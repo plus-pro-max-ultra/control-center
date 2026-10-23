@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.0.4 2026-10-22 20:00</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.0.5 2026-10-23 17:38</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 每日任務</a><a href="#s8">8 資料規則</a><a href="#s9">9 目前狀態</a><a href="#s10">10 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -58,7 +58,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s4">4. 工作方式（元規則）</h2>
 <ul>
-<li>發布節奏：新功能排入每日批次（一天一次）；錯誤修正與明確的即時要求立即處理；「現在」/「立即執行所有更新」優先於批次，該批完成後恢復批次節奏。</li>
+<li>發布節奏（MM 2026-10-23 更新，取代每日批次制）：功能完成並驗證後等待 15 分鐘（MM 可在此期間補充或修改），之後自動推送；錯誤修正與明確的即時要求立即處理。</li>
 <li>主動命題（MM 2026-10-22）：除了完成被指派的任務，也要主動思考是否存在更好的命題和路徑，值得時提出來。</li>
 <li>多 agent 協作（MM 2026-10-22）：歡迎充分利用多個 agent／專門分工來完成工作。</li>
 <li>先自行填補缺口再發問；一次只問最少必要的問題。</li>
@@ -98,10 +98,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s9">9. 目前狀態</h2>
 <ul>
-<li>控制中心：v2.0.4（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
+<li>控制中心：v2.0.5（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
 <li>單字網頁：v14.22。日文 1309 條（教學 126＋N5 題庫 1183；1241 條有 2 句例句）；德文 325 條（306 條有 2 句例句）。</li>
 <li>德文第二例句：306/325 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
-<li>佇列：無。</li>
+<li>待發布：v14.23 德文文法新課「雙向介詞 Wechselpräpositionen」＋文法來源連結排版修正（已提交 a912c68，15 分鐘窗口後推送）。</li>
+<li>佇列：聽力區播放器式控制（上一首／播放暫停／下一首）、重播次數 +／− 按鈕、播放速度滑桿 0.5x–1.5x、全站說明按鈕統一（區塊左下角、白底小寫 i）。</li>
 <li>已知限制：iOS 鍵盤、觸控手勢與 Safari 外框無法在開發環境驗證，實機表現以使用回報為準。</li>
 </ul>
 <h2 id="s10">10. 修改方式</h2>
@@ -115,6 +116,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.0.5（2026-10-23）</h2>
+<ul>
+<li>發布節奏規則更新（MM 2026-10-23）：功能完成並驗證後等待 15 分鐘自動推送（期間 MM 可補充修改），取代每日批次制；錯誤修正維持立即。</li>
+<li>目前狀態：待發布 v14.23（雙向介詞文法課＋來源連結排版）；佇列加入聽力區控制 4 項。</li>
+</ul>
 <h2>v2.0.4（2026-10-22）</h2>
 <ul>
 <li>目前狀態：單字網頁 v14.22（德文例句 306/325，任務關閉，19 條無來源句已標出）。</li>
