@@ -43,13 +43,13 @@
 
 - 部署規則（MM 2026-10-22）：不使用 Instinct 內建的網頁部署；網站一律用 GitHub repo + GitHub Pages。
 - Repos：plus-pro-max-ultra/Shinnigammi-vocab（單字頁）、plus-pro-max-ultra/control-center（本文件與本站）。
-- 單字頁 pipeline：src/（app.js 可讀化 bundle、words.json 單行 JSON、style.css、模板三件套）→ tools/build.py 內嵌資料與版本戳產出單一 index.html → tools/push.sh 以 vault 取 PAT、clone、同步、提交、推送 → tools/smoke.js 以無頭 Chrome 跑 7 項冒煙檢查（0 page errors 才推送）。原始碼可讀化後存於 repo，repo 是唯一來源；工作區每次任務重建，遺失不影響。Pages 從 main 根目錄發佈，部署延遲約 1-2 分鐘，以帶隨機參數的網址驗證版本戳。
+- 單字頁 pipeline：src/（app.js 可讀化 bundle、words.json 單行 JSON、style.css、模板三件套）→ tools/build.py 內嵌資料與版本戳產出單一 index.html → tools/push.sh 以 vault 取 PAT、clone、同步、提交、推送 → tools/smoke.js 以無頭 Chrome 跑 18 項冒煙檢查（0 page errors 才推送）。原始碼可讀化後存於 repo，repo 是唯一來源；工作區每次任務重建，遺失不影響。Pages 從 main 根目錄發佈，部署延遲約 1-2 分鐘，以帶隨機參數的網址驗證版本戳。
 - 推送用 MM 的 fine-grained PAT（vocab，Contents read/write，範圍涵蓋兩個 repo，約 90 天效期，2026-10-20 建立）。
 - 公開頁面本身唯讀；所有編輯一律透過 GitHub 檔案或對話指令。
 
 ## 6. 單字頁架構
 
-- 單元結構：日文 6 個教學單元（問候與介紹／日常動作／時間／飲食／形容詞／家人與人物，共 126 條）＋ N5 題庫（1183 條，標 bank）；德文 Lektion 1-3（91/122/112 條，themeId debook-L1/L2/L3），每條附 topic（19 個主題，如 sich vorstellen、Berufe und Arbeit）。
+- 單元結構：日文 6 個主題單元（問候與介紹／日常動作／時間／飲食／形容詞／家人與人物）＋「語言基礎」獨立課程 50 條（數詞與序數 28・代名詞 8・指示詞 3・疑問詞 8・接續詞 3）＋ JLPT 參考字庫 N5／N4（原始題庫條目 616／567、合計 1183 條標 bank；介面字庫卡顯示 655／567，因另有 39 個教學條目一併歸入 N5 卡）；德文 Lektion 1-3（91/122/112 條，themeId debook-L1/L2/L3）＋「語言基礎」38 條（Zahlen 22・冠詞與限定詞 3・介係詞 6・代名詞 2・疑問詞 5），每條附 topic（19 個主題，如 sich vorstellen、Berufe und Arbeit）。語言基礎與一般單元在單元、測驗範圍與複習入口分流（JLPT 字庫為明確標示的參考例外）；條目 ID、學習進度與原課本歸屬（參照）保留。
 - 詞條欄位：共同 id、lang、word、reading、zh、en、examples（jp 為 text+zh；de 為 text+zh+en，翻譯點開才顯示）、contentType（word/phrase）、sourceUrl；日文另有 romaji、pos、note（用法提示，109 條）、collocations（961 條）、parts（片語逐字拆解，11 條）、similar（105 條）、senses、loan（外來語標註，90 條）、動詞變化欄位（masu、masuReading、vclass、vkind、vsrc，264 條）；德文另有 ipa、ipaNote、grammar（如 "noun · masculine; plural Namen"）、themeId、topic、note（46 條）、parts（34 條）。
 - 測驗類型（選單順序）：日→中／DE→EN、中→日／EN→DE、漢字⇄假名（僅日文）、字塊拼字、打字拼字、字卡、熟悉度。
 - 熟悉度規則：五級（未標記／陌生／有印象／熟悉／已掌握）；答對 +1、答錯 -1、「不會」視同答錯；字卡「認識」最高升到「熟悉」（已掌握的前一級）；測驗、字卡、標題列、範圍選擇、詳細頁行為一致。
@@ -72,8 +72,8 @@
 
 ## 9. 目前狀態
 
-- 控制中心：v2.1.2（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。
-- 單字網頁：v14.29。日文 1315 條（教學 155＋N5 題庫 1183；第七課 30 項目中 23 項沿用題庫既有條目與進度）；德文 325 條（306 條有 2 句例句）。新增「語言基礎」獨立課程：日文 50 條、德文 38 條。
+- 控制中心：v2.1.3（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。
+- 單字網頁：v14.29。日文不重複條目 1315＝非題庫 132＋題庫 1183（N5 616＋N4 567）；其中教學條目 155 條，內含 23 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 325 條（306 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 38 條，與一般單元分流。
 - 德文第二例句：306/325 完成；19 條確定無附中文來源句（已標出回報，未編造）。
 - 佇列：無。
 - 已知限制：iOS 鍵盤、觸控手勢與 Safari 外框無法在開發環境驗證，實機表現以使用回報為準。
