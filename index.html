@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.11 2026-10-28 22:00</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.12 2026-10-28 22:19</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -114,7 +114,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
 <li>控制中心：v2.2.11（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
-<li>單字網頁：v14.41。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
+<li>單字網頁：v14.42。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
 <li>德文第二例句：312/331 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
 <li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-010，最新 010 期（2026-10-28）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄；同一分頁貼上或點擊 #/story/ 文章連結現在會正確切換到該文章；首頁主選自 2026-10-28 起固定為最新一期。</li>
 <li>佇列：無。</li>
@@ -131,6 +131,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.12（2026-10-28）</h2>
+<ul>
+<li>單字網頁 v14.42 修正（MM 22:12 截圖：單元清單殘留舊主題單元、Lektion 順序錯誤，錯誤修正依規則立即上線）：v14.41 的遷移清單不完整——漏掉兩個歷史預設單元 id（debook-13「2 · andere wichtige Wörter und Wendungen」，v14.5 起已併入 debook-7；debook-21「3 · andere wichtige Wörter und Wendungen」，v14.6 起已併入），且未把已儲存清單中的 Lektion 1/2/3 排回正序（裝置顯示為 3、1、2）。已從 git 歷史逐一確認 21 個數字 id 皆為歷史預設單元（自訂單元 id 為 debook-u*／debook-auto-*，絕不為純數字，不受影響）。v14.42 移除全部 21 個歷史預設 id、三個 Lektion 單元排為正序（自訂單元位置不變）；自訂單元、自加單字、熟悉度與學習進度不受影響。新增 mig-test2，以 MM 截圖的混合清單狀態為種子驗證（12/12 通過，0 page errors）。規則無變動。</li>
+</ul>
 <h2>v2.2.11（2026-10-28）</h2>
 <ul>
 <li>記錄 MM 2026-10-28 版本號指示：版本號可視調整幅度適度調整，不設固定級距門檻，既有版本不回溯重編；適用於後續單字頁與控制中心版本。僅此規則新增，其餘規則無變動。</li>
