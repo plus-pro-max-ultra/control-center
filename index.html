@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.14 2026-10-28 23:40</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.15 2026-10-28 23:57</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -113,8 +113,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>控制中心：v2.2.14（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
-<li>單字網頁：v14.44。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
+<li>控制中心：v2.2.15（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
+<li>單字網頁：v14.45。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
 <li>德文第二例句：312/331 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
 <li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-010，最新 010 期（2026-10-28）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄；同一分頁貼上或點擊 #/story/ 文章連結現在會正確切換到該文章；首頁主選自 2026-10-28 起固定為最新一期。</li>
 <li>佇列：無。</li>
@@ -131,6 +131,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.15（2026-10-28）</h2>
+<ul>
+<li>單字網頁 v14.45 修正（全站查核，錯誤修正依規則立即上線）：題庫條目「同じ」詞性誤標「動詞」，依 JMdict（noun or verb acting prenominally）與站內同類詞（大きな、小さな、こんな、そんな、あんな 皆標名詞）慣例改標「名詞」；已掃描全部 259 個標「動詞」的日文條目，僅此 1 條非動詞。另更正 v14.44 更新說明筆數（24→25）。查核另確認：德文測驗範圍池計數正確（全部不含基礎 291＝L1 63＋L2 118＋L3 110；基礎 40；本文件 94/123/112 為 themeId 歸屬含基礎條目，與測驗範圍口徑不同，兩者一致）；備份/還原 roundtrip 逐位元一致（格式 mm-vocabulary-v1）；精熟複習模式自動換題符合設計；單字詳情頁點例句下方空白處看翻譯正常；名詞測驗 live 複跑通過；例句語義抽查 36 句全數相符；題庫讀音抽查 8/8 與 Jisho 一致。Tatoeba 連線逾時，tid 連結抽驗留待後續。規則無變動。</li>
+</ul>
 <h2>v2.2.14（2026-10-28）</h2>
 <ul>
 <li>單字網頁 v14.44 修正（全站查核發現之資料錯誤，依規則立即上線）：25 個日文早期教學條目的詞性誤標為「代名詞」——8 個動詞（食べる、飲む、行く、聞く、買う、寝る、来る、働く）改標「動詞」，17 個名詞（水、学校、店、家、会社、図書館、病院、公園、部屋、肉、ご飯、卵、お茶、牛乳、野菜、今日、明日）改標「名詞」。查詢結果與單字資訊原先會顯示「代名詞 · 二類」之類自相矛盾的標示（如 食べる）。私、これ、それ、あれ、何 本為代名詞／疑問詞，維持不變；題庫（N5/N4）條目不受影響。已跑全量詞性交叉檢查（pos 與 grammar、vclass 一致性），無其他類似錯誤。全站查核持續進行中，其餘發現另行記錄。規則無變動。</li>
