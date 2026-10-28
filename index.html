@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.8 2026-10-28 21:45</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.9 2026-10-28 21:50</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -112,8 +112,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>控制中心：v2.2.8（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
-<li>單字網頁：v14.39。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
+<li>控制中心：v2.2.9（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
+<li>單字網頁：v14.40。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
 <li>德文第二例句：312/331 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
 <li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-010，最新 010 期（2026-10-28）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄；同一分頁貼上或點擊 #/story/ 文章連結現在會正確切換到該文章；首頁主選自 2026-10-28 起固定為最新一期。</li>
 <li>佇列：無。</li>
@@ -130,6 +130,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.9（2026-10-28）</h2>
+<ul>
+<li>單字網頁 v14.40 修正（錯誤修正依規則立即上線）：名詞測驗恢復作答前的 ⓘ 說明按鈕——v14.39 誤將其隱藏（原意是避免資訊卡提前洩題，但 18:52 核准的設計是各測驗固定提供手動說明按鈕，使用者可自行選擇是否查看），現已恢復，作答前後都可手動開啟彈出資訊卡，與其他測驗一致。規則無變動。</li>
+<li>紀錄更正：名詞測驗精熟模式自動換題計時器實為 0.7 秒（與其他客觀測驗同一設定，v14.35 起未變）；v2.2.3 所記「約 1.1 秒」是當時測試檢查點的等待時間，非計時器設定值。</li>
+</ul>
 <h2>v2.2.8（2026-10-28）</h2>
 <ul>
 <li>單字網頁 v14.39 修正（MM 21:34 回報截圖，錯誤修正依規則立即上線）：名詞測驗答錯後的資訊卡改為彈出形式，與其他測驗一致（原內嵌卡片被底部按鈕遮住；答錯或按「不會」時自動彈出，點「✕ 返回」或背景關閉，作答後點左下角 ⓘ 可再次開啟；作答前不提供 ⓘ 以免洩題——資訊卡含詞性與複數即答案）；修正「不會」按鈕未套用樣式且位置錯誤（MM 21:35 指明為渲染與位置問題，操作流程不變），現與「送出」並排、外觀與其他測驗一致。精熟模式行為不變（答對不開卡、自動換題；答錯手動）。規則無變動。</li>
