@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.1.7 2026-10-28 09:25</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.1.8 2026-10-28 13:43</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -111,10 +111,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>控制中心：v2.1.7（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
+<li>控制中心：v2.1.8（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
 <li>單字網頁：v14.31。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 326 條（307 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 39 條，與一般單元分流。</li>
 <li>德文第二例句：306/325 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
-<li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-009，最新 009 期（2026-10-27）。</li>
+<li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-009，最新 009 期（2026-10-27）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄。</li>
 <li>佇列：無。</li>
 <li>已知限制：iOS 鍵盤、觸控手勢與 Safari 外框無法在開發環境驗證，實機表現以使用回報為準。</li>
 </ul>
@@ -129,6 +129,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.1.8（2026-10-28）</h2>
+<ul>
+<li>記錄遠方誌網站除錯（MM 2026-10-28「檢視遠方誌的網站設計除錯」）：手機版恢復收藏文章入口；切換到收藏清單後，網址不再殘留文章片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄。由遠方誌專案依隔離規則獨立修正並上線，本站僅記錄結果；出刊狀態不變（001-009，最新 009）。規則無變動。</li>
+</ul>
 <h2>v2.1.7（2026-10-28）</h2>
 <ul>
 <li>單字網頁 v14.31 上線：處理暫存區第一筆實際提交——德文 welche（2026-10-28 使用者提交）。依語言基礎規則歸入「語言基礎」疑問詞（de-426），不進一般單元或「我的單字本」；IPA／詞性／詞形來源 de.wiktionary，2 句例句取自 Tatoeba（tid 13916667、662244；後者中文由簡體經 OpenCC 轉繁體）。以 words-inbox.json 的 skip 項目清除暫存（inbox 機制首次實際處理）。</li>
