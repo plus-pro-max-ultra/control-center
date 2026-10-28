@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.16 2026-10-29 00:02</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.17 2026-10-29 07:16</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -113,8 +113,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>控制中心：v2.2.16（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
-<li>單字網頁：v14.46。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
+<li>控制中心：v2.2.17（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
+<li>單字網頁：v14.47。日文不重複條目 1323＝非題庫 140＋題庫 1183（N5 616＋N4 567）；其中教學條目 214 條，內含 74 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
 <li>德文第二例句：312/331 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
 <li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-010，最新 010 期（2026-10-28）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄；同一分頁貼上或點擊 #/story/ 文章連結現在會正確切換到該文章；首頁主選自 2026-10-28 起固定為最新一期。</li>
 <li>佇列：無。</li>
@@ -131,6 +131,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.17（2026-10-29）</h2>
+<ul>
+<li>單字網頁 v14.47 功能（每日日文課第 9 課頁面整合，依發布節奏於驗證後延遲 15 分鐘推送）：第 9 課 30 字（20 動詞＋10 副詞）經去重——29 字與題庫既有條目重複，依規則沿用題庫條目與學習進度，以條目映射歸入「日常動作」單元；全然 為真正新字，新增 jpl9-01（副詞，2 句 Tatoeba 例句 tid 140787／2353823，提示說明通常接否定形、口語亦可接肯定形如「全然大丈夫」）。動詞類別全數經 Jisho 覆核：19 字一類＋教える 為二類，與既有資料一致。「日常動作」單元 24→54 字，初級日文課程 139→169 單字，測驗範圍自動涵蓋，其餘單元不變。規則無變動。</li>
+</ul>
 <h2>v2.2.16（2026-10-29）</h2>
 <ul>
 <li>單字網頁 v14.46 修正（全站查核；錯誤修正依規則立即上線）：7 個日文連体詞詞性標示改正——大きな、小さな、こんな、そんな、あんな、同じ、あの 依 JMdict 皆為 pre-noun adjectival（連体詞，rentaishi），原標「名詞」不準確（同じ在 v14.45 由「動詞」改「名詞」亦仍不準確，本版一併改正）；現統一標示「連体詞」。已確認 pos 僅供顯示（單字庫篩選只有內容類型／熟悉度／主題，無詞性篩選；名詞測驗僅德文且讀 gender/plural 欄位），新標籤不影響任何功能邏輯。同じ 在 JMdict 另有名詞／な形容詞／副詞用法，教學上以連体詞為主要用法標示。規則無變動。</li>
