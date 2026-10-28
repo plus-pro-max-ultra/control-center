@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.1.8 2026-10-28 13:43</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.1.9 2026-10-28 14:07</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -93,6 +93,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>網址：https://plus-pro-max-ultra.github.io/remote-journal/ （GitHub Pages 發佈）。</li>
 <li>內容：繁體中文每日長文；每期從一個具體現象或問題出發，說明背景、機制、證據、限制，以及一個可帶走的想法；不做新聞摘要或百科拼接。</li>
 <li>出刊節奏（MM 2026-10-25「現在開始每日出刊」）：每個台北日期一篇新刊；更正舊文不算新刊；品質優先，來不及就延後並回報，不降品質趕出刊。</li>
+<li>首頁呈現（MM 2026-10-28「新增的文章應該放在today’s selection不然難以閱讀」）：首頁 Today’s Selection 固定展示最新一期，不輪替舊文；新期刊出後即成為首頁主選。</li>
 <li>作業流程：選題（不重複已出刊主題）→ 實際開啟來源查證（每個關鍵主張對應實際讀過的來源，優先一手或官方資料）→ 依固定結構撰寫 → 事實與編輯審查（已查證事實、推論、學界爭議與未知分開標示；數字附來源、單位與年份；來源連結可點並對應其支持的主張）→ 發佈 → 網站驗證與桌機、手機實際閱讀檢查 → 核對當日刊期避免重複出刊 → 向 MM 交付當期連結與簡介。</li>
 <li>界線：不動用單字頁的程式、資料與憑證；不產生費用；涉及聯絡他人或金錢，依最高限制先取得 MM 確認。</li>
 </ul>
@@ -111,10 +112,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>控制中心：v2.1.8（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
+<li>控制中心：v2.1.9（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
 <li>單字網頁：v14.31。日文不重複條目 1322＝非題庫 139＋題庫 1183（N5 616＋N4 567）；其中教學條目 184 條，內含 45 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 326 條（307 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 39 條，與一般單元分流。</li>
 <li>德文第二例句：306/325 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
-<li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-009，最新 009 期（2026-10-27）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄。</li>
+<li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-009，最新 009 期（2026-10-27）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄；首頁主選自 2026-10-28 起固定為最新一期。</li>
 <li>佇列：無。</li>
 <li>已知限制：iOS 鍵盤、觸控手勢與 Safari 外框無法在開發環境驗證，實機表現以使用回報為準。</li>
 </ul>
@@ -129,6 +130,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.1.9（2026-10-28）</h2>
+<ul>
+<li>記錄遠方誌首頁規則（MM 2026-10-28「新增的文章應該放在today’s selection不然難以閱讀」）：首頁 Today’s Selection 固定展示最新一期，不再輪替舊文；新期刊出後即成為首頁主選。由遠方誌專案依隔離規則實作並上線（手機與桌機版面已驗證），本站僅記錄；出刊狀態不變（001-009，最新 009）。規則新增於 §7，其餘規則無變動。</li>
+</ul>
 <h2>v2.1.8（2026-10-28）</h2>
 <ul>
 <li>記錄遠方誌網站除錯（MM 2026-10-28「檢視遠方誌的網站設計除錯」）：手機版恢復收藏文章入口；切換到收藏清單後，網址不再殘留文章片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄。由遠方誌專案依隔離規則獨立修正並上線，本站僅記錄結果；出刊狀態不變（001-009，最新 009）。規則無變動。</li>
