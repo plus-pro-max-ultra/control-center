@@ -1,5 +1,9 @@
 # 更新紀錄
 
+## v2.2.23（2026-10-29）
+
+- 單字網頁 v14.51 功能（依發布節奏驗證後延遲 15 分鐘推送）：處理暫存區 69 筆提交（MM 11:36「把暫存區處理一下」）——58 筆新增 de-442..de-499：國家與語言、城市、名詞（Staat／Verb／Artikel／Schüler／Informatiker／Ingenieur／Tablette／Spritze／Bier／Fahrt 等）、動詞 schlafen／lieben、「語言基礎」新增代名詞 ich/du/Sie（6→9）、介係詞 für/bis/am/im/zum（6→11）、新類別連接詞 aber/und/oder（3）、數詞 hundert/tausend/die Million（22→25）、疑問詞 worum（6→7）。7 筆拼字依 MM 2026-10-29 確認登錄（direk→direkt、Protugiesisch→Portugiesisch、Fimland→Finnland、Chinesish→Chinesisch、doe Spritze→die Spritze 等）；屈折形式依原形規則併入原形條目（dir/dich→du、mich→ich、Ihnen→Sie、Verben→das Verb）；ya 為 de-287 ja 之重複，記錄略過。每條附 Wiktionary 音標／詞性／來源連結與 2 句 Tatoeba 例句（含 tid、英譯、繁中；簡中來源句採 Tatoeba 自有繁體轉寫並於條目標示）；例句以詞界與大小寫驗證確實含詞條。6 筆僅 1 句雙語來源句（Dänemark、Ägypten、Wien、das Symbol、Moin、das Pech）依 §9 保留暫存，待 MM 確認可否標示缺第二句收錄；3 筆文法詞（der Aussagesatz、das Nomen、das Personalpronomen）無中英雙語來源句，保留暫存未登錄，未編造內容。德文 341→399 條（380 條有 2 句例句）；Lektion 1-3 介面筆數 69/119/110→107/123/111（themeId 138/128/113）；名詞測驗「全部」範圍 151→161（11 個新名詞皆可用現有字尾字塊拼出複數）；「語言基礎」43→58 條。mig-test2 筆數期望值更新為 107/123/111；noun-r-test 改為回合結束自動重開新回合（原設計單回合 10 題內需抽中 7 個 -er 名詞之一，命中率僅約四成，屬測試工具隨機性缺陷，非功能問題）。規則無變動。
+
 ## v2.2.22（2026-10-29）
 
 - 修正（錯誤修正依規則立即上線）：§10 目前狀態的控制中心自我版本號自 v2.2.20 起滯留 v2.2.19，更正為 v2.2.22，與頁首徽章一致。規則無變動。
