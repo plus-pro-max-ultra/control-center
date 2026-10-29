@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.17 2026-10-29 07:16</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.18 2026-10-29 08:55</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -81,7 +81,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <ul>
 <li>單元結構：日文 7 個主題單元（問候與介紹／日常動作／時間／飲食／形容詞／家人與人物／購物與衣著 29 條＝新增 7＋沿用題庫 22）＋「語言基礎」獨立課程 50 條（數詞與序數 28・代名詞 8・指示詞 3・疑問詞 8・接續詞 3）＋ JLPT 參考字庫 N5／N4（原始題庫條目 616／567、合計 1183 條標 bank；介面字庫卡顯示 655／567，因另有 39 個教學條目一併歸入 N5 卡）；德文 Lektion 1-3（94/123/112 條，themeId debook-L1/L2/L3）＋「語言基礎」40 條（Zahlen 22・冠詞與限定詞 3・介係詞 6・代名詞 3・疑問詞 6），每條附 topic（19 個主題，如 sich vorstellen、Berufe und Arbeit；使用者提交的 de-426 welche 無課本 topic）。語言基礎與一般單元在單元、測驗範圍與複習入口分流（JLPT 字庫為明確標示的參考例外）；條目 ID、學習進度與原課本歸屬（參照）保留。</li>
 <li>詞條欄位：共同 id、lang、word、reading、zh、en、examples（jp 為 text+zh；de 為 text+zh+en，翻譯點開才顯示）、contentType（word/phrase）、sourceUrl；日文另有 romaji、pos、note（用法提示，109 條）、collocations（961 條）、parts（片語逐字拆解，11 條）、similar（105 條）、senses、loan（外來語標註，90 條）、動詞變化欄位（masu、masuReading、vclass、vkind、vsrc，264 條）；德文另有 ipa、ipaNote、grammar（如 "noun · masculine; plural Namen"）、themeId、topic、note（46 條）、parts（34 條）。</li>
-<li>測驗類型（選單順序）：日→中／DE→EN、中→日／EN→DE、漢字⇄假名（僅日文）、名詞測驗（僅德文）、字塊拼字、打字拼字、字卡、熟悉度。名詞測驗（MM 2026-10-28 核准「名詞測驗先上線看看」）：看單字選詞性（der/das/die）並以五個字尾字塊（¨、-、e、n、s）拼出複數字尾，送出後詞性與複數兩部分一起判定、兩部分都對才算答對；回饋以複數冠詞 die 顯示複數形，答對時與實際拼出的字尾一致（如選 s 顯示 die Euros），答錯顯示題庫標準複數（如 die Tage）；只出題庫已收錄詞性與複數、且字尾可由五個字塊拼出的名詞；Euro 依 de.wiktionary 同一詞位接受 Euro／Euros 兩種複數。</li>
+<li>測驗類型（選單順序）：日→中／DE→EN、中→日／EN→DE、漢字⇄假名（僅日文）、名詞測驗（僅德文）、字塊拼字、打字拼字、字卡、熟悉度。名詞測驗（MM 2026-10-28 核准「名詞測驗先上線看看」）：看單字選詞性（der/das/die）並以六個字尾字塊（¨、-、e、n、s、r）拼出複數字尾，送出後詞性與複數兩部分一起判定、兩部分都對才算答對；回饋以複數冠詞 die 顯示複數形，答對時與實際拼出的字尾一致（如選 s 顯示 die Euros），答錯顯示題庫標準複數（如 die Tage）；只出題庫已收錄詞性與複數、且字尾可由六個字塊拼出的名詞；Euro 依 de.wiktionary 同一詞位接受 Euro／Euros 兩種複數。</li>
 <li>熟悉度規則：五級（未標記／陌生／有印象／熟悉／已掌握）；答對 +1、答錯 -1、「不會」視同答錯；字卡「認識」最高升到「熟悉」（已掌握的前一級）；測驗、字卡、標題列、範圍選擇、詳細頁行為一致。</li>
 <li>視圖結構：底部五頁籤——課程／測驗／查詢／單字庫／更多；「更多」內：新增單字、暫存區、我的單字本、書籤複習、自訂單元、學習統計、備份資料、設定、指令區（連結至本站）、文法課程。</li>
 <li>進度儲存：全在本機（device-local）；手動備份／還原格式 mm-vocabulary-v1（附加欄位 userWords、staging，舊備份仍可還原）。</li>
@@ -113,8 +113,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>控制中心：v2.2.17（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
-<li>單字網頁：v14.47。日文不重複條目 1323＝非題庫 140＋題庫 1183（N5 616＋N4 567）；其中教學條目 214 條，內含 74 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
+<li>控制中心：v2.2.18（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
+<li>單字網頁：v14.48。日文不重複條目 1323＝非題庫 140＋題庫 1183（N5 616＋N4 567）；其中教學條目 214 條，內含 74 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 331 條（312 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 40 條，與一般單元分流。</li>
 <li>德文第二例句：312/331 完成；19 條確定無附中文來源句（已標出回報，未編造）。</li>
 <li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-010，最新 010 期（2026-10-28）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄；同一分頁貼上或點擊 #/story/ 文章連結現在會正確切換到該文章；首頁主選自 2026-10-28 起固定為最新一期。</li>
 <li>佇列：無。</li>
@@ -131,6 +131,10 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.18（2026-10-29）</h2>
+<ul>
+<li>單字網頁 v14.48 功能（MM 08:49「德文名詞測驗可能需要加入r的選項」，功能依發布節奏驗證後延遲 15 分鐘推送）：名詞測驗的複數字尾字塊由五個（¨、-、e、n、s）增為六個，加入 r；-er 複數可拼出（Bild→Bilder 點 e＋r；Buch→Bücher 點 ¨＋e＋r）。名詞測驗範圍 140→146 個名詞，新增 6 個 -er 複數：Land/Länder、Buch/Bücher、Schwimmbad/Schwimmbäder、Wörterbuch/Wörterbücher、Haus/Häuser、Bild/Bilder。其餘 9 個不收錄名詞維持排除，原因：字幹替換型複數（Museen、Firmen、Geburtsdaten）、-sse 雙寫（Busse）、或變音不在第一個 a/o/u（Bahnhöfe、Krankenhäuser、Rathäuser、Konzerthäuser、Fahrräder；現行 ¨ 字塊只標示第一個 a/o/u 變音）。詞性／複數判定邏輯不變；新增 noun-r-test 迴歸。規則無變動。</li>
+</ul>
 <h2>v2.2.17（2026-10-29）</h2>
 <ul>
 <li>單字網頁 v14.47 功能（每日日文課第 9 課頁面整合，依發布節奏於驗證後延遲 15 分鐘推送）：第 9 課 30 字（20 動詞＋10 副詞）經去重——29 字與題庫既有條目重複，依規則沿用題庫條目與學習進度，以條目映射歸入「日常動作」單元；全然 為真正新字，新增 jpl9-01（副詞，2 句 Tatoeba 例句 tid 140787／2353823，提示說明通常接否定形、口語亦可接肯定形如「全然大丈夫」）。動詞類別全數經 Jisho 覆核：19 字一類＋教える 為二類，與既有資料一致。「日常動作」單元 24→54 字，初級日文課程 139→169 單字，測驗範圍自動涵蓋，其餘單元不變。規則無變動。</li>
