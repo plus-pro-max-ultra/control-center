@@ -1,8 +1,12 @@
 # 更新紀錄
 
+## v2.2.19（2026-10-29）
+
+- 更正 v2.2.18 更新說明筆數：原記「名詞測驗範圍 140→146」為含語言基礎名詞（die Zahl）的總計；測驗「全部」範圍（不含語言基礎）實為 139→145，已與頁面即時顯示核對一致並回改 v2.2.18 條目。規則無變動。
+
 ## v2.2.18（2026-10-29）
 
-- 單字網頁 v14.48 功能（MM 08:49「德文名詞測驗可能需要加入r的選項」，功能依發布節奏驗證後延遲 15 分鐘推送）：名詞測驗的複數字尾字塊由五個（¨、-、e、n、s）增為六個，加入 r；-er 複數可拼出（Bild→Bilder 點 e＋r；Buch→Bücher 點 ¨＋e＋r）。名詞測驗範圍 140→146 個名詞，新增 6 個 -er 複數：Land/Länder、Buch/Bücher、Schwimmbad/Schwimmbäder、Wörterbuch/Wörterbücher、Haus/Häuser、Bild/Bilder。其餘 9 個不收錄名詞維持排除，原因：字幹替換型複數（Museen、Firmen、Geburtsdaten）、-sse 雙寫（Busse）、或變音不在第一個 a/o/u（Bahnhöfe、Krankenhäuser、Rathäuser、Konzerthäuser、Fahrräder；現行 ¨ 字塊只標示第一個 a/o/u 變音）。詞性／複數判定邏輯不變；新增 noun-r-test 迴歸。規則無變動。
+- 單字網頁 v14.48 功能（MM 08:49「德文名詞測驗可能需要加入r的選項」，功能依發布節奏驗證後延遲 15 分鐘推送）：名詞測驗的複數字尾字塊由五個（¨、-、e、n、s）增為六個，加入 r；-er 複數可拼出（Bild→Bilder 點 e＋r；Buch→Bücher 點 ¨＋e＋r）。名詞測驗範圍（全部範圍，不含語言基礎）139→145 個名詞，新增 6 個 -er 複數：Land/Länder、Buch/Bücher、Schwimmbad/Schwimmbäder、Wörterbuch/Wörterbücher、Haus/Häuser、Bild/Bilder。其餘 9 個不收錄名詞維持排除，原因：字幹替換型複數（Museen、Firmen、Geburtsdaten）、-sse 雙寫（Busse）、或變音不在第一個 a/o/u（Bahnhöfe、Krankenhäuser、Rathäuser、Konzerthäuser、Fahrräder；現行 ¨ 字塊只標示第一個 a/o/u 變音）。詞性／複數判定邏輯不變；新增 noun-r-test 迴歸。規則無變動。
 
 ## v2.2.17（2026-10-29）
 
