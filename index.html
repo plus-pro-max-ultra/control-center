@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.30 2026-10-30 19:52</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.30 2026-10-30 19:54</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -120,7 +120,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>單字網頁：v14.55。日文不重複條目 1324＝非題庫 141＋題庫 1183（N5 616＋N4 567）；其中教學條目 215 條，內含 74 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。德文 408 條（382 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 58 條，與一般單元分流。</li>
 <li>德文第二例句：383/408 完成；24 條各保留 1 句（19 條確定無附中文來源句＋5 條 v14.53 依「例句可後補」收錄，均已標出回報，未編造）；4 條例句中文譯文待補（3 條文法詞例句僅德英，及 Dänemark 第二句 2026-10-30 已補德英來源句）。以上缺句缺譯列入每日檢查回補。</li>
 <li>遠方誌：每日出刊中（2026-10-25 起）；已出刊 001-011，最新 011 期（2026-10-29）。網站除錯（2026-10-28）：手機版恢復收藏文章入口；收藏清單不再殘留文章網址片段；瀏覽器上一頁／下一頁可在首頁、收藏清單與文章之間正確往返，直接開啟文章連結不會憑空新增首頁紀錄；同一分頁貼上或點擊 #/story/ 文章連結現在會正確切換到該文章；首頁主選自 2026-10-28 起固定為最新一期。</li>
-<li>連結入口頁（新專案，規劃中）：MM 2026-10-30 17:37 提出（iMessage：「做一個可以個人化的一頁式網頁html檔，操作系統和邏輯能貼近系統設定（如套用預設黑/白背景、支援md語法等）。我要用來放網站連結，作為多個網站的入口。先做出完整規劃」）。需求：個人化的一頁式單檔 HTML，作為多個網站的連結入口；設定與邏輯貼近作業系統（套用系統預設黑／白背景、支援 Markdown 語法）；先完成完整規劃再談建置。狀態：完整規劃已交付（2026-10-30 17:43，規劃文件雙語附上）；MM 2026-10-30 19:52「做出來看看」核准依規劃做出首版供檢視（§2 大型改版流程，MM 逐輪檢視後才繼續）。首版建置中：自足的單檔 HTML、內含可編輯的範例連結；僅供檢視，未核准公開部署或任何帳號、存取權變動。單檔 HTML 需求保留；日後若需經 GitHub 發佈，新 repo 的發佈存取權尚未解決（現有 PAT 僅涵蓋單字頁與控制中心兩個 repo，遠方誌另有獨立憑證，依 §5 與 §7 隔離先例處理）。不動用單字頁的程式、資料與憑證。</li>
+<li>連結入口頁（新專案，首版建置中）：MM 2026-10-30 17:37 提出（iMessage：「做一個可以個人化的一頁式網頁html檔，操作系統和邏輯能貼近系統設定（如套用預設黑/白背景、支援md語法等）。我要用來放網站連結，作為多個網站的入口。先做出完整規劃」）。需求：個人化的一頁式單檔 HTML，作為多個網站的連結入口；設定與邏輯貼近作業系統（套用系統預設黑／白背景、支援 Markdown 語法）；先完成完整規劃再談建置。狀態：完整規劃已交付（2026-10-30 17:43，規劃文件雙語附上）；MM 2026-10-30 19:52「做出來看看」核准依規劃做出首版供檢視（§2 大型改版流程，MM 逐輪檢視後才繼續）。首版建置中：自足的單檔 HTML、內含可編輯的範例連結；僅供檢視，未核准公開部署或任何帳號、存取權變動。單檔 HTML 需求保留；日後若需經 GitHub 發佈，新 repo 的發佈存取權尚未解決（現有 PAT 僅涵蓋單字頁與控制中心兩個 repo，遠方誌另有獨立憑證，依 §5 與 §7 隔離先例處理）。不動用單字頁的程式、資料與憑證。</li>
 <li>佇列：無。</li>
 <li>已知限制：iOS 鍵盤、觸控手勢與 Safari 外框無法在開發環境驗證，實機表現以使用回報為準。</li>
 </ul>
