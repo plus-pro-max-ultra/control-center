@@ -1,5 +1,11 @@
 # 更新紀錄
 
+## v2.2.49（2026-11-01）
+
+- 遠方誌 V3 架構改版獲 MM 核准：2026-11-01 01:58 MM「批准長期運作版本的網站設計」（phonemsg-01M69HTB1K20TCPG2CH5WDZXQX，iMessage 原文已核對）。maintainer 部署中：替換式分頁（每頁 24 篇）、關鍵字／分類／月份篩選導覽、首頁精簡（最新 6 篇＋Today's Selection＋一週預告）、保留標題連結與字體修正；以現行 main cfcf2a5／SW v6 調和 held 分支 3172917。待線上核實後標記完成。此核准僅及遠方誌改版；連結入口頁託管比較與 GitHub-only 規則不受影響。
+- 連結入口頁：01:59 外部（Instinct 以外）託管比較已交付 MM——推薦 Neocities 免費方案、Cloudflare Pages 為替代（附第一方連結）；已請 MM 核准 Neocities 免費方案與一次性 GitHub-only 例外，並詢問使用現有帳號或新建帳號。MM 尚未核准；核准前不部署、不建帳號、不付費，GitHub-only 規則未豁免。Instinct 代管方案不再進行。
+- 規則無變動，單字頁無變動。
+
 ## v2.2.48（2026-11-01）
 
 - 遠方誌字體修正標記完成：2026-11-01 01:57 上線並經手機（390px）／電腦版像素檢視核實（main cfcf2a5／gh-pages 055b00f／service worker v6）；引號內文改為 1em，筆記反思 18px（手機 17px）；無文章資料或內容更動；01:56 已交付 MM（iMessage phonemsg-01M69HPWAFMD82NJBF0674WFRK）。擱置中 redesign 提案（3172917）已含同修正，核准後不會迴歸。
