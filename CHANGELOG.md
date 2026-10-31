@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.67（2026-11-01）
+
+- 連結入口頁部署疑難（未解決）：03:52 Cloud Shell 提示專案 gate-way-e2551，但 Firebase CLI 顯示「Deploying to bloodflash-2e075」，專案指向不一致、部署完成與影響未知；03:59 gcloud 拒絕 [[gate-way]]（已向 MM 說明：用專案 ID 非顯示名稱、免括號，且 gcloud 設定不影響 Firebase CLI）。已請 MM 停止進一步部署、勿刪除專案，待提供實際專案 ID／完整輸出後以唯讀核對。我方未寫入帳號；部署不標完成（todo user-pending，研究方保留）。
+- 規則無變動，單字頁與遠方誌無變動。
+
 ## v2.2.66（2026-11-01）
 
 - 連結入口頁部署路徑修正：03:38 MM 確認使用 Firebase Cloud Shell 而非 Mac 本機 Terminal；經 Firebase CLI 文件查證，交付簡化 Step 4（上傳 ZIP／解壓／cd／firebase deploy --only hosting --project 專案ID；Cloud Shell 預先驗證、免裝 Node／CLI）。原指南其餘步驟不變；早先 Mac 本機路徑對 MM 環境非必要。MM 自行部署與同步驗證仍待完成；我方未寫入帳號。
