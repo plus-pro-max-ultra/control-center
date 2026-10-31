@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.56（2026-11-01）
+
+- 連結入口頁：MM 2026-11-01 02:24「設計好入口頁面夠告訴我如何在firebase上進行操作直至部署」（phonemsg-01M69K8W1R61N08GK2S5TYN2DQ，iMessage 原文已核對；「夠」依文意為「後」）。MM 自行操作 Firebase console；先前請准 console 檢視／專案名稱之請求已被取代。研究方建置設計檔案與經核實之詳細部署指南（含同步／驗證）中（todo-01M662RV3G7HZQ833TAACSY6N3 agent-owned in_progress）。執行邊界：我方不存取帳號、不部署、不付費。
+- 規則無變動，單字頁與遠方誌無變動。
+
 ## v2.2.55（2026-11-01）
 
 - 連結入口頁：研究方檢視所供 manus.space 站回報——YMcore 分類樞紐採黑／金配色與 oversized 品牌區塊；前端未驗證到 Firebase／同步實作。已向 MM 請求確認三項：YMcore 分類與先前可編輯入口頁合併、Firebase 託管＋同步方向、以專案名稱／連結檢視 Firebase console 之許可。設計提案方向（系統字體、分組連結、自動明暗）尚未核准建置；待 MM 回覆（todo-01M662RV3G7HZQ833TAACSY6N3 user-pending）。無任何更動。
