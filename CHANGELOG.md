@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.61（2026-11-01）
+
+- 遠方誌圖標 A 標記完成：2026-11-01 02:45 上線並經桌機／手機實際像素檢視核實（main 5777229／gh-pages 7a6c734／service worker v8）；標頭、favicon 16/32、apple-touch-icon 180、PWA 192/512 皆更新，舊 icon.svg 移除；完成通知與網址已交付 MM。範圍僅圖標；間距修正預覽仍待 MM 核准、未併入。
+- 規則無變動，單字頁無變動。
+
 ## v2.2.60（2026-11-01）
 
 - 遠方誌圖標 A 獲 MM 核准：2026-11-01 02:41「套用」（phonemsg-01M69M7XBR8H38P5TXMDC5JYQ0，iMessage 原文已核對，承接 02:39 替換核准請求）。maintainer 套用至標頭／favicon／PWA 並核實中（todo-01M69KZQ8W3HD5SYY66PAT50G5 in_progress）；範圍僅圖標，間距修正預覽仍待 MM 核准，兩者不混併。
