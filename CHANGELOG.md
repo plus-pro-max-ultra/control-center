@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.55（2026-11-01）
+
+- 連結入口頁：研究方檢視所供 manus.space 站回報——YMcore 分類樞紐採黑／金配色與 oversized 品牌區塊；前端未驗證到 Firebase／同步實作。已向 MM 請求確認三項：YMcore 分類與先前可編輯入口頁合併、Firebase 託管＋同步方向、以專案名稱／連結檢視 Firebase console 之許可。設計提案方向（系統字體、分組連結、自動明暗）尚未核准建置；待 MM 回覆（todo-01M662RV3G7HZQ833TAACSY6N3 user-pending）。無任何更動。
+- 規則無變動，單字頁與遠方誌無變動。
+
 ## v2.2.54（2026-11-01）
 
 - 連結入口頁：MM 2026-11-01 02:18 告知已自行建立 Firebase 專案，提供 https://ymcorehub-dpz8b6vm.manus.space/ ，要求以先前入口頁為基礎、去除「濃厚AI未」設計風格（「AI未」依文意為「AI味」；三則 iMessage 原文已核對：phonemsg-01M69JY8E5F1MKPEYEQEKT56AJ、phonemsg-01M69JYB4QK1TRD66B9AW21G9W、phonemsg-01M69JYB63V8J5DV5ZDX4HHE8A）。研究方檢視現有功能／同步／設計中（todo-01M662RV3G7HZQ833TAACSY6N3 研究方持有、進行中）；未核准任何更動、廣泛託管豁免、帳號變更或付費。
