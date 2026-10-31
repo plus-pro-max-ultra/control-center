@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.65（2026-11-01）
+
+- 連結入口頁部署支援：03:27 MM 提供的 .read/.write false 規則 JSON 為 Realtime Database 規則語法（非 Cloud Firestore）；已說明差異並指引保留現有 RTDB 規則不動、改用 Build＞Firestore Database＞Rules（若無則以 production 模式建立）。MM 繼續自行操作（todo user-pending）；我方未寫入專案、未部署；實機驗證仍開放，未交付新套件。
+- 規則無變動，單字頁與遠方誌無變動。
+
 ## v2.2.64（2026-11-01）
 
 - 連結入口頁 v1.3.1 套件交付：2026-11-01 02:59 最終 ZIP＋完整雙語 Mac 版 README 已交付 MM（MM 自行部署）。研究方回報測試通過：本機 39 項、模擬器同步 13 項、安全規則 7 項；實際 Firebase 專案／登入／雙裝置同步驗證待 MM 部署後進行。我方未部署、未動帳號、未產生費用；設計建置與套件交付完成，整體部署不標完成（todo-01M662RV3G7HZQ833TAACSY6N3 待 MM）。
