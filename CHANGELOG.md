@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.60（2026-11-01）
+
+- 遠方誌圖標 A 獲 MM 核准：2026-11-01 02:41「套用」（phonemsg-01M69M7XBR8H38P5TXMDC5JYQ0，iMessage 原文已核對，承接 02:39 替換核准請求）。maintainer 套用至標頭／favicon／PWA 並核實中（todo-01M69KZQ8W3HD5SYY66PAT50G5 in_progress）；範圍僅圖標，間距修正預覽仍待 MM 核准，兩者不混併。
+- 規則無變動，單字頁無變動。
+
 ## v2.2.59（2026-11-01）
 
 - 遠方誌圖標：圖標 A（書本＋太陽）已生成並檢視，02:39 交付 MM 完整尺寸＋手機標頭 mock 並請求替換核准；實際質感已向 MM 揭露。待 MM 核准，核准前不更動線上（todo-01M69KZQ8W3HD5SYY66PAT50G5 user-pending）。間距修正預覽之核准 gate 不變。
