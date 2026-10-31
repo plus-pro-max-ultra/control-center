@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.61 2026-11-01 02:45</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.62 2026-11-01 02:50</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -103,6 +103,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>07:00 每日課程：日文、德文隔日輪替，雙語呈現。日文每天 30 個新詞，文法加快（一天可多個重點）；新詞附 note（符合條件時）與 parts（片語）；含隨機複習、練習題、造句作業（隔日批改）、資源連結。德文依教科書單元前進。</li>
 <li>遠方誌每日出刊：每個台北日期一篇新刊；流程與標準見「遠方誌」一節。</li>
 <li>09:00 每日檢查：確認頁面版本、inbox/staging、CONTROL.md 是否有 MM 的修改；只有需要處理的事項才回報。</li>
+<li>22:00 前後遠方誌每日維護（MM 2026-11-01 02:49 新增，出刊結束後）：抽檢文章內容（必含當日新刊，舊文輪替抽檢）＋網站架構與功能例行檢查（類似單字網站 09:00 檢查）。出刊延遲時接在出刊後檢查，不以前一期充當今日新文；無異常則靜默，重大問題回報 main 協調修復。由獨立維護任務執行（todo-01M69MR9JY5N6JYETP3X3KGATV，設置中），與每日出刊流程分開；不承諾固定完成時刻。</li>
 <li>例句回補（隨每日檢查，寬鬆節奏、不密集重試）：查 Tatoeba 是否已出現（a）5 條缺第二句（Ägypten、Wien、das Symbol、Moin、das Pech）（b）13 條例句中文譯文待補（der Aussagesatz、das Nomen、das Personalpronomen 例句、Dänemark 第二句 tid 2310787，及日文 セール第二句 tid 1130520、うどん tid 1771715、うどん第二句 tid 76613、そば tid 684617／76613、焼肉 tid 9054928／10910096、天ぷら tid 837402／75856；tid 76613 同句用於 そば 與 うどん 兩條）的來源句；有才補上並依發布節奏推送。</li>
 <li>進行中：德文第二例句補齊（見目前狀態）。</li>
 </ul>
@@ -137,6 +138,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.62（2026-11-01）</h2>
+<ul>
+<li>遠方誌新增每日維護排程（MM 指示）：MM 2026-11-01 02:49「在十點左右（出刊結束後）加入一個遠方至網站維護排程。包含抽檢文章內容（其中必包含今日新文）以及網站架構的例行檢查（類似單字網站）」（phonemsg-01M69MR01DJZ8ER3V2TZ38DP59，iMessage 原文已核對；「遠方至」依文意為「遠方誌」，「十點」依對話脈絡為台北時間 22:00 前後）。範圍：當日新刊必查＋舊文輪替抽檢＋網站架構／功能例行檢查；出刊延遲時接在出刊後，不以前一期替代；無異常靜默，重大問題回報 main 並與編輯協調修復。由獨立維護任務執行（todo-01M69MR9JY5N6JYETP3X3KGATV 設置中），與每日出刊流程分開；遠方誌 repo 隔離不變、無新付費或帳號、無改版授權。確切涵蓋範圍與節奏待該任務回報後定稿記錄。</li>
+<li>規則無變動，單字頁無變動。</li>
+</ul>
 <h2>v2.2.61（2026-11-01）</h2>
 <ul>
 <li>遠方誌圖標 A 標記完成：2026-11-01 02:45 上線並經桌機／手機實際像素檢視核實（main 5777229／gh-pages 7a6c734／service worker v8）；標頭、favicon 16/32、apple-touch-icon 180、PWA 192/512 皆更新，舊 icon.svg 移除；完成通知與網址已交付 MM。範圍僅圖標；間距修正預覽仍待 MM 核准、未併入。</li>
