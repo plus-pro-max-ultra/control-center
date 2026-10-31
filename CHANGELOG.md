@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.68（2026-11-01）
+
+- 連結入口頁：MM 2026-11-01 04:42「problem solved」（phonemsg-01M69V5VWSDXXZ9697ZFC0YPA3，iMessage 原文已核對）。已停止主動檔案診斷，並向 MM 確認完成範�圍（僅部署上線或含跨裝置同步驗證；待回覆，不預設整體實機驗證完成）。bloodflash-2e075 專案受影響之疑慮保留，不視為已排除或復原。我方無任何更動。
+- 規則無變動，單字頁與遠方誌無變動。
+
 ## v2.2.67（2026-11-01）
 
 - 連結入口頁部署疑難（未解決）：03:52 Cloud Shell 提示專案 gate-way-e2551，但 Firebase CLI 顯示「Deploying to bloodflash-2e075」，專案指向不一致、部署完成與影響未知；03:59 gcloud 拒絕 [[gate-way]]（已向 MM 說明：用專案 ID 非顯示名稱、免括號，且 gcloud 設定不影響 Firebase CLI）。已請 MM 停止進一步部署、勿刪除專案，待提供實際專案 ID／完整輸出後以唯讀核對。我方未寫入帳號；部署不標完成（todo user-pending，研究方保留）。
