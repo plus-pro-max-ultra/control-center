@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.66（2026-11-01）
+
+- 連結入口頁部署路徑修正：03:38 MM 確認使用 Firebase Cloud Shell 而非 Mac 本機 Terminal；經 Firebase CLI 文件查證，交付簡化 Step 4（上傳 ZIP／解壓／cd／firebase deploy --only hosting --project 專案ID；Cloud Shell 預先驗證、免裝 Node／CLI）。原指南其餘步驟不變；早先 Mac 本機路徑對 MM 環境非必要。MM 自行部署與同步驗證仍待完成；我方未寫入帳號。
+- 規則無變動，單字頁與遠方誌無變動。
+
 ## v2.2.65（2026-11-01）
 
 - 連結入口頁部署支援：03:27 MM 提供的 .read/.write false 規則 JSON 為 Realtime Database 規則語法（非 Cloud Firestore）；已說明差異並指引保留現有 RTDB 規則不動、改用 Build＞Firestore Database＞Rules（若無則以 production 模式建立）。MM 繼續自行操作（todo user-pending）；我方未寫入專案、未部署；實機驗證仍開放，未交付新套件。
