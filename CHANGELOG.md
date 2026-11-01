@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.73（2026-11-02）
+
+- 遠方誌對外簡介：MM 2026-11-02 00:27「幫我寫一個遠方誌對外的簡介」（phonemsg-01M6BZ0VW2P2S0NT2WD6SKAWRD，iMessage 原文已核對）；雙語可複製簡介＋網站網址已於 00:29 交付 MM（todo-01M6BZ14GQ4QY8FH6TVQ7C876E 完成）。僅文稿交付，未更動線上網站、未對外發佈。間距修正預覽仍待 MM 核准。
+- 規則無變動，單字頁無變動。
+
 ## v2.2.72（2026-11-01）
 
 - 遠方誌 014 期出刊：2026-11-01 20:45 上線並經像素檢視核實（main 53c3e67／gh-pages 0a6ff75／service worker v8），https://plus-pro-max-ultra.github.io/remote-journal/#/story/escalator-stand-walk 。出刊狀態更新為已出刊 001-014／最新 014 期；夜間維護排程已獲通知。間距修正預覽仍待 MM 核准。
