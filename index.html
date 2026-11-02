@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.105 2026-11-03 03:14</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.106 2026-11-03 03:26</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -122,10 +122,15 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>MM 03:16 大批指示（均 iMessage 原文已核對）：03:16:00「我採用cloudflare方案，擬定詳細計畫。此外，把所有進行作業全部列出。另外追加：一次性多更新十五篇遠方誌內容，依據最新標準進行。所有任務會在約十點驗收」（phonemsg-01M6EV17Y05R45Z5PEGZHM5B4W）；03:16:48「上午十點」（phonemsg-01M6EV2Q8B77XJ6NB0WCV35HSS，驗收＝今日上午約十點）；03:17:44「除整改目前所有內容以符合最新標準，結束厚載以最新標準多更新十五篇」（phonemsg-01M6EV4DSD4VYQNPWD0EM1G61J；「結束厚載」為錯字，依上下文解讀為先後順序：先整改現有全部 15 篇至最新標準，再依同標準新增 15 篇）；03:21:32「ok，但我必須看到進度」（phonemsg-01M6EVBCB17DSWDNR5BQWMBTBB）。</li>
+<li>批次執行約定（主端已回覆 MM）：批次為「整改 15＋新增 15」，獨立於每日一篇常態；事實查核標準不降；實質改寫先交付審閱、核准後才發布，不直接替換線上；時程風險已告知（現有 15 篇整改於十點前可供審閱為發布方評估；新增 15 篇完整品質時程未承諾）；進度回報採逐篇「已改／已查／待補／可審閱」＋06:00 檢查點＋10:00 驗收，重大阻礙提前告知。批次待辦由發布方持有；Cloudflare 詳細計畫草稿 03:19 完成、主端審閱中（尚未交付 MM；規劃不含帳號／部署／廣告申請／費用，GitHub 版不變）；全部作業總覽 File（雙語 PDF，13 項目標＋狀態）03:23 已交付 MM（後續於 06:00／10:00 節點更新）。</li>
+<li>頁首英文名完成（MM 03:16:35「頁面頂部可加入英文名」，phonemsg-01M6EV2APC7GSTJMTEEZCDCER1，已核對）：03:24 上線（main ed5313a、cache v15），375／390／1280px 實際像素檢查通過，手機版英文置於中文下方、各寬度皆可見、導覽完整；03:24 已回覆 MM。</li>
+</ul>
+<ul>
 <li>遠方誌更名上線完成（發布方確認 + 現場驗證，2026-11-03 03:14；main 563ffe8、gh-pages f8917d5、cache v13）：HTML／瀏覽器標題與 PWA manifest name 套用全名「遠方誌 | Journal for Far」；頁面頁首／頁尾與 manifest short_name 維持精簡「遠方誌」；slogan 不變。MM 已由主端明確告知實際更名範圍（03:14），命名待辦（todo-01M6ETRYY94KAJBN0556J3F9RP）完成。無文章內容、版面或平台變動。</li>
 </ul>
 <ul>
-<li>遠方誌正式更名（MM 2026-11-03 03:11）：「正式名稱更名為『遠方誌 | Journal for Far』」（phonemsg-01M6ETRH6A38M9N18DPMWPETG1，iMessage 原文已核對）。發布方已獲通知，依現行變更規則於現有出版面向一致更名；此為命名指示，非平台選擇，不授權建立公開版新站、帳號或付費；平台決定（Blogger／Cloudflare）仍待 MM。</li>
+<li>遠方誌正式更名（MM 2026-11-03 03:11）：「正式名稱更名為『遠方誌 | Journal for Far』」（phonemsg-01M6ETRH6A38M9N18DPMWPETG1，iMessage 原文已核對）。發布方已獲通知，依現行變更規則於現有出版面向一致更名；此為命名指示，非平台選擇，不授權建立公開版新站、帳號或付費；平台決定：MM 2026-11-03 03:16 已選定 Cloudflare（見下）。</li>
 </ul>
 <ul>
 <li>主網站遷移評估（MM 2026-11-03 02:36 提出，研究階段）：「如果我想要把目前在github的主網站遷移到一個獨立的網站（如一般部落格），該如何執行（盡可能不產生維運成本）」（phonemsg-01M6ERSP3F8YVTTEWDDE44PEDN，iMessage 原文已核對）。僅計畫研擬、非執行：盤點現行託管與功能→查證選項之現行費用與限制→提出遷移方案交 MM 決定（涵蓋成本、編輯方式、舊連結處理）。探索期間 GitHub-only 偏好維持；無付費、新帳號、網域購買或部署授權。研究方 agent-01M6ERTHZFPMW2YZRPRVFJ78KC（todo-01M6ERT5NWHNW4XKKKKXWBMB1R）。研究完成（2026-11-03 02:53-02:56）：簡明雙語答覆（02:53，附 Porkbun 官方來源）＋完整雙語 DOCX（02:56）已交付 MM。結論建議：保留免費之現行 GitHub Pages；獨立網域為可選項，與部落格式文章文章頁／RSS／預覽等功能屬不同範疇，編輯器亦屬另一範圍。網域範例之可用性未查；標準 .com 報價為現行每年 US$11.81（結帳稅前，非購買核准）。任何未來切換前須保留本地收藏／筆記並測試舊連結。未接受遷移專案、未授權任何實作、付費、帳號或網域購買。後續指示（2026-11-03 03:01，取代前述遷移建議框架）：MM「我會保留目前的github版作為面向自己的管道，同時將正式版複製到一個全新的地方，主要是想用google廣告營利，至於網址部分主要是因為目前是以github帳號名發佈不美觀，但不一定要有完全自訂獨立網址」（phonemsg-01M6ET6RBH1SYTEFHQX83STFDG，iMessage 原文已核對）。新方向：保留 GitHub 版作為面向 MM 自己之管道；正式版另複製至新平台，主要目的為 Google 廣告營利；網址訴求為美觀（現行含 GitHub 帳號名），平台提供之網址可接受、不需完全自訂獨立網址。工作流（研究階段，todo-01M6ET752Q37YGGC8ZV028XDMS）：查證新平台之 Google 廣告營利資格與條件、費用、平台網址形式、雙平台重複刊登之影響（含 SEO／內容政策），提出方案交 MM 決定；核准方案前不註冊、不發文、不付費、不更動帳號或網域。研究交付（2026-11-03 03:05，待 MM 選平台）：Blogger 與 Cloudflare 雙語比較（附官方連結）已交付 MM，並請 MM 選擇平台以提出正式方案。重點：Blogger 有較明確文件化之 AdSense／編輯流程；Cloudflare 可免費保留現行設計建置（pages.dev 網址原則可行），但 Google 註冊指引說法衝突、核准未經實測；網域為可選；廣告核准與收益均不保證。已提示：雙平台重複內容之搜尋處理、商業使用下之圖片授權複查、隱私相關揭露。GitHub 版維持不變；未授權註冊、部署、付費、noindex 或重新導向。todo-01M6ET752Q37YGGC8ZV028XDMS 轉 user-pending（待 MM 平台偏好）。</li>
@@ -165,6 +170,14 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.106（2026-11-03）</h2>
+<ul>
+<li>MM 03:16 大批指示記錄：選定 Cloudflare 公開版方案（詳細計畫草稿 03:19 完成、主端審閱中；僅規劃，無帳號／部署／廣告／費用，GitHub 版不變）；要求列出所有進行作業（雙語總覽 PDF 03:23 交付 MM，06:00／10:00 節點續更新）；遠方誌批次 03:17 澄清為「先整改現有 15 篇至最新標準，再新增 15 篇同標準」（原文「結束厚載」為錯字，先後順序依上下文解讀）；驗收今日上午約十點（03:16:48「上午十點」）。訊息原文與 ID 見 §10，均已核對。</li>
+<li>批次執行約定：獨立於每日常態；查核標準不降；實質改寫先審後發；進度逐篇回報（已改／已查／待補／可審閱）＋06:00 檢查點＋10:00 驗收，重大阻礙提前告知（MM 03:21「ok，但我必須看到進度」）。</li>
+<li>頁首英文名完成：MM 03:16:35 授權；03:24 上線（main ed5313a、cache v15），375／390／1280px 像素檢查通過，手機版英文置中文下方、各寬度可見、導覽完整。</li>
+<li>平台選擇狀態翻轉：先前「Blogger／Cloudflare 仍待 MM」改為已選定 Cloudflare。</li>
+<li>規則變動：無。單字頁無變動。</li>
+</ul>
 <h2>v2.2.105（2026-11-03）</h2>
 <ul>
 <li>遠方誌更名上線完成：發布方確認 main 563ffe8、gh-pages f8917d5、cache v13 並完成現場驗證。實際更名範圍：HTML／瀏覽器標題與 PWA manifest name →「遠方誌 | Journal for Far」；頁面頁首／頁尾與 manifest short_name 維持「遠方誌」（精簡顯示）；slogan 不變。MM 已由主端明確告知範圍（2026-11-03 03:14），命名待辦完成。無文章內容、版面或平台變動。</li>
