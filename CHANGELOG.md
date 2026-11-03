@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.153（2026-11-04，分支交付待批准）
+
+- MM 樣式指示（01:47:28，phonemsg-01M6H8BXMJD2N346A2AZTMH2V1，搭配截圖，逐字）：「調整遠方誌標題（幾乎切頂）、世界不只發生那個的字體和大小，用明體，世界那行要突出，它值得大小不變」。主線已讀取並回覆；規劃方獲授權於本地分支進行樣式調整與渲染檢查（品牌行頂部留白、「世界不只發生那個」改明體、「世界」行突出、第二行大小不變），並記入既有分支日誌與發布檢查清單（architecture todo 進行中）。推送凍結維持：Workers 預覽配置驗證前不再推送。此為樣式指示，非 Branch control 配置截圖；先前之配置截圖請求仍待 MM 提供。main／正式環境未更動。
+- 規則變動：無。單字頁無變動（維持 v14.59）。
+
 ## v2.2.152（2026-11-04，分支交付待批准）
 
 - 主線請 MM 提供 Settings → Build → Branch control 截圖（01:45：production branch／Enable Preview Builds／Preview command），僅查看不求變更。規劃方於 architecture-v1 推送僅更動日誌之 commit 392d37b（01:43）；主線在配置驗證前停止一切進一步推送。正式環境 01:44 讀取檢查：維持 legacy v25 未變。規劃方更正其初步機制說法：非正式環境之 opt-in Preview command（預設 npx wrangler preview）與正式環境之 npx wrangler deploy 為不同機制，實際是否啟用未知。main／gh-pages 未更動。下一步：待使用者提供配置截圖；規劃方排定 01:56 一次性正式環境複查。CC 不寫 main。
