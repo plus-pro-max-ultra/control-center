@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.123 2026-11-03 12:28</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.124 2026-11-03 15:30</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -122,6 +122,9 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>例句可後補（MM 2026-10-29「以後例句可後補但單字先更新」）：來源例句不足時詞條先收錄，缺的例句或中文譯文明確標「待補」並列入每日檢查回補；仍不得編造內容。</li>
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
+<ul>
+<li>MM 核准 006／014 文意修正（2026-11-03 15:28「修正可以」，phonemsg-01M6G4Z2TXY4GXAR2YRCGGNE3M，iMessage 原文已核對；「邊準」為「標準」錯字）：發布方套用並驗證部署；非新稿發布核准。MM 另問：措辭檢查標準與工具（模型）——主端作答中（僅使用者可理解之準則與能力，不涉內部架構、不宣稱模型排名）；GitHub 文字呈現更易直接編修之需求——依大型改版流程先提方案（含同步保護），方案檢視前不更動結構。新稿 15 篇維持審閱未發布。</li>
+</ul>
 <ul>
 <li>替換稿審閱包 v3（12:28 交付 MM，10 頁 PDF 8b688b3f，主端檢視 3／4／7／8／10 頁與 390px 內嵌）：v1 主端審讀扣下（點字可寫性誤植、1821／1833 時序矛盾、種子庫經費與備份絕對化），v1／v2 均未交付；v3 修正內容並移除讀者版內部生產紀錄。兩篇替換稿待 MM 審閱；新稿 15 篇全部未發布；006／014 文意改寫待 MM 核准（12:08 送出）。</li>
 </ul>
@@ -224,6 +227,16 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.124（2026-11-03）</h2>
+<ul>
+<li>MM 核准兩項文意修正＋兩項新提問（15:28，phonemsg-01M6G4Z2TXY4GXAR2YRCGGNE3M，iMessage 原文已核對）：「修正可以。告訴我措辭檢查的邊準和使用工具（模型）。在資料呈現不作更動的情況下，能把github資料庫對於文字的呈現變得更容易使用以便我直接從那裡進行修改嗎」（「邊準」依文意為「標準」之錯字）。</li>
+<li>核准：006／014 兩項 12:08 送審之文意修正獲准（「修正可以」依上下文指該兩項待審修正，非新稿 15 篇發布核准）；發布方套用並驗證部署。</li>
+<li>提問一：措辭檢查之標準與使用工具（模型）——主端作答中；答覆範圍為實際編輯準則與使用者可理解之能力／限制，不涉內部工具或架構，不宣稱「最好模型」排名。</li>
+<li>提問二（新需求）：在資料呈現不作更動前提下，使 GitHub repo 之文字呈現更易於 MM 直接修改——依大型改版流程先提方案（含發布／同步保護，避免 MM 編修被建置覆蓋）；MM 檢視方案前不更動檔案結構；發布方調查中。</li>
+<li>主端 15:29 已雙語回覆確認。</li>
+<li>規則衝突檢查：無——方案先行符合大型改版流程；帳號／憑證隔離與不產生費用界線不變。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
 <h2>v2.2.123（2026-11-03）</h2>
 <ul>
 <li>替換稿審閱包 v3 交付 MM（12:28）：10 頁 PDF（8b688b3f）交付至原批次指示串；主端實際檢視第 3／4／7／8／10 頁及內嵌 390px 像素。v1（12:17 收到）經主端審讀扣下未交付——點字稿把浮雕印刷「只能讀」之限制誤植到 Barbier 可書寫之 12 點、1821 制度引介與 1833 首次會面之時序矛盾、種子庫經費範圍與備份絕對化表述需精確；v2 亦未交付。v3 修正：點字可寫性區分與反思段、來源矛盾、種子庫經費範圍／無據備份絕對化／電纜錯誤對比；並自讀者版 PDF 移除內部生產紀錄。</li>
