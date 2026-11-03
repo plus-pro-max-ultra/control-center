@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.149（2026-11-04，分支交付待批准）
+
+- 瀏覽器驗證結果（01:31 主線交付）：實際 Workers 網址 https://journal-for-far.learnman.workers.dev/ 提供 legacy v25 內容，article 014 圖片正常，service worker 於根路徑啟用；架構路由 404 屬預期（架構分支未部署）。位址問題實質已解決；未斷言屬改名或新 Worker。下一步使用者選項：提供 architecture-v1 預覽網址，或提供 Deployments／Builds 截圖；不合併 main、不重新部署。實際預覽配置未知；以猜測主機名稱得到 404 不構成證明。規劃方新分類法 9 對 7 之報告與先前截圖矛盾，已退回核對，非使用者決策事項。所有正式環境未更動。
+- 規則變動：無（分支優先與 main 正式批准規則不變）。單字頁無變動（維持 v14.59）。
+
 ## v2.2.148（2026-11-04，分支交付待批准）
 
 - MM 回報本站架設成功（01:27，phonemsg-01M6H776GY7TYXT3WX04PT8Q87）：https://journal-for-far.learnman.workers.dev/ ，並問「架設成功下一步為」（phonemsg-01M6H776HYXCAFBHYK8M0JFSTF，01:27，原文無問號）。主線回應方向：先確認網址與線上狀態，架構預覽檢閱另行處理；main 未更動，廣告在核准頁面／政策前暫緩。規劃方正以瀏覽器驗證中（相關 todo 由 agent 負責、進行中）。新 Worker 名稱 journal-for-far 與原先 remote-journal 截圖不同，實際配置不預設。新站為使用者回報；Instinct curl 檢查（01:28）：HTTP 200，標題《遠方誌 | Journal for Far》；完整功能與 service worker 啟用待瀏覽器驗證。
