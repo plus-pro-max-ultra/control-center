@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.151（2026-11-04，分支交付待批准）
+
+- MM 提供萬用字元形式「*-journal-for-far.learnman.workers.dev」（01:38，phonemsg-01M6H7TK08MAWP4DA11FPPX7E6），非實際網址。MM 截圖（01:41，phonemsg-01M6H80VECCX2V7RQCP6WQNJ8Y，圖片由主線讀取轉述）：Worker Deployments #e1794705，分支 main，「Manually deployed」成功，連接 remote-journal 倉庫，Build command: None／Deploy command: npx wrangler deploy／root: /。主線已讀圖回覆並告知不要 Retry build；規劃方在變更前先驗證 Workers 獨立分支預覽配置，不預設倉庫端 Wrangler 假設。此非 architecture-v1 預覽；未授權任何 Cloudflare 設定變更；main／正式環境未更動。
+- 規則變動：無（分支優先與 main 正式批准規則不變）。單字頁無變動（維持 v14.59）。
+
 ## v2.2.150（2026-11-04，分支交付待批准）
 
 - 更正（規劃方核對 main 459ac8c 對分支 5bf100f 對正式環境後撤回）：v2.2.149 所載「9 對 7 分類」說法屬報告錯誤，已撤回。16 篇 article JSON 之差異僅新增 date 欄位；categories／title／body／source／image 均未變，維持原 7 個分類（014 為社會與城市）。無分類法決策或修復需要。使用者未曾收到該錯誤說法，無需對使用者更正。預覽與分支 SW 啟用仍未查證，待使用者提供網址／截圖佐證；不另向使用者催問。
