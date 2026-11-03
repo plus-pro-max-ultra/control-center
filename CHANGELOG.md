@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.154（2026-11-04，分支交付待批准）
+
+- MM 提供 Branch control 截圖（01:48:34，phonemsg-01M6H8DY0T3ZYF7E39P58VAQM5，主線讀取）：Preview branches ON／Preview URLs disabled／Preview command: npx wrangler preview／Build: None／root: /；另有「Configured API token unavailable」警告（未被證實已撤銷）。主線指示：點 Enable Preview URLs（僅開啟公開連結存取，非合併 main），完成後回傳畫面；不替換、不刪除、不貼上 token。規劃方讀取 GitHub checks：architecture-v1 之 journal-for-far build FAILED（原因未顯示）；舊 remote-journal check 亦 failed（Worker does not exist），不據此推斷改名或新舊 Worker 之身分歷史。主線請 MM 一併提供失敗之 journal-for-far architecture-v1 錯誤日誌與啟用結果；暫不重試、不動 token。推送凍結維持；字體樣式僅本地調整。main／正式環境未更動。
+- 規則變動：無。單字頁無變動（維持 v14.59）。
+
 ## v2.2.153（2026-11-04，分支交付待批准）
 
 - MM 樣式指示（01:47:28，phonemsg-01M6H8BXMJD2N346A2AZTMH2V1，搭配截圖，逐字）：「調整遠方誌標題（幾乎切頂）、世界不只發生那個的字體和大小，用明體，世界那行要突出，它值得大小不變」。主線已讀取並回覆；規劃方獲授權於本地分支進行樣式調整與渲染檢查（品牌行頂部留白、「世界不只發生那個」改明體、「世界」行突出、第二行大小不變），並記入既有分支日誌與發布檢查清單（architecture todo 進行中）。推送凍結維持：Workers 預覽配置驗證前不再推送。此為樣式指示，非 Branch control 配置截圖；先前之配置截圖請求仍待 MM 提供。main／正式環境未更動。
