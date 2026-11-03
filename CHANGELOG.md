@@ -1,5 +1,11 @@
 # 更新紀錄
 
+## v2.2.155（2026-11-04，分支交付待批准）
+
+- 字體樣式進度：規劃方本地 commit 619d23a（未推送）；已取得 390／768／1280 寬度之明體本地渲染證明（本地安裝授權 NotoSerifCJKTC 後渲染）。系統字體之實機外觀不保證一致；網站未加入字體檔。主線在預覽失敗日誌到手前維持推送凍結。MM 回報（01:51:24，phonemsg-01M6H8K2JMMVKD2ZSADMSS38FJ，逐字）：「除了黃框消失沒有變化」（Enable Preview URLs 後）；主線已請 MM 提供失敗之 architecture-v1 journal-for-far 錯誤日誌，Retry build 與 token 維持不動。無正式環境批准或更動。
+- 規則查核（01:52，應主線要求）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145；待批准分支內容為 v2.2.145–154。即時規則狀態：一切更動分支優先、main 合併需 MM 正式批准；Workers 預覽配置驗證前推送凍結；樣式僅本地；token 不動。
+- 規則變動：無。單字頁無變動（維持 v14.59）。
+
 ## v2.2.154（2026-11-04，分支交付待批准）
 
 - MM 提供 Branch control 截圖（01:48:34，phonemsg-01M6H8DY0T3ZYF7E39P58VAQM5，主線讀取）：Preview branches ON／Preview URLs disabled／Preview command: npx wrangler preview／Build: None／root: /；另有「Configured API token unavailable」警告（未被證實已撤銷）。主線指示：點 Enable Preview URLs（僅開啟公開連結存取，非合併 main），完成後回傳畫面；不替換、不刪除、不貼上 token。規劃方讀取 GitHub checks：architecture-v1 之 journal-for-far build FAILED（原因未顯示）；舊 remote-journal check 亦 failed（Worker does not exist），不據此推斷改名或新舊 Worker 之身分歷史。主線請 MM 一併提供失敗之 journal-for-far architecture-v1 錯誤日誌與啟用結果；暫不重試、不動 token。推送凍結維持；字體樣式僅本地調整。main／正式環境未更動。
