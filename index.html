@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.128 2026-11-03 22:05</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.129 2026-11-03 22:15</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -123,6 +123,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>跨模型潤飾試跑指示（MM 2026-11-03 22:14，phonemsg-01M6GW67VJVDVFXHVG0A6T49Q1，iMessage 原文已核對）：「此為最終潤飾套件，使用claude、deepseek、豆包對已完成文章進行審核，從天花那篇開始，回報效果」。套件為 MM 22:10 提供之 ZIP（phonemsg-01M6GVZD594FZ081T80BYXN81V；「中文文字編輯師 v1.0.0」，15 個 Markdown 檔之編輯指南，無腳本或執行檔）。範圍：以 MM 指定之三個外部服務（Claude、DeepSeek、豆包）審核已完成文章，自 008 天花篇起，回報實際效果與保真問題；試跑不替換已刊文字、不發布、不新建帳號或付費。外部服務之實際選用模型與結果可如實回報（與 15:28 內部模型名稱之問分開：內部名稱仍不提供）。套件檢查備註：範例 3 為確定敘述添加「可能」、違反其自身保真原則，模型比較表空白未填；MM 視套件為最終版，輸出若重現此問題應如實回報，不暗中改寫套件。由發布方執行（todo-01M6GW066AF95WBJEHTVGF08EK）。</li>
+<li>夜間稽核收尾（2026-11-03 22:05）：核心架構通過，獨立核實 016 時間措辭更正兩處（第 3 節與來源 4）。一處有限驗證缺口（非確認缺陷）：列印按鈕觸發瀏覽器評估逾時、已復原，實際列印預覽／PDF 未能檢視，保留至次夜抽檢；其餘未完成覆蓋：逐圖片類別、上一頁／下一頁往返、組合篩選；輪替下一篇 007／006；320px 已知限制不變；無需使用者行動。</li>
 <li>006／014 文意修正上線完成（15:32，zine main 7db1ed0／gh-pages 17bc795／SW v21，套用與 12:08 送審版一致）：語言審查全部收尾、無待處理文意項；主端 15:33 雙語通知 MM。措辭檢查標準 15:29 已雙語答覆（不含內部模型名稱／設定、不宣稱排名）。GitHub 直接編修方案 15:31 交 MM 審閱（user-pending）：每篇一可讀 Markdown＋轉換器精確保留文章資料與外觀、存檔不等於線上更新、Actions 自動化另需擁有者權限；未實施。新稿 15 篇未發布。</li>
 </ul>
 <ul>
@@ -230,6 +232,12 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.129（2026-11-03）</h2>
+<ul>
+<li>MM 指示跨模型潤飾試跑（2026-11-03 22:14，phonemsg-01M6GW67VJVDVFXHVG0A6T49Q1，iMessage 原文已核對）：「此為最終潤飾套件，使用claude、deepseek、豆包對已完成文章進行審核，從天花那篇開始，回報效果」。套件為 MM 22:10 提供之 ZIP（phonemsg-01M6GVZD594FZ081T80BYXN81V；「中文文字編輯師 v1.0.0」，15 個 Markdown 檔之編輯指南，無腳本或執行檔）。範圍：以 MM 指定之三個外部服務（Claude、DeepSeek、豆包）審核已完成文章，自 008 天花篇起，回報實際效果與保真問題；試跑不替換已刊文字、不發布、不新建帳號或付費。外部服務之實際選用模型與結果可如實回報（與 15:28 內部模型名稱之問分開：內部名稱仍不提供）。套件檢查備註：範例 3 為確定敘述添加「可能」、違反其自身保真原則，模型比較表空白未填；MM 視套件為最終版，輸出若重現此問題應如實回報，不暗中改寫套件。由發布方執行（todo-01M6GW066AF95WBJEHTVGF08EK）。</li>
+<li>夜間稽核收尾（22:05）：核心架構通過，獨立核實 016 時間措辭更正兩處（第 3 節與來源 4）。一處有限驗證缺口（非確認缺陷）：列印按鈕觸發瀏覽器評估逾時、已復原，實際列印預覽／PDF 未能檢視，保留至次夜抽檢；其餘未完成覆蓋：逐圖片類別、上一頁／下一頁往返、組合篩選；輪替下一篇 007／006；320px 已知限制不變；無需使用者行動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。Markdown 編修方案與新稿 15 篇審閱維持待 MM。</li>
+</ul>
 <h2>v2.2.128（2026-11-03）</h2>
 <ul>
 <li>遠方誌 016 期狹窄事實更正上線（2026-11-03 22:05，zine main 9877dc8／gh-pages 941ca44／SW v23）：第 3 節與來源 4 之「書籍出版後」更正為「原研究選樣期之後」；發布方依原 paper（印本頁 57／59）核實原研究選樣期為 1995–2005 年、所述時期與選樣期不重疊；結論與詮釋不變。主端實際檢視 390 像素更正後頁面，22:05 於原每日錨點串雙語通知 MM。更正 todo-01M6GVFAMECJDEKKGQZ1Y638HK 完成、相關喚醒已移除。新稿 15 篇與結構無更動。</li>
