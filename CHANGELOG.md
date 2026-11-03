@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.147（2026-11-04，分支交付待批准）
+
+- 架構分支首輪檢閱交付（01:21，回覆核准串 phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J）：4 張截圖＋分支比對 https://github.com/plus-pro-max-ultra/remote-journal/compare/main...architecture-v1 。remote-journal 分支 architecture-v1（5bf100fe0f3fd7fb625577da2546f2f73c1831a7），main 維持 459ac8c 未更動。手機版裁切問題已修，本地功能測試通過；Workers 線上預覽與實際 service worker 啟用未查證。MM 要求：若產生預覽網址則提供，勿僅為預覽而合併 main。權利／授權／聯絡之草稿佔位內容待 MM 審閱。todo-01M6H4C053YKQ916BTJH7XC3V5 user-pending（審閱／預覽網址）；無 main 或線上更動。
+- 規則變動：無。單字頁無變動（維持 v14.59）。
+
 ## v2.2.146（2026-11-04，分支交付待批准）
 
 - Workers 網址修正指引交付（01:04）：Workers & Pages 帳號總覽 →「Your subdomain」→ Change 修改帳號子網域；依官方文件 https://developers.cloudflare.com/workers/configuration/routing/workers-dev/ 查證。已向 MM 明示：此為帳號全域設定，影響該帳號其他 Workers 與預覽網址；不需刪除或重新部署；若無此設定選項請截圖回報；未斷言帳號僅一個 Worker。todo-01M6ET752Q37YGGC8ZV028XDMS user-pending（待結果／新網址）。
