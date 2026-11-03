@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.148（2026-11-04，分支交付待批准）
+
+- MM 回報本站架設成功（01:27，phonemsg-01M6H776GY7TYXT3WX04PT8Q87）：https://journal-for-far.learnman.workers.dev/ ，並問「架設成功下一步為」（phonemsg-01M6H776HYXCAFBHYK8M0JFSTF，01:27，原文無問號）。主線回應方向：先確認網址與線上狀態，架構預覽檢閱另行處理；main 未更動，廣告在核准頁面／政策前暫緩。規劃方正以瀏覽器驗證中（相關 todo 由 agent 負責、進行中）。新 Worker 名稱 journal-for-far 與原先 remote-journal 截圖不同，實際配置不預設。新站為使用者回報；Instinct curl 檢查（01:28）：HTTP 200，標題《遠方誌 | Journal for Far》；完整功能與 service worker 啟用待瀏覽器驗證。
+- 規則變動：無（分支優先與 main 正式批准規則不變）。單字頁無變動（維持 v14.59）。
+
 ## v2.2.147（2026-11-04，分支交付待批准）
 
 - 架構分支首輪檢閱交付（01:21，回覆核准串 phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J）：4 張截圖＋分支比對 https://github.com/plus-pro-max-ultra/remote-journal/compare/main...architecture-v1 。remote-journal 分支 architecture-v1（5bf100fe0f3fd7fb625577da2546f2f73c1831a7），main 維持 459ac8c 未更動。手機版裁切問題已修，本地功能測試通過；Workers 線上預覽與實際 service worker 啟用未查證。MM 要求：若產生預覽網址則提供，勿僅為預覽而合併 main。權利／授權／聯絡之草稿佔位內容待 MM 審閱。todo-01M6H4C053YKQ916BTJH7XC3V5 user-pending（審閱／預覽網址）；無 main 或線上更動。
