@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.152（2026-11-04，分支交付待批准）
+
+- 主線請 MM 提供 Settings → Build → Branch control 截圖（01:45：production branch／Enable Preview Builds／Preview command），僅查看不求變更。規劃方於 architecture-v1 推送僅更動日誌之 commit 392d37b（01:43）；主線在配置驗證前停止一切進一步推送。正式環境 01:44 讀取檢查：維持 legacy v25 未變。規劃方更正其初步機制說法：非正式環境之 opt-in Preview command（預設 npx wrangler preview）與正式環境之 npx wrangler deploy 為不同機制，實際是否啟用未知。main／gh-pages 未更動。下一步：待使用者提供配置截圖；規劃方排定 01:56 一次性正式環境複查。CC 不寫 main。
+- 規則變動：無。單字頁無變動（維持 v14.59）。
+
 ## v2.2.151（2026-11-04，分支交付待批准）
 
 - MM 提供萬用字元形式「*-journal-for-far.learnman.workers.dev」（01:38，phonemsg-01M6H7TK08MAWP4DA11FPPX7E6），非實際網址。MM 截圖（01:41，phonemsg-01M6H80VECCX2V7RQCP6WQNJ8Y，圖片由主線讀取轉述）：Worker Deployments #e1794705，分支 main，「Manually deployed」成功，連接 remote-journal 倉庫，Build command: None／Deploy command: npx wrangler deploy／root: /。主線已讀圖回覆並告知不要 Retry build；規劃方在變更前先驗證 Workers 獨立分支預覽配置，不預設倉庫端 Wrangler 假設。此非 architecture-v1 預覽；未授權任何 Cloudflare 設定變更；main／正式環境未更動。
