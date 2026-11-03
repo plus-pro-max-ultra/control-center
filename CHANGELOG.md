@@ -1,5 +1,10 @@
 # 更新紀錄
 
+## v2.2.140（2026-11-04）
+
+- MM 補充部署網址細節（iMessage 原文均已核對）：00:15:44「除此之外還包含了帳號名」（phonemsg-01M6H33WZS39H766W2ZBCSK1S5）、00:16:18「在pages.dev前」（phonemsg-01M6H34Y790JKA0ATE9MDWFEM7）、00:28:26「他自動帶入了我登入時的google帳戶名稱」（phonemsg-01M6H3V4Q5X35KMFD1KNJK3TE2）——部署網址在 pages.dev 前含 MM 之 Google 登入帳戶名稱，係自動帶入、非刻意選擇（主端已更正先前認為刻意選擇之假設）。00:28:56 MM 再指示「先解決這個問題」（phonemsg-01M6H3W1WPZF0YNN577DWZW78P），即優先處理網址含帳戶名稱之問題。完整公開網址仍待 MM 提供以做功能檢查；規劃方研究可查證之網址修正選項（todo-01M6ET752Q37YGGC8ZV028XDMS 轉規劃方 in-progress）。未授權帳號或網站更動；現行 GitHub 版本未更動。
+- 規則變動：無。單字頁無變動（維持 v14.59）。
+
 ## v2.2.139（2026-11-04）
 
 - MM 回報 Cloudflare 部署顯示成功（00:12:38，phonemsg-01M6H2Y72QFP7096H0B09YBDJM，iMessage 原文已核對）：「選擇連結remote-journal專案後以點按部署顯示成功」（原文「點按」與「部署」之間有一個多餘控制字元 U+0008，不影響語意）。此為 MM 回報之狀態，尚未經實際查證；主端已請 MM 提供實際公開網址，以檢查文章、圖片與導航是否正確。todo-01M6ET752Q37YGGC8ZV028XDMS 維持 user-pending（待公開網址）；規劃方已知情。無代理端帳號或網站更動；現行 GitHub 版本未更動。
