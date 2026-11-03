@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.129 2026-11-03 22:15</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.130 2026-11-03 22:20</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -123,7 +123,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>跨模型潤飾試跑指示（MM 2026-11-03 22:14，phonemsg-01M6GW67VJVDVFXHVG0A6T49Q1，iMessage 原文已核對）：「此為最終潤飾套件，使用claude、deepseek、豆包對已完成文章進行審核，從天花那篇開始，回報效果」。套件為 MM 22:10 提供之 ZIP（phonemsg-01M6GVZD594FZ081T80BYXN81V；「中文文字編輯師 v1.0.0」，15 個 Markdown 檔之編輯指南，無腳本或執行檔）。範圍：以 MM 指定之三個外部服務（Claude、DeepSeek、豆包）審核已完成文章，自 008 天花篇起，回報實際效果與保真問題；試跑不替換已刊文字、不發布、不新建帳號或付費。外部服務之實際選用模型與結果可如實回報（與 15:28 內部模型名稱之問分開：內部名稱仍不提供）。套件檢查備註：範例 3 為確定敘述添加「可能」、違反其自身保真原則，模型比較表空白未填；MM 視套件為最終版，輸出若重現此問題應如實回報，不暗中改寫套件。由發布方執行（todo-01M6GW066AF95WBJEHTVGF08EK）。</li>
+<li>跨模型潤飾試跑指示（MM 2026-11-03 22:14，phonemsg-01M6GW67VJVDVFXHVG0A6T49Q1，iMessage 原文已核對）：「此為最終潤飾套件，使用claude、deepseek、豆包對已完成文章進行審核，從天花那篇開始，回報效果」。套件為 MM 22:10 提供之 ZIP（phonemsg-01M6GVZD594FZ081T80BYXN81V；「中文文字編輯師 v1.0.0」，15 個 Markdown 檔之編輯指南，無腳本或執行檔）。範圍：以 MM 指定之三個外部服務（Claude、DeepSeek、豆包）審核已完成文章，自 008 天花篇起，回報實際效果與保真問題；試跑不替換已刊文字、不發布、不新建帳號或付費。外部服務之實際選用模型與結果可如實回報（與 15:28 內部模型名稱之問分開：內部名稱仍不提供）。套件檢查備註：範例 3 為確定敘述添加「可能」、違反其自身保真原則，模型比較表空白未填；MM 視套件為最終版，輸出若重現此問題應如實回報，不暗中改寫套件。由發布方執行（todo-01M6GW066AF95WBJEHTVGF08EK）。後續補充（iMessage 原文均已核對）：22:15「是把套件作為skill丟24模型，據此審查文章」＋「進」（22:15:43 phonemsg-01M6GW844NTH7KMWCJY3RKMD02、22:15:54 phonemsg-01M6GW8FJYNR3VEMQSF4EDGT2G；依文意為「丟進模型」之輸入更正，非 24 個模型）——套件作為 skill 載入指定模型再據此審查，非一般校稿；原生 skill 與完整指令替代方式分開記錄、不宣稱等同。22:16「你要進行最終的整體性把關」（22:16:51 phonemsg-01M6GWA6ZG8CFWJDKS46HPRDN2）——最終整體編輯判斷由 Instinct 把關：原意／來源／邏輯／不確定性／語氣與全文一致性逐項核對，建議附接受／不採用／緩議理由，模型評分不凌駕保真，實質文意修改仍先交 MM 審閱。22:18「用之前授權的google帳號登入」（22:18:34 phonemsg-01M6GWDDGFSEA00VCGGNB8EZAJ，附同一套件 ZIP 重傳）——原 NotebookLM 一次性 Google 授權擴及本次指定平台審查登入；非 Google 全面授權，不含新建帳號／付費／額外 OAuth 權限。現況：Claude 可據此授權登入繼續；DeepSeek／豆包之原生 skill 或替代方式仍待 MM 選擇；三模型皆尚未收到輸入；無網站更動。</li>
 <li>夜間稽核收尾（2026-11-03 22:05）：核心架構通過，獨立核實 016 時間措辭更正兩處（第 3 節與來源 4）。一處有限驗證缺口（非確認缺陷）：列印按鈕觸發瀏覽器評估逾時、已復原，實際列印預覽／PDF 未能檢視，保留至次夜抽檢；其餘未完成覆蓋：逐圖片類別、上一頁／下一頁往返、組合篩選；輪替下一篇 007／006；320px 已知限制不變；無需使用者行動。</li>
 <li>006／014 文意修正上線完成（15:32，zine main 7db1ed0／gh-pages 17bc795／SW v21，套用與 12:08 送審版一致）：語言審查全部收尾、無待處理文意項；主端 15:33 雙語通知 MM。措辭檢查標準 15:29 已雙語答覆（不含內部模型名稱／設定、不宣稱排名）。GitHub 直接編修方案 15:31 交 MM 審閱（user-pending）：每篇一可讀 Markdown＋轉換器精確保留文章資料與外觀、存檔不等於線上更新、Actions 自動化另需擁有者權限；未實施。新稿 15 篇未發布。</li>
 </ul>
@@ -232,6 +232,15 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.130（2026-11-03）</h2>
+<ul>
+<li>MM 補充跨模型潤飾試跑之三項指示（iMessage 原文均已核對）：</li>
+<li>套件載入方式（22:15:43 phonemsg-01M6GW844NTH7KMWCJY3RKMD02「是把套件作為skill丟24模型，據此審查文章」＋22:15:54 phonemsg-01M6GW8FJYNR3VEMQSF4EDGT2G「進」；依文意「丟24模型」接「進」為「丟進模型」之輸入更正，非指 24 個模型）：套件作為 skill 載入三個指定模型，再據此審查文章，非一般校稿。原生 skill 與貼入完整指令之替代方式分開記錄，不宣稱等同；宣稱已安裝 skill 前先核實平台支援。</li>
+<li>最終整體把關（22:16:51 phonemsg-01M6GWA6ZG8CFWJDKS46HPRDN2「你要進行最終的整體性把關」）：由 Instinct 作最終整體編輯判斷，非轉遞模型輸出；逐項核對原意、來源、邏輯、不確定性、語氣與全文一致性，建議分接受／不採用／緩議並附理由；模型評分不凌駕保真；實質文意修改仍先交 MM 審閱才替換已刊文字。</li>
+<li>Google 登入授權（22:18:34 phonemsg-01M6GWDDGFSEA00VCGGNB8EZAJ「用之前授權的google帳號登入」，附同一套件 ZIP 重傳）：先前僅 NotebookLM 一次性之 Google 帳號授權擴及本次指定平台審查登入；非 Google 全面使用授權，不含新建帳號、付費或額外 OAuth 權限。</li>
+<li>試跑現況：Claude 可依此授權繼續登入；DeepSeek／豆包之原生 skill 或完整指令替代方式仍待 MM 選擇，三個模型皆尚未收到文章輸入；發布方已備妥未更動之原生 Claude ZIP 與 008 完整現行文字，無網站更動。todo-01M6GW066AF95WBJEHTVGF08EK 維持 user-pending（DeepSeek 安全密碼連結未使用，待方式選擇）。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
 <h2>v2.2.129（2026-11-03）</h2>
 <ul>
 <li>MM 指示跨模型潤飾試跑（2026-11-03 22:14，phonemsg-01M6GW67VJVDVFXHVG0A6T49Q1，iMessage 原文已核對）：「此為最終潤飾套件，使用claude、deepseek、豆包對已完成文章進行審核，從天花那篇開始，回報效果」。套件為 MM 22:10 提供之 ZIP（phonemsg-01M6GVZD594FZ081T80BYXN81V；「中文文字編輯師 v1.0.0」，15 個 Markdown 檔之編輯指南，無腳本或執行檔）。範圍：以 MM 指定之三個外部服務（Claude、DeepSeek、豆包）審核已完成文章，自 008 天花篇起，回報實際效果與保真問題；試跑不替換已刊文字、不發布、不新建帳號或付費。外部服務之實際選用模型與結果可如實回報（與 15:28 內部模型名稱之問分開：內部名稱仍不提供）。套件檢查備註：範例 3 為確定敘述添加「可能」、違反其自身保真原則，模型比較表空白未填；MM 視套件為最終版，輸出若重現此問題應如實回報，不暗中改寫套件。由發布方執行（todo-01M6GW066AF95WBJEHTVGF08EK）。</li>
