@@ -44,7 +44,7 @@
 
 ## 5. 部署與基礎架構
 
-- 分支優先規則（MM 2026-11-04 01:01:01，phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J，iMessage 原文已核對）：「以後任何更動都先到分支上⋯正式轉移到main必須經過正式批准」——任何更動先提交至分支，附更動日誌（避免正式上線時清理遺漏）；合併 main 須 MM 正式明確批准。適用範圍經 MM 2026-11-04 02:15 澄清：遠方誌（remote-journal，含架構改版與每日出刊）與控制中心本身維持分支優先、正式批准後方合併 main 或上線；單字系統（Shinnigammi-vocab）不經分支關卡，依下條直接上線規則發布。
+- 分支優先規則（MM 2026-11-04 01:01:01，phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J，iMessage 原文已核對）：「以後任何更動都先到分支上⋯正式轉移到main必須經過正式批准」——任何更動先提交至分支，附更動日誌（避免正式上線時清理遺漏）；合併 main 須 MM 正式明確批准。適用範圍經 MM 兩次澄清：2026-11-04 02:15 澄清單字系統（Shinnigammi-vocab）不經分支關卡、依下條直接上線規則發布；2026-11-04 09:04（phonemsg-01M6J1B6YXPTZAD7Q3NHHSCCJX，iMessage 原文已核對）「控制中心及單字的更新皆為自動推送，僅遠方誌須經手動核准」——控制中心更新亦改為自動推送（依既有規則直接發布 main，不再逐次等待批准）；僅遠方誌（remote-journal，含架構改版與每日出刊）維持分支優先、合併 main 或正式上線前須 MM 正式明確批准。
 - 單字系統直接上線規則（MM 2026-11-04 02:15:15，phonemsg-01M6H9YPTKD89WWHVJHD8N8K6W，iMessage 原文已核對）：「這屬於德文單字，單字系統更新直接上線（相關規定均遵照控制中心）」——單字頁（Shinnigammi-vocab）更新不經分支批准關卡，在控制中心既有規則下直接發布至 main 上線：來源查核、基本形、去重、詞條欄位與例句 待補 規則照舊；MM 明確需求即時發布，功能類更新驗證後 15 分鐘發布；每次發布附控制中心同步記錄。此為分支優先規則之範圍澄清，非廢止該規則。
 - 部署規則（MM 2026-10-22）：不使用 Instinct 內建的網頁部署；網站一律用 GitHub repo + GitHub Pages。
 - Repos：plus-pro-max-ultra/Shinnigammi-vocab（單字頁）、plus-pro-max-ultra/control-center（本文件與本站）、plus-pro-max-ultra/remote-journal（遠方誌）。
