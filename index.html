@@ -24,7 +24,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.165 2026-11-04 09:06</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.166 2026-11-04 09:08</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -71,6 +71,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s5">5. 部署與基礎架構</h2>
 <ul>
+<li>分支優先規則（MM 2026-11-04 01:01:01，phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J，iMessage 原文已核對）：「以後任何更動都先到分支上⋯正式轉移到main必須經過正式批准」——任何更動先提交至分支，附更動日誌（避免正式上線時清理遺漏）；合併 main 須 MM 正式明確批准。適用範圍經 MM 兩次澄清：2026-11-04 02:15 澄清單字系統（Shinnigammi-vocab）不經分支關卡、依下條直接上線規則發布；2026-11-04 09:04（phonemsg-01M6J1B6YXPTZAD7Q3NHHSCCJX，iMessage 原文已核對）「控制中心及單字的更新皆為自動推送，僅遠方誌須經手動核准」——控制中心更新亦改為自動推送（依既有規則直接發布 main，不再逐次等待批准）；僅遠方誌（remote-journal，含架構改版與每日出刊）維持分支優先、合併 main 或正式上線前須 MM 正式明確批准。</li>
+<li>單字系統直接上線規則（MM 2026-11-04 02:15:15，phonemsg-01M6H9YPTKD89WWHVJHD8N8K6W，iMessage 原文已核對）：「這屬於德文單字，單字系統更新直接上線（相關規定均遵照控制中心）」——單字頁（Shinnigammi-vocab）更新不經分支批准關卡，在控制中心既有規則下直接發布至 main 上線：來源查核、基本形、去重、詞條欄位與例句 待補 規則照舊；MM 明確需求即時發布，功能類更新驗證後 15 分鐘發布；每次發布附控制中心同步記錄。此為分支優先規則之範圍澄清，非廢止該規則。</li>
 <li>部署規則（MM 2026-10-22）：不使用 Instinct 內建的網頁部署；網站一律用 GitHub repo + GitHub Pages。</li>
 <li>Repos：plus-pro-max-ultra/Shinnigammi-vocab（單字頁）、plus-pro-max-ultra/control-center（本文件與本站）、plus-pro-max-ultra/remote-journal（遠方誌）。</li>
 <li>單字頁 pipeline：src/（app.js 可讀化 bundle、words.json 單行 JSON、style.css、模板三件套）→ tools/build.py 內嵌資料與版本戳產出單一 index.html → tools/push.sh 以 vault 取 PAT、clone、同步、提交、推送 → tools/smoke.js 以無頭 Chrome 跑 18 項冒煙檢查（0 page errors 才推送）。原始碼可讀化後存於 repo，repo 是唯一來源；工作區每次任務重建，遺失不影響。Pages 從 main 根目錄發佈，部署延遲約 1-2 分鐘，以帶隨機參數的網址驗證版本戳。</li>
@@ -98,10 +100,12 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>首頁呈現（MM 2026-10-28「新增的文章應該放在today’s selection不然難以閱讀」）：首頁 Today’s Selection 固定展示最新一期，不輪替舊文；新期刊出後即成為首頁主選。</li>
 <li>作業流程：選題（不重複已出刊主題）→ 實際開啟來源查證（每個關鍵主張對應實際讀過的來源，優先一手或官方資料）→ 依固定結構撰寫 → 事實與編輯審查（已查證事實、推論、學界爭議與未知分開標示；數字附來源、單位與年份；來源連結可點並對應其支持的主張）→ 發佈前語言審查（MM 2026-11-03 11:42，見下條）→ 發佈 → 網站驗證與桌機、手機實際閱讀檢查 → 核對當日刊期避免重複出刊 → 向 MM 交付當期連結與簡介。</li>
 <li>編輯檢核（MM 2026-11-02 01:46 核准，探索導向、非數據配額）：五項檢核作為探索議題的視角——每期回答一個具體問題；解釋有證據支持（證據不必是數字）；因果鏈分清觀察與推論；面對最強反例並說明適用限制；結論說明證據能支持到何處。保留敘事、情感、人的經驗與詮釋；分清「來源能證明什麼」與「我如何理解它」，不刪詮釋、不以資料填滿版面；假設例證可用於教學，但不得作為現實主張的唯一依據。已刊文章之實質改寫須先交 MM 審閱，再替換線上內容。</li>
+<li>編修結構與深度（MM 2026-11-04 09:05:58 指示，phonemsg-01M6J1ERR0A16B9ED7XF4RFG20，iMessage 原文已核對）：「關於十五篇編修全文，再度進行研究，深度不足，不要為了版面就統一只寫四段」——深度優先於版面一致性：各篇依其故事決定結構與長度，不為版面統一段落數或篇幅；加深實際解釋、證據與未決問題，不以內容填充版面。</li>
 <li>表達形式（MM 2026-11-03 01:11 指示加入寫稿準則，phonemsg-01M6EKX3JMGSNTBYWMYHD5C0ED）：「可以利用圖表、圖片或引用等文字或非文字的方法來支撐內容敘述」——用以解釋、佐證或加深理解，而非填滿版面；與探索導向、保留情感與詮釋之編輯平衡一致。</li>
 <li>來源連結內嵌（MM 2026-11-03 01:43 指示加入寫稿準則，phonemsg-01M6ENQ4B7K8CEHW4NX97M4688）：「在文章中的事實來源敘述，可以直接把連結嵌入文本」——事實來源連結可直接嵌入相關敘述文字，讀者讀到該主張時即可點開查證；不溯及改寫全部已刊文章。後續：MM 01:45「關於文內連結具體模式可以參照維基百科的形態」（phonemsg-01M6ENV3G6WAEDNF3PD91KG5T7，iMessage 原文已核對）——文內連結之具體呈現參照維基百科形態；確切渲染方式以預覽交 MM 檢閱後定案。上標編號密度（MM 2026-11-03 02:33 指示，phonemsg-01M6ERK8X6CWGZMZ2RHCWABKFM，iMessage 原文已核對）：「對於編號索引不要這麼多，在提到數據提供單位時放一個就夠了，不必逐句顯示」——引用編號在提到數據提供單位時標示一次，不逐句重複；仍需可辨識何來源支持何主張，但同一單位之連貫敘述不逐句加標。</li>
 <li>圖表品質（MM 2026-11-03 02:34 指示加入寫稿準則，phonemsg-01M6ERNWSSM5FKMHCJF2BK3BY1，iMessage 原文已核對）：「對於使用圖表，要注意製圖美觀性、顯示效果及版面因素」——圖表須兼顧美觀、實際顯示效果與版面協調（含行動裝置），屬規則校準，非新圖表或全站重設計指示。</li>
 <li>發佈前語言審查（MM 2026-11-03 11:42 指示加入發佈前最終流程，phonemsg-01M6FR1CXW6595MXJ2C2XNR463，iMessage 原文已核對）：「用中文寫作理解最好的模型跑一遍目前所有已刊出文章，避免任何不自然語句、不精準用詞（這個流程同時加到發佈前最終流程）」——發佈前最終流程加入中文語句審查（不自然語句、不精準用詞）；模型選擇以可取得之最適中文寫作理解能力為準，實際能力由執行方查證後確定，不虛構排名；首次執行範圍為全部已刊出文章，於種子庫／點字替換稿動筆前優先完成。語彙潤飾與實質改寫依既有授權區分，審查保留原意、事實限定與引用。</li>
+<li>發佈規則（MM 2026-11-04 01:01:01 分支優先規則＋02:15:36「遠方誌相關規定亦須同步更新至控制中心」phonemsg-01M6H9ZB6MVN2N0CW2TBZXRTZP 指示同步，iMessage 原文已核對）：遠方誌之一切更動——含每日出刊、架構改版、內容、樣式與設定——先提交分支並附更動日誌（避免正式上線時清理遺漏）；合併 main 或正式上線前須 MM 正式明確批准；預覽以分支比對、截圖或獨立預覽網址交付，不為預覽而合併 main。此規則與單字系統直接上線規則明確區分（見 §5）。</li>
 <li>界線：不動用單字頁的程式、資料與憑證；不產生費用；涉及聯絡他人或金錢，依最高限制先取得 MM 確認。</li>
 </ul>
 <h2 id="s8">8. 每日任務</h2>
@@ -110,7 +114,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>遠方誌每日出刊：每個台北日期一篇新刊；流程與標準見「遠方誌」一節。</li>
 <li>09:00 每日檢查：確認頁面版本、inbox/staging、CONTROL.md 是否有 MM 的修改；只有需要處理的事項才回報。</li>
 <li>遠方誌每日維護（MM 2026-11-01 02:49 新增，出刊結束後；2026-11-01 設置完成，首查 11/1 晚）：每日 21:55–22:10 台北（wakeschedule-01M69MVP4QD20AQRGGG12GDBX5）。涵蓋：出刊 ledger／日期／線上 Today's Selection 核對；當日新文必查＋舊文 2 篇輪替（013 期起納入輪替）；來源連結檢查＋具實質來源主張抽核（非僅格式、非逐條窮盡）；桌機／手機渲染像素檢查；首頁／標頭／圖標、文章庫關鍵字／分類／月份篩選與 24 篇分頁、首頁搜尋 12 筆後導向文章庫、下一篇順序、上一頁／下一頁／收藏、manifest／圖標／SW 一致性。唯讀；修復經 main＋編輯協調；無異常靜默。出刊延遲：60 分鐘後複查，約 23:30 停止輪詢，但出刊方明確交接後仍保留當日新文必查。由獨立維護任務執行（agent-01M69MRNW6BAWDNE6XHH4AZH1R，todo-01M69MR9JY5N6JYETP3X3KGATV），與每日出刊流程分開；不承諾固定完成時刻。</li>
-<li>例句回補（隨每日檢查，寬鬆節奏、不密集重試）：查 Tatoeba 是否已出現（a）1 條缺第二句（Moin；Tatoeba 僅低地德語結果不可用）（b）16 條例句中文譯文待補（der Aussagesatz、das Nomen、das Personalpronomen 例句、Dänemark 第二句 tid 2310787，及日文 セール第二句 tid 1130520、うどん tid 1771715、うどん第二句 tid 76613、そば tid 684617／76613、焼肉 tid 9054928／10910096、天ぷら tid 837402／75856；tid 76613 同句用於 そば 與 うどん 兩條；2026-11-01 新增德文 Wien 第二句 tid 4833997、das Symbol 第二句 tid 2067097、das Pech 第二句 tid 10113813）的來源句；有才補上並依發布節奏推送。</li>
+<li>例句回補（隨每日檢查，寬鬆節奏、不密集重試）：查 Tatoeba 是否已出現（a）1 條缺第二句（Moin；Tatoeba 僅低地德語結果不可用）（a2）2026-11-04 德文 L4–6 批次新增待回補：2 條缺來源例句（de-624 die Homepage、de-762 die Schorle；de-735 ins Fitness-Studio gehen 有已查證候選 tid 8088438「Ich gehe ins Fitnessstudio.」德英句、無中文，候選已查證屬實可由回補採用並標中文待補）＋63 句例句中文譯文待補（zhPending；來源無中文譯文，不編造）（b）16 條例句中文譯文待補（der Aussagesatz、das Nomen、das Personalpronomen 例句、Dänemark 第二句 tid 2310787，及日文 セール第二句 tid 1130520、うどん tid 1771715、うどん第二句 tid 76613、そば tid 684617／76613、焼肉 tid 9054928／10910096、天ぷら tid 837402／75856；tid 76613 同句用於 そば 與 うどん 兩條；2026-11-01 新增德文 Wien 第二句 tid 4833997、das Symbol 第二句 tid 2067097、das Pech 第二句 tid 10113813）的來源句；有才補上並依發布節奏推送。</li>
 <li>進行中：德文第二例句補齊（見目前狀態）。</li>
 </ul>
 <h2 id="s9">9. 資料規則</h2>
@@ -123,6 +127,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>架構計畫核准＋分支優先新規（MM 2026-11-04 01:01:01，phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J，iMessage 原文已核對）：「計畫批准，以後任何更動都先到分支上（github版網頁應該可以預覽改變之後的樣子?），正式轉移到main必須經過正式批准（建議在進行分支上的更新時寫一個更動日誌避免正式上線時有些地方需要刪除等有所遺漏）」。架構計畫（e9995b8e）獲准進入分支作業：更動先上分支、附更動日誌與上線清理核對清單、合併 main 須正式明確批准；預覽方式另行查證（不取代現行 GitHub 線上版）；合併目標未決，不阻擋分支準備。架構分支首輪檢閱交付（2026-11-04 01:21）：architecture-v1（5bf100f）4 張截圖＋main...architecture-v1 比對交付 MM；main 維持 459ac8c；手機裁切已修、本地功能測試通過；Workers 線上預覽與 SW 啟用未查證；MM 指示有預覽網址則提供、勿僅為預覽合併 main；權利／授權／聯絡佔位草稿待審。todo-01M6H4C053YKQ916BTJH7XC3V5 user-pending。MM 回報本站架設成功（2026-11-04 01:27，phonemsg-01M6H776GY7TYXT3WX04PT8Q87）：https://journal-for-far.learnman.workers.dev/（Worker 名稱 journal-for-far，與原 remote-journal 截圖不同，實際配置不預設）；MM 問「架設成功下一步為」（phonemsg-01M6H776HYXCAFBHYK8M0JFSTF）。主線：先驗證線上、架構預覽另行檢閱、廣告暫緩至核准頁面／政策；Instinct curl 01:28 見 HTTP 200《遠方誌 | Journal for Far》，完整功能與 SW 啟用待瀏覽器驗證（規劃方進行中）。瀏覽器驗證完成（2026-11-04 01:31 主線交付）：實際 Workers 網址提供 legacy v25、article 014 圖片正常、SW 根路徑啟用；架構路由 404 屬預期。位址問題實質解決，未斷言改名或新 Worker。下一步：使用者提供 architecture-v1 預覽網址或 Deployments／Builds 截圖；不合併 main、不重新部署；猜測主機名稱 404 非證明。規劃方 9 對 7 分類報告與先前截圖矛盾，退回核對。正式環境未更動。更正（同日核對撤回）：9 對 7 說法屬報告錯誤；16 篇 article JSON 差異僅新增 date 欄位，其餘欄位未變、維持原 7 分類（014 社會與城市）；無分類決策或修復需要，使用者未收到錯誤說法、無需更正。預覽與分支 SW 啟用仍未查證，待使用者網址／截圖佐證。MM 提供萬用字元 *-journal-for-far.learnman.workers.dev（01:38，非實際網址）與 Deployments 截圖（01:41，phonemsg-01M6H80VECCX2V7RQCP6WQNJ8Y）：#e1794705 main 手動部署成功、連接 remote-journal、Build None／Deploy npx wrangler deploy／root /。主線告知勿 Retry build；規劃方先驗證獨立分支預覽配置再動；非 architecture-v1 預覽；未授權 Cloudflare 設定變更；正式環境未更動。主線請 MM 提供 Settings → Build → Branch control 截圖（01:45，僅查看）。規劃方推送 architecture-v1 日誌 commit 392d37b（01:43）後，主線於配置驗證前停止進一步推送；正式環境 01:44 複查維持 legacy v25。規劃方更正機制說法：Preview command（預設 npx wrangler preview）與正式 npx wrangler deploy 屬不同機制，啟用狀態未知。待使用者配置截圖；規劃方 01:56 一次性正式環境複查。MM 樣式指示（2026-11-04 01:47:28，phonemsg-01M6H8BXMJD2N346A2AZTMH2V1，逐字）：「調整遠方誌標題（幾乎切頂）、世界不只發生那個的字體和大小，用明體，世界那行要突出，它值得大小不變」。規劃方獲授權本地分支樣式與渲染（頂部留白／明體標語／世界行突出／第二行大小不變），推送凍結維持至預覽配置驗證；Branch control 截圖請求仍待 MM。正式環境未更動。MM 提供 Branch control 截圖（01:48:34，phonemsg-01M6H8DY0T3ZYF7E39P58VAQM5）：Preview branches ON／Preview URLs disabled／Preview command npx wrangler preview／Build None／root /；API token unavailable 警告（未證實撤銷）。主線指示啟用 Preview URLs（公開連結存取，非合併 main）並回傳；勿動 token。GitHub checks：architecture-v1 journal-for-far build FAILED（原因未顯示）；舊 remote-journal check failed（Worker does not exist），不推斷身分歷史。待 MM 提供錯誤日誌與啟用結果；推送凍結、樣式僅本地。正式環境未更動。字體進度：本地 commit 619d23a 未推送；390／768／1280 明體渲染證明已取得（本地安裝授權 NotoSerifCJKTC）；實機系統字體外觀不保證，網站未加字體檔。MM 01:51:24「除了黃框消失沒有變化」（phonemsg-01M6H8K2JMMVKD2ZSADMSS38FJ）；主線請 MM 提供失敗建置錯誤日誌，Retry／token 不動。規則查核 01:52：main 9717e64 未變、無 MM 編輯、遠端僅 main 與 cc-v2.2.145。正式環境未更動。規劃方 01:56 一次性正式環境唯讀複查：journal-for-far Worker 維持 legacy v25；根 200、refreshEdition 在；無 archive／feed 參照（feed.xml、archive 404）；無持續監控。字體本地預覽 390／1280 已 01:53 交付 MM（附實機字體 caveat，不推送不發布）。規則查核 01:57：main 9717e64 未變、無 MM 編輯。正式環境未更動。MM 02:02:51 指正（phonemsg-01M6H980MPXCYW2SRZQEXFA656，逐字）：「預覽圖看起來手機版畫面遠方誌三字幾乎切頂」；主線認可前次未修到位，規劃方以實際字形頂部空間本地修訂（原指示錨點 phonemsg-01M6H8BXMJD2N346A2AZTMH2V1 不變），推送凍結、不動 main／正式環境；解除阻塞者為規劃方。規則查核 02:03：main 9717e64 未變、無 MM 編輯。正式環境未更動。字體修訂：本地 6eff12b（未推送）；根因為 480px 媒體查詢 padding 0 12px 覆蓋垂直留白，改手機 26／16、平板 30／18、桌面 14／12；主線目視 390px 通過並於 02:05 交付原指示串。更正：行動版第二行前後實為 28.9px（非先前回報 31.2px），大小不變結論成立。預覽錯誤日誌仍待 MM。規則查核 02:05：main 9717e64 未變、無 MM 編輯。正式環境未更動。MM 02:07:10 指示（phonemsg-01M6H9FWWYV5Y9W070K9G75E2G，逐字「在」應為「再」）：「在多研究十篇主題，並且把目前近乎完工的文章編修到可隨時上線的程度」。交既有發布方：延伸 new15 批次（不取代、非十篇完整文章），依既有編輯準則，分支優先、非發布批准；架構推送凍結不變，內容準備獨立進行。規則查核 02:07：main 9717e64 未變、無 MM 編輯。正式環境未更動。MM 02:12:09「單字新增」（phonemsg-01M6H9S1AKJ81YZSYP93TVPR2K，6 張照片，todo-01M6H9SJEDDQ4QFMGQZSNBGJAB）：Lernwortschatz 第 4–6 章全數可讀；謄寫 304 條、去重後新增 287 條（debook-L4／L5／L6，自 de-509）；明確授權不受德語暫停限制；分支優先、無正式發布；例句依來源查核與 待補 規則。規則查核 02:12：main 9717e64 未變、無 MM 編輯。正式環境未更動。MM 發布澄清（02:15:15，phonemsg-01M6H9YPTKD89WWHVJHD8N8K6W，逐字）：「這屬於德文單字，單字系統更新直接上線（相關規定均遵照控制中心）」。單字系統更新依控制中心既有規則直接上線（MM 明確需求即時發布、查核與 待補 規則照舊）；遠方誌 main／架構正式批准與凍結不變；控制中心本身仍分支交付待批准。MM 02:15:36 指示（phonemsg-01M6H9ZB6MVN2N0CW2TBZXRTZP，逐字）：「遠方誌相關規定亦須同步更新至控制中心」——已於 §5／§7 完成規則同步（分支優先＋更動日誌＋正式批准，與單字系統直接上線區分）；MM 未明言批准整個待批准分支合併 CC main，已回報釐清。範圍未釐清前從寬：各 repo 直接 main 推送暫停，本記錄以分支 cc-v2.2.145 交付待批准。發布方與夜間稽核已獲通知僅分支作業；每日出刊是否受規範待釐清。每日出刊維持正式批准關卡、無例外；規劃方提供發布方之遠方誌獨立憑證標籤與安全程序（無密碼值）供已核准分支推送，不推 main。</li>
+<li>Cloudflare 截圖查證（phonemsg-01M6H5QNG3S7EPP44TFHHNWPAA，2026-11-04 01:01:26 收訖，檔名時間 00:55）：主端實際檢視——Workers 部署（remote-journal.&lt;帳號子網域&gt;.workers.dev 正式與預覽網址，無自訂網域），非 Pages；先前 Pages 改名指引不適用，主端已更正並致歉。規劃方查證 Workers 帳號子網域修正方式中；無帳號或網站更動。修正指引交付（2026-11-04 01:04）：Workers &amp; Pages 帳號總覽 →「Your subdomain」→ Change；依官方文件（developers.cloudflare.com/workers/configuration/routing/workers-dev/）查證；已明示帳號全域影響、不需刪除／重新部署、無此選項請截圖；未斷言僅一個 Worker。todo user-pending（待結果／新網址）。</li>
 <li>GitHub 架構改版規劃（MM 2026-11-04 00:37:15 提出，phonemsg-01M6H4BA0XDRCYFNH88F5X2QBB，iMessage 原文已核對）：「現在開始規劃如何改動github架構以符合每個頁面一個html（可能還有RWD?）、RSS、隱私政策、關於頁面、版權標示、聲明、刪除目前的更新按鍵」——規劃階段（§2 大型改版流程：先提計畫→MM 逐輪檢視），不含線上更動；範圍含每頁一個 HTML（RWD 需求一併評估）、RSS、隱私政策、關於頁面、版權標示、聲明、移除現行「更新內容」按鍵（無按鍵之更新邏輯一併規劃）。由 Cloudflare 規劃方負責規劃；每日出刊流程不變。保留現行 GitHub 版本或另建新架構之範圍問題未決，實作前先釐清。規劃方已更正先前空白建置指令之說：python 建置→dist 正確、相對路徑資源皆在來源，根網址上線狀態仍未查證。</li>
 </ul>
 <p>計畫交付（2026-11-04 00:46，回覆原需求串）：修正版 11 頁 PDF（e9995b8e）＋可編輯 DOCX（1d7c469c），主端檢視第 7-10 頁像素；較早版（124f6cc3）扣下。更正：全頁面實體 HTML（非僅文章）、如實描述現行 main→本地建置→gh-pages 流程（不採未查證之 Cloudflare 監看分支假設）、隱私區分 localStorage 與託管方日誌、HTML／資料／RSS 採 network-first 且閱讀中不強制重載。建議預設值僅供審閱，非建置／發布授權；無分支／repo／網站更動，每日出刊不受影響。todo-01M6H4C053YKQ916BTJH7XC3V5 user-pending；合併目標（現行 repo 或獨立官方 repo）未決。</p>
@@ -216,7 +222,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <ul>
 <li>控制中心：v2.2.47（本站，https://plus-pro-max-ultra.github.io/control-center/ ）。</li>
-<li>單字網頁：v14.59。日文不重複條目 1353＝非題庫 170＋題庫 1183（N5 616＋N4 567）；其中教學條目 275 條，內含 105 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。日文第十課「週末活動」單元 30 條（16 沿用題庫＋14 新收錄；9 條例句中文譯文待補，列入每日檢查回補，未編造）。日文第十一課「早晨生活」單元 30 條（15 沿用題庫＋15 新收錄；朝寝坊／味噌汁／納豆 共 6 句例句中文譯文待補，列入每日檢查回補，未編造）。德文 408 條（382 條有 2 句例句）。「語言基礎」獨立課程：日文 50 條、德文 58 條，與一般單元分流。</li>
+<li>單字網頁：v14.61。日文不重複條目 1353＝非題庫 170＋題庫 1183（N5 616＋N4 567）；其中教學條目 275 條，內含 105 條沿用題庫既有條目與進度（屬於題庫的一部分，不另新增）。日文第十課「週末活動」單元 30 條（16 沿用題庫＋14 新收錄；9 條例句中文譯文待補，列入每日檢查回補，未編造）。日文第十一課「早晨生活」單元 30 條（15 沿用題庫＋15 新收錄；朝寝坊／味噌汁／納豆 共 6 句例句中文譯文待補，列入每日檢查回補，未編造；v14.59 曾因 Od() 缺少 morning 分支致 15 沿用詞誤植「數字與計數」單元，v14.61 修復並遷移歸位，自訂單元與進度保留）。德文 695 條（Lektion 1–6；L4/L5/L6 於 v14.60 新增 287 條 de-509..de-795，其中 284 條附來源例句、63 句例句中文譯文待補、3 條例句待補）。「語言基礎」獨立課程：日文 50 條、德文 58 條，與一般單元分流。</li>
 <li>德文第二例句：387/408 完成；20 條各保留 1 句（19 條確定無附中文來源句＋Moin 暫無可用來源句，均已標出回報，未編造）；7 條例句中文譯文待補（3 條文法詞例句僅德英、Dänemark 第二句已補德英來源句，及 2026-11-01 新增 Wien tid 4833997、das Symbol tid 2067097、das Pech tid 10113813 第二句僅英文）。以上缺句缺譯列入每日檢查回補。2026-11-01 回補（v14.58）：Ägypten（de-501）第二句 tid 370486 含中文（來源簡體、OpenCC 轉繁）；Wien（de-502）、das Symbol（de-503）、das Pech（de-505）各補第二句、中文待補。</li>
 <li>遠方誌長期架構與設計改版（已完成上線）：MM 2026-11-01 01:14 提出（iMessage 原文已核對：「標題標語本身不錯，但可以多做設計（兩個具靠看起來很生硬，手機版看看起來很突兀。）重新考量總表的設置形式，由於文章數量會持續增加，應該要有可以快速選擇想要閱讀文章的方法而不是滑到底部（文章塊和列表不斷變長也不是好的網頁設計）。因此以長期運作的架構重新歸或網頁的設計。」；依文意為重新規劃）。重點：標題標語的字體編排與留白加強（手機版尤為突兀）；重新考量主題總表設置形式——文章數持續增加，需能快速選擇想讀的文章，而非滑到底部；以長期運作的架構重新規劃網頁設計。已回覆：先交付整體架構與手機／電腦版設計供 MM 審閱，核准前不更動正式網站（§2 大型改版流程）。由遠方誌 maintainer 負責提案；現行版本維持線上，每日出刊不變。設計提案 V3 已交付 MM 審閱（2026-11-01 01:28，待核准）：首頁精簡為最新 6 篇＋Today’s Selection＋一週預告；文章庫獨立頂層導覽，含關鍵字／分類／月份篩選；真正的替換式分頁（每頁 24 篇，非無限加長）；首頁搜尋顯示 12 筆後導向文章庫；返回時保留篩選、頁碼與捲動位置；標語字體編排細修。提案僅在本機分支（redesign-mock，提交 3172917，已含字體修正），提案時正式站 main 為 a1e09c8（後經 cfcf2a5 字體修正，現為 d067b5f）；以 313 篇合成文章測試規模後已清理。核准前未部署。後續：MM 01:47 提問「點名稱能否導向文章?」（已答覆：首頁卡片與文章索引點標題即開啟文章，改版亦保留）；MM 01:50 內文排版回饋（見遠方誌狀態列修正項）。以上均非當時之改版核准。核准：MM 2026-11-01 01:58「批准長期運作版本的網站設計」（phonemsg-01M69HTB1K20TCPG2CH5WDZXQX，iMessage 原文已核對），V3 架構改版獲准；maintainer 部署中（替換式分頁每頁 24 篇、關鍵字／分類／月份篩選、首頁精簡、保留標題連結與字體修正；以現行 main cfcf2a5／SW v6 調和 held 分支 3172917）。已於 2026-11-01 02:07 上線並經桌機／手機像素檢視核實（main d067b5f／gh-pages 8211dc7／service worker v7）：頂層導覽文章庫＋月份／分類／關鍵字篩選、替換式分頁每頁 24 篇、首頁精簡（最新 6 篇／搜尋 12 筆）、標語字體編排、標題連結與引用／筆記字體修正均保留，已交付 MM。此核准僅及遠方誌改版，不及連結入口頁託管方案，GitHub-only 規則不變。</li>
 <li>遠方誌主題總表（新功能提案，待 MM 核准）：MM 2026-10-31 23:37 提出（iMessage：「新增一個易讀的區塊總表列出所有文章的主題（包含預告未來一週的主題」）。需求：易讀的區塊總表，列出所有文章主題，並預告未來一週主題。檢視稿已交付 MM（2026-11-01 00:02，含 13 篇已刊主題列與 11/1–11/7 暫定主題，附桌面與手機版預覽）；MM 2026-11-01 01:02「一起上線後通知」核准主題總表與四項站內修正合併上線（iMessage 原文已核對），已於當日 01:09 上線核實並一次通知交付；未來一週主題維持暫定（編輯候選，查證後可能調整或延後），非固定排程或長期規則。流程：檢視稿→MM 指示／核准→建置、測試與線上視覺檢查→CC 同步與交付；未來主題需先查來源，日期與主題的對應若因延遲需調整，須明確記錄、不得默默更動。每日出刊維持不變。部署由遠方誌 maintainer 執行，整合自檢視稿 V3（預告候選以穩定文章識別移除、不標正式期數、延期保留原定日期標示）。此為功能提案核准上線，非固定輪值規則；遠方誌維持自有 repo 與隔離。</li>
@@ -237,6 +243,136 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.166（2026-11-04）</h2>
+<ul>
+<li>MM 十五篇編修深度指正（09:05:58，phonemsg-01M6J1ERR0A16B9ED7XF4RFG20，逐字，iMessage 原文已核對）：「關於十五篇編修全文，再度進行研究，深度不足，不要為了版面就統一只寫四段」。據此：(1) 02:35 交付審閱之十五篇 31 頁 PDF 被判定深度不足，須再度研究，不作為可上線版本（我方先前之完成度判斷過度樂觀，主線已認列更正）；(2) 十五篇全部重新進入研究與實質編修——非潤飾或機械加段：加深實際解釋、證據與未決問題；結構與長度依各篇故事決定，不為版面統一四段、不填充湊版；(3) 原批次工作由「待 MM 審閱」轉為出版方代理進行中（主線 09:06 交辦；本地內容分支 3ca7a47 與來源文件保留）；遠方誌發布規則不變——分支優先、合併 main 或正式上線前須 MM 手動核准（09:04 發布範圍澄清僅及控制中心與單字系統）。§7 同步新增編修結構與深度規則條。</li>
+<li>MM 要求檢視架構批次成果（09:07，phonemsg-01M6J1JCV89MM7WK21NVAMSNAS，逐字，iMessage 原文已核對）：「我要檢視關於頁以及隱私政策那一批更新的成果」。主線 09:08 回覆將整理該批更新成果、附頁面預覽並標明未完成項，未經批准不上線；原規劃方離線，由架構檢閱復原代理接手恢復其分支與本地保留工作（含未推送之字體 619d23a 與手機頂部修正 6eff12b，不重做、不丟棄）。遠方誌 main／正式上線仍未批准，architecture-v1 預覽建置失敗（錯誤日誌待 MM 提供）與推送凍結維持不變。</li>
+<li>本站頁面內文補正（本 agent 疏漏，依規則主動標出）：v2.2.145–v2.2.165 分支期間僅更新 CHANGELOG.md、CONTROL.md 與版本戳，未以 build.py 重新產生 index.html 內文，致線上頁面章節內文與更新紀錄一度停留 v2.2.144；本次 v2.2.166 重新產生完整 index.html，補齊 v2.2.145 起全部記錄與 §5 規則更正之頁面呈現。</li>
+<li>規則查核（09:07）：origin/main 371bdda（v2.2.165）與本地一致，無 MM 更動；遠端分支僅 main 與 cc-v2.2.145。</li>
+<li>規則變動：有（§7 新增編修結構與深度規則，依 MM 逐字指示記錄）。單字頁無變動（維持 v14.61）。</li>
+</ul>
+<h2>v2.2.165（2026-11-04）</h2>
+<ul>
+<li>MM 發布範圍澄清（09:04:01，phonemsg-01M6J1B6YXPTZAD7Q3NHHSCCJX，逐字，iMessage 原文已核對）：「控制中心及單字的更新皆為自動推送，僅遠方誌須經手動核准」。據此：(1) §5 分支優先規則之適用範圍更正——控制中心更新改為自動推送（依既有規則直接發布 main，不再逐次等待批准），先前「控制中心本身維持分支優先」之從寬解讀更正；(2) 累積待批准分支 cc-v2.2.145（v2.2.145–v2.2.165，含遠方誌規定同步、單字 v14.60／v14.61 記錄、例句回補範圍更新等 20 筆記錄）正式合併 main 並發布；(3) 遠方誌維持不變：分支優先＋合併 main／正式上線前須 MM 手動核准，本次不處理遠方誌 main／架構預覽凍結。主線已於 09:04 回覆 MM 確認此理解並預告本次推送。</li>
+<li>規則查核（09:05）：origin/main 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145；合併前無衝突（main 為分支祖先）。todo-01M6H9ZQY7RTYAAZY4N9VVZ0CG（CC 合併批准）隨本澄清解除。</li>
+<li>規則變動：有（上述發布範圍更正，依 MM 逐字指示記錄）。單字頁無變動（維持 v14.61）。</li>
+</ul>
+<h2>v2.2.164（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>單字系統 v14.61 錯誤修復直接上線（依發布節奏錯誤即時發布；main 3b47bc4；線上版本戳 v14.61 1104-0257 已查證）：修復 v14.59（e998f0e，本 agent 先前發布之錯誤，依規則主動標出）引入之日文單元歸屬迴歸。冒煙測試「numbers book hidden from main units」失敗經查證為真實既有迴歸（先前「flake」描述已撤回）：v14.59 將第十一課 15 個沿用詞以 Nm 標記 morning，但 Od() 歸屬函數缺少 morning 分支（v14.56 有加 weekend 分支、v14.59 漏加），新裝置種入時落入「數字與計數」單元（顯示 20 字、含 5 個非題庫詞因 Ne＋Nm 串接重複列），早晨生活單元缺沿用詞。修復內容：Od() 補 morning 分支；id() 串接依 id 去重；新增遷移（v14.41/42 模式）將該 15 詞自 numbers／舊預設單元移入 morning 單元。查證：v14.29 建置該檢查通過、v14.59 建置失敗（二分定位）；新裝置驗證——數字單元隱藏、早晨生活 30 條目、食べる 僅一列、0 頁面錯誤；既有錯誤狀態遷移驗證——jp-007 自訂單元 debook-u-custom1 與熟悉度 2 保留、numbers 移除、jp-326 自 daily 歸正、無關條目不動；冒煙 18/18 通過（含原失敗項）；線上日文旅課程頁實測 9 單元正確、無數字單元、早晨生活 30 字、0 頁面錯誤。todo-01M6HC3HTRRYW4AC9RYWGXTXC0。</li>
+<li>例句回補範圍更新（§9）：德文 L4–6 批次之待回補清單併入每日檢查（de-624、de-762 缺例句；de-735 候選 tid 8088438 已查證屬實：Tatoeba 原文「Ich gehe ins Fitnessstudio.」附英文「I'm going to the gym.」、無中文譯文；Fitnessstudio／Fitness-Studio 拼寫差異不影響語意，候選交由日常回補採用並標中文待補；63 句 zhPending）。</li>
+<li>規則查核（03:00）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145。規則狀態不變。</li>
+<li>規則變動：無。單字頁 v14.60 → v14.61（如上）。</li>
+</ul>
+<h2>v2.2.163（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>單字系統 v14.60 直接上線（依 MM 02:15:15 授權，phonemsg-01M6H9YPTKD89WWHVJHD8N8K6W；todo-01M6H9SJEDDQ4QFMGQZSNBGJAB 完成）：德文 Lektion 4–6 共 287 新條目（de-509..de-795；L4 103／L5 90／L6 94）。謄寫 304 條 − 既有題庫重複 16 條 − 批次內重複 1 條（süß 保留 L4）＝287；das Essen／essen 名詞動詞並存。每條含 de.wiktionary 來源音標與詞性變化（不規則動詞人稱變化、名詞性與複數、可分動詞等），片語音標按單字讀音組合。例句依 MM 2026-10-29「例句可後補但單字先更新」規則：284 條附 Tatoeba 來源例句（其中 63 句來源無中文譯文，標 zhPending 待補；中文均 OpenCC 簡轉繁）；de-624 die Homepage、de-735 ins Fitness-Studio gehen、de-762 die Schorle 無可用來源句，依既有格式標明待補；無任何自造例句或譯文。新增預設單元 Lektion 4／5／6（既有使用者單元自動補入，學習進度不受影響）。查核：本地 18 項冒煙檢查 17 過 1 項既有 flake（numbers book hidden，舊版 v14.59 同結果，非本次引入）、0 頁面錯誤；推送前 rebase 於 MM 之 inbox staging 更新（7202ad3，無檔案重疊）；main 6467902；線上版本戳 v14.60 1104-0246 已查證，Lektion 4 實頁目視檢查通過（103 條目、音標、複數、不規則標記正確顯示）。</li>
+<li>遠方誌內容準備進度（批次記錄，無推送、無發布）：(1) 02:16 十篇主題研究 PDF 已交付至 MM 最新指示串（phonemsg-01M6H9FWWYV5Y9W070K9G75E2G；研究大綱非完整文稿，限制於 PDF 內註明）；原 15 篇首輪實質編修完成，配圖／排版／最終審讀持續於本地分支進行。(2) 02:35 最終核對版 31 頁 PDF 已交付 MM（審閱用途，非發布；明確註記尚待架構整合、日期、期號、發布前最終檢查與正式批准）：出版方本地 commit 3ca7a47，15 篇編修稿＋9 張授權照片（6 篇刻意無圖）；主線已抽查 112 處點字修正並檢視實際像素；既有渲染器手機／桌機已驗證；尚待最終架構整合、日期／期號、發布前回歸檢查；無推送、無 main 發布。正式上線仍須 MM 正式批准。</li>
+<li>規則查核（02:51）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145。規則狀態不變：遠方誌與控制中心分支優先、main 需正式批准；單字系統依規則直接上線。</li>
+<li>規則變動：無。單字頁 v14.59 → v14.60（如上）。</li>
+</ul>
+<h2>v2.2.162（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 指示同步遠方誌規定至控制中心（02:15:36，phonemsg-01M6H9ZB6MVN2N0CW2TBZXRTZP，逐字）：「遠方誌相關規定亦須同步更新至控制中心」。主線回覆：記錄遠方誌分支優先、更動日誌、合併 main 或正式上線前須批准，並與單字系統直接上線規則明確區分。本次規則同步（整合既有待批准記錄，不重複立規）：</li>
+<li>§5 分支優先規則之適用範圍由「未釐清、從寬適用」改為 MM 已澄清之區分：遠方誌（含架構改版與每日出刊）與控制中心本身維持分支優先＋正式批准；單字系統不經分支關卡。</li>
+<li>§5 新增「單字系統直接上線」規則（依 MM 02:15:15 逐字指示）。</li>
+<li>§7 新增「遠方誌發佈規則」條（分支優先＋更動日誌＋main／正式上線前正式批准）。</li>
+<li>批准範圍判定：MM 要求更新控制中心，惟未明言批准將整個待批准分支（v2.2.145 起累積）合併至 CC main；依 01:01:01 正式批准規則，本次同步仍以分支交付，並向 MM 釐清是否一併批准 CC main 合併（差異預覽：https://github.com/plus-pro-max-ultra/control-center/compare/main...cc-v2.2.145 ）。</li>
+<li>規則變動：有（上述三項規則同步）。單字頁無變動（維持 v14.59，批次建置中）。</li>
+</ul>
+<h2>v2.2.161（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 發布規則澄清（02:15:15，phonemsg-01M6H9YPTKD89WWHVJHD8N8K6W，逐字）：「這屬於德文單字，單字系統更新直接上線（相關規定均遵照控制中心）」。主線解讀並回覆確認：此批歸入德文；單字系統更新依控制中心規定直接上線，不再另外等批准；遠方誌仍維持正式發布前須經批准。此澄清取代我方將「任何更動分支優先」擴及單字系統之作法：單字系統（Shinnigammi-vocab）更新在控制中心既有規則下直接上線（來源查核、基本形、去重、單字先行例句後補、MM 明確需求即時發布等規則照舊）；遠方誌 main／架構分支之正式批准關卡與推送凍結不變；控制中心本身仍維持分支交付、待 MM 正式批准合併。v2.2.160 所記「全程分支優先、無正式發布」對本單字批次不再適用，todo-01M6H9SJEDDQ4QFMGQZSNBGJAB 轉為規則內直接部署（非僅審閱）。</li>
+<li>規則變動：有（上述發布區分澄清，依 MM 逐字指示記錄）。單字頁無變動（維持 v14.59，批次建置中）。</li>
+</ul>
+<h2>v2.2.160（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 單字新增（02:12:09，phonemsg-01M6H9S1AKJ81YZSYP93TVPR2K，逐字）：「單字新增」，附 6 張照片；主線已回覆收訖。todo-01M6H9SJEDDQ4QFMGQZSNBGJAB（in_progress，agent 負責）。6 張照片全數收到且可讀：教科書 Lernwortschatz 第 4 章（p.128＋LW4 頁）、第 5 章（p.140＋LW5 頁）、第 6 章（LW6 頁＋p.152）。謄寫完成共 304 條；去除與現有題庫重複 16 條、批次內重複 1 條（süß 見第 4、5 章，保留第 4 章首次出現；das Essen／essen 名詞動詞並存）後新增 287 條，主題 debook-L4／L5／L6（現有德語題庫 408 條、最大 id de-508，新條目自 de-509 起）。MM 明確新增授權，不受德語每日新增暫停限制；全程分支優先、main 需 MM 正式批准、無正式發布。後續：建條目（基本形、詞類／片語／句型分流）、Tatoeba 例句來源查核（不足者依 待補 規則），完成後推送分支交付審閱。</li>
+<li>規則查核（02:12）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145。規則狀態不變。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.159（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 新指示（02:07:10，phonemsg-01M6H9FWWYV5Y9W070K9G75E2G，逐字）：「在多研究十篇主題，並且把目前近乎完工的文章編修到可隨時上線的程度」（「在」應為「再」之筆誤）。已交既有發布方處理：延伸既有 new15 批次（不取代、十篇主題研究不等於十篇完整文章）；既有批次 todo 恢復 agent 負責進行中，新需求另建 todo。來源查核、文字編修、配圖與手機排版依既有編輯準則；全程分支優先，正式發布／main 仍需 MM 正式批准（本次指示非發布批准）。架構分支推送凍結維持（Workers 預覽診斷中，待錯誤日誌）；內容準備與凍結之部署各自獨立，不互相覆寫。</li>
+<li>規則查核（02:07）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145。規則狀態不變。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.158（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>字體修訂進度：規劃方本地 commit 6eff12b（疊於 619d23a，未推送）。根因：較後之 480px 媒體查詢將 topbar padding 設為 0 12px，覆蓋垂直留白；修正為手機 26／16、平板 30／18、桌面維持 14／12。主線已目視檢查 390px 證明截圖（品牌上方留白明確），並於 02:05 交付至原樣式指示串（錨點 phonemsg-01M6H8BXMJD2N346A2AZTMH2V1）。規劃方更正先前行動版第二行大小之計算：實際前後均為 28.9px（34px × .85，≤760px 區間），非先前回報之 31.2px；「第二行大小不變」之結論維持成立。無線上更動、無 main 批准；預覽錯誤日誌仍待 MM 提供。</li>
+<li>規則查核（02:05）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145。規則狀態不變：分支優先、main 需正式批准、推送凍結、樣式僅本地、token 不動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.157（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>字體修正重啟：MM 檢視 01:53 本地預覽後指正（02:02:51，phonemsg-01M6H980MPXCYW2SRZQEXFA656，逐字）：「預覽圖看起來手機版畫面遠方誌三字幾乎切頂」。主線認可前次調整未修到位；規劃方改以實際字形頂部空間為準於本地修訂（非僅容器 padding），維持推送凍結、不推 main、不動正式環境。原樣式指示錨點維持 phonemsg-01M6H8BXMJD2N346A2AZTMH2V1。此次修訂之解除阻塞者為規劃方（非使用者）。</li>
+<li>規則查核（02:03）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145（尖端為 v2.2.156）。規則狀態不變：分支優先、main 需正式批准、推送凍結、樣式僅本地、token 不動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.156（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>規劃方 01:56 正式環境唯讀複查（一次性，已完成，無持續監控）：實際 journal-for-far Worker 維持 legacy v25 未變；根路徑 HTTP 200、refreshEdition 存在；無 archive／feed 參照，feed.xml 與 archive 均 404。字體本地預覽（390／1280）已於 01:53 交付 MM，附實機字體外觀不保證之說明；不推送、不發布。正式環境未變，不向使用者另作通告。</li>
+<li>規則查核（01:57）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145（尖端為 v2.2.155）。規則狀態不變：分支優先、main 需正式批准、推送凍結、樣式僅本地、token 不動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.155（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>字體樣式進度：規劃方本地 commit 619d23a（未推送）；已取得 390／768／1280 寬度之明體本地渲染證明（本地安裝授權 NotoSerifCJKTC 後渲染）。系統字體之實機外觀不保證一致；網站未加入字體檔。主線在預覽失敗日誌到手前維持推送凍結。MM 回報（01:51:24，phonemsg-01M6H8K2JMMVKD2ZSADMSS38FJ，逐字）：「除了黃框消失沒有變化」（Enable Preview URLs 後）；主線已請 MM 提供失敗之 architecture-v1 journal-for-far 錯誤日誌，Retry build 與 token 維持不動。無正式環境批准或更動。</li>
+<li>規則查核（01:52，應主線要求）：origin/main 維持 9717e64（v2.2.144）無 MM 更動；遠端分支僅 main 與 cc-v2.2.145；待批准分支內容為 v2.2.145–154。即時規則狀態：一切更動分支優先、main 合併需 MM 正式批准；Workers 預覽配置驗證前推送凍結；樣式僅本地；token 不動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.154（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 提供 Branch control 截圖（01:48:34，phonemsg-01M6H8DY0T3ZYF7E39P58VAQM5，主線讀取）：Preview branches ON／Preview URLs disabled／Preview command: npx wrangler preview／Build: None／root: /；另有「Configured API token unavailable」警告（未被證實已撤銷）。主線指示：點 Enable Preview URLs（僅開啟公開連結存取，非合併 main），完成後回傳畫面；不替換、不刪除、不貼上 token。規劃方讀取 GitHub checks：architecture-v1 之 journal-for-far build FAILED（原因未顯示）；舊 remote-journal check 亦 failed（Worker does not exist），不據此推斷改名或新舊 Worker 之身分歷史。主線請 MM 一併提供失敗之 journal-for-far architecture-v1 錯誤日誌與啟用結果；暫不重試、不動 token。推送凍結維持；字體樣式僅本地調整。main／正式環境未更動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.153（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 樣式指示（01:47:28，phonemsg-01M6H8BXMJD2N346A2AZTMH2V1，搭配截圖，逐字）：「調整遠方誌標題（幾乎切頂）、世界不只發生那個的字體和大小，用明體，世界那行要突出，它值得大小不變」。主線已讀取並回覆；規劃方獲授權於本地分支進行樣式調整與渲染檢查（品牌行頂部留白、「世界不只發生那個」改明體、「世界」行突出、第二行大小不變），並記入既有分支日誌與發布檢查清單（architecture todo 進行中）。推送凍結維持：Workers 預覽配置驗證前不再推送。此為樣式指示，非 Branch control 配置截圖；先前之配置截圖請求仍待 MM 提供。main／正式環境未更動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.152（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>主線請 MM 提供 Settings → Build → Branch control 截圖（01:45：production branch／Enable Preview Builds／Preview command），僅查看不求變更。規劃方於 architecture-v1 推送僅更動日誌之 commit 392d37b（01:43）；主線在配置驗證前停止一切進一步推送。正式環境 01:44 讀取檢查：維持 legacy v25 未變。規劃方更正其初步機制說法：非正式環境之 opt-in Preview command（預設 npx wrangler preview）與正式環境之 npx wrangler deploy 為不同機制，實際是否啟用未知。main／gh-pages 未更動。下一步：待使用者提供配置截圖；規劃方排定 01:56 一次性正式環境複查。CC 不寫 main。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.151（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 提供萬用字元形式「*-journal-for-far.learnman.workers.dev」（01:38，phonemsg-01M6H7TK08MAWP4DA11FPPX7E6），非實際網址。MM 截圖（01:41，phonemsg-01M6H80VECCX2V7RQCP6WQNJ8Y，圖片由主線讀取轉述）：Worker Deployments #e1794705，分支 main，「Manually deployed」成功，連接 remote-journal 倉庫，Build command: None／Deploy command: npx wrangler deploy／root: /。主線已讀圖回覆並告知不要 Retry build；規劃方在變更前先驗證 Workers 獨立分支預覽配置，不預設倉庫端 Wrangler 假設。此非 architecture-v1 預覽；未授權任何 Cloudflare 設定變更；main／正式環境未更動。</li>
+<li>規則變動：無（分支優先與 main 正式批准規則不變）。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.150（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>更正（規劃方核對 main 459ac8c 對分支 5bf100f 對正式環境後撤回）：v2.2.149 所載「9 對 7 分類」說法屬報告錯誤，已撤回。16 篇 article JSON 之差異僅新增 date 欄位；categories／title／body／source／image 均未變，維持原 7 個分類（014 為社會與城市）。無分類法決策或修復需要。使用者未曾收到該錯誤說法，無需對使用者更正。預覽與分支 SW 啟用仍未查證，待使用者提供網址／截圖佐證；不另向使用者催問。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.149（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>瀏覽器驗證結果（01:31 主線交付）：實際 Workers 網址 https://journal-for-far.learnman.workers.dev/ 提供 legacy v25 內容，article 014 圖片正常，service worker 於根路徑啟用；架構路由 404 屬預期（架構分支未部署）。位址問題實質已解決；未斷言屬改名或新 Worker。下一步使用者選項：提供 architecture-v1 預覽網址，或提供 Deployments／Builds 截圖；不合併 main、不重新部署。實際預覽配置未知；以猜測主機名稱得到 404 不構成證明。規劃方新分類法 9 對 7 之報告與先前截圖矛盾，已退回核對，非使用者決策事項。所有正式環境未更動。</li>
+<li>規則變動：無（分支優先與 main 正式批准規則不變）。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.148（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 回報本站架設成功（01:27，phonemsg-01M6H776GY7TYXT3WX04PT8Q87）：https://journal-for-far.learnman.workers.dev/ ，並問「架設成功下一步為」（phonemsg-01M6H776HYXCAFBHYK8M0JFSTF，01:27，原文無問號）。主線回應方向：先確認網址與線上狀態，架構預覽檢閱另行處理；main 未更動，廣告在核准頁面／政策前暫緩。規劃方正以瀏覽器驗證中（相關 todo 由 agent 負責、進行中）。新 Worker 名稱 journal-for-far 與原先 remote-journal 截圖不同，實際配置不預設。新站為使用者回報；Instinct curl 檢查（01:28）：HTTP 200，標題《遠方誌 | Journal for Far》；完整功能與 service worker 啟用待瀏覽器驗證。</li>
+<li>規則變動：無（分支優先與 main 正式批准規則不變）。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.147（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>架構分支首輪檢閱交付（01:21，回覆核准串 phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J）：4 張截圖＋分支比對 https://github.com/plus-pro-max-ultra/remote-journal/compare/main...architecture-v1 。remote-journal 分支 architecture-v1（5bf100fe0f3fd7fb625577da2546f2f73c1831a7），main 維持 459ac8c 未更動。手機版裁切問題已修，本地功能測試通過；Workers 線上預覽與實際 service worker 啟用未查證。MM 要求：若產生預覽網址則提供，勿僅為預覽而合併 main。權利／授權／聯絡之草稿佔位內容待 MM 審閱。todo-01M6H4C053YKQ916BTJH7XC3V5 user-pending（審閱／預覽網址）；無 main 或線上更動。</li>
+<li>規則變動：無。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.146（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>Workers 網址修正指引交付（01:04）：Workers &amp; Pages 帳號總覽 →「Your subdomain」→ Change 修改帳號子網域；依官方文件 https://developers.cloudflare.com/workers/configuration/routing/workers-dev/ 查證。已向 MM 明示：此為帳號全域設定，影響該帳號其他 Workers 與預覽網址；不需刪除或重新部署；若無此設定選項請截圖回報；未斷言帳號僅一個 Worker。todo-01M6ET752Q37YGGC8ZV028XDMS user-pending（待結果／新網址）。</li>
+<li>推送憑證釐清：架構規劃方提供發布方已查證之遠方誌獨立憑證項目標籤與安全操作程序（不含密碼值），供已核准之分支推送使用；任何情況不推 main。每日出刊維持正式批准關卡，無例外。CC 更新維持僅分支交付（本版本同）。</li>
+<li>規則變動：無（v2.2.145 分支優先規則之適用確認）。單字頁無變動（維持 v14.59）。</li>
+</ul>
+<h2>v2.2.145（2026-11-04，分支交付待批准）</h2>
+<ul>
+<li>MM 核准架構計畫並發布分支優先新規（01:01:01，phonemsg-01M6H5PT927FZ7XKJEHN0DNP7J，iMessage 原文已核對）：「計畫批准，以後任何更動都先到分支上（github版網頁應該可以預覽改變之後的樣子?），正式轉移到main必須經過正式批准（建議在進行分支上的更新時寫一個更動日誌避免正式上線時有些地方需要刪除等有所遺漏）」。架構計畫（e9995b8e）獲准進入分支作業；合併 main 須 MM 正式明確批准；分支更新附更動日誌與上線清理核對清單；預覽方式另行查證，不取代現行 GitHub 線上版；合併目標（現行 repo 或獨立官方 repo）未決，不阻擋分支準備。「任何更動」範圍未釐清前從寬適用：remote-journal、control-center、單字頁 repo 之直接 main 推送皆暫停；本版本即以分支 cc-v2.2.145 交付，待 MM 正式批准後才合併 main（線上維持 v2.2.144）。發布方與夜間稽核已獲通知僅分支作業；每日出刊流程是否受此規範待釐清。</li>
+<li>Cloudflare 截圖查證（phonemsg-01M6H5QNG3S7EPP44TFHHNWPAA，2026-11-04 01:01:26 收訖，檔名時間 00:55）：主端實際檢視截圖——部署為 Workers（remote-journal.&lt;帳號子網域&gt;.workers.dev 正式網址與預覽網址，無自訂網域），非 Pages；先前 Pages 改名指引不適用，主端已更正並向 MM 致歉。規劃方查證 Workers 帳號子網域之修正方式中；無帳號或網站更動。</li>
+<li>規則變動：有——§5 新增分支優先規則（任何更動先上分支、附更動日誌、合併 main 須正式批准）。單字頁無變動（維持 v14.59）。新稿 15 篇與 Markdown 編修方案維持待 MM。</li>
+</ul>
 <h2>v2.2.144（2026-11-04）</h2>
 <ul>
 <li>MM 回報重新發佈後網址仍含帳號名稱（00:50:41，phonemsg-01M6H53WA46WWZR0Y73TEMR0DF，iMessage 原文已核對）：「重新發佈之後還是帶上了帳號名稱」。主端請 MM 暫停進一步刪除／重新部署，並請提供完整 pages.dev 網址或截圖（含網址與專案名稱，遮住電郵／帳號細節）。實際網址尚未提供；MM 實際操作路徑（新建專案或重新部署、產品路徑）未查證；未斷言原因。代理端無任何更動。todo-01M6ET752Q37YGGC8ZV028XDMS user-pending（待憑證）；規劃方已知情。架構計畫審閱為另一軌，維持不變。</li>
