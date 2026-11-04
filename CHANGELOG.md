@@ -2,7 +2,9 @@
 
 ## v2.2.170（2026-11-04）
 
-- MM 正式版定位澄清（13:25:11，iMessage 原文已核對）：「主要是正式版不涉及github」——遠方誌正式版以 Cloudflare 為準、不涉及 GitHub；隱私政策維持僅述 Cloudflare 正式版，不補回 GitHub Pages 託管說明（09:47 政策問題結案）。GitHub 鏡像站維持現狀，未授權刪除、停用或帳號更動；正式版之 canonical／RSS／連結是否仍指向 GitHub 鏡像，檢查與修正進行中，結果收到後補記。十五篇維持未發布。
+- MM 正式版定位澄清（13:25:11，iMessage 原文已核對）：「主要是正式版不涉及github」——遠方誌正式版以 Cloudflare 為準、不涉及 GitHub；隱私政策維持僅述 Cloudflare 正式版，不補回 GitHub Pages 託管說明（09:47 政策問題結案）。GitHub 鏡像站維持現狀，未授權刪除、停用或帳號更動；正式版網址指向已修正（13:28 收尾）：正式版地址統一為 https://journal-for-far.learnman.workers.dev/ ——canonical、OG、RSS 頻道與項目、sitemap、robots、404 均改發正式地址（main 60f1d5a、gh-pages ef115d1、架構分支 73e54bf，Worker 建置成功、線上輸出已核實）；GitHub 鏡像站維持可開啟，其 canonical 指向正式版。此為目前之網址選擇，未做新網域或最終網域決定。隱私政策維持僅述 Cloudflare 正式版不變；十五篇維持未發布。
+- 規則查核（13:28）：origin/main 616aca4（v2.2.169）與本地一致，無 MM 更動；遠端分支僅 main 與 cc-v2.2.145。
+- 規則變動：無。單字頁無變動（維持 v14.61）。
 
 
 ## v2.2.169（2026-11-04）
