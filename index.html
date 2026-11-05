@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.190 2026-11-06 00:41</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.191 2026-11-06 01:28</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -114,6 +114,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>三分支用途（MM 2026-11-05 01:02:38、01:05:28，iMessage 原文已核對）：先指示「把preview和gh-pages合併，表示我的修改可以直接顯示在pages上。同時，對於那些還沒完全成型的內容（例如已經研究完成卻沒上線的十五篇）另建一個分支另置那些內容」，再明確「main是官方網站、gh-pages是我的預覽及修改版本、第三個分支專放還沒成型的資料如研究中的一切資料等（當完成之後就可移至gh-pages甚至到main）」。取代先前 preview→gh-pages 的來源／產出流程；00:17 全部修改須更新 main、23:48 保留 MM 修改之要求維持，正式發布須批准。</li>
 <li>界線：不動用單字頁的程式、資料與憑證；不產生費用；涉及聯絡他人或金錢，依最高限制先取得 MM 確認。</li>
 <li>文章寫作流程（MM 2026-11-06 00:17:31，iMessage 原文已核對）：「工作流程先查核發佈前再潤飾，潤飾溯及所有文章」。順序為先事實查核、發佈前再潤飾，並追溯套用到所有既有文章與現有草稿；潤飾所依 MM 提供的自然台灣繁體中文寫作指引（natural-zh-tw）僅作內部參考，不在此公開全文。涉及事實或意思的改動交 MM 審閱；潤飾不等於核准推向 main，也不解除 017 品質控管；保留 MM 最新修改（含 gh-pages 8b8f8c5）與未成型十五篇不變。</li>
+<li>001–018 gh 版上線與品質控管取消（MM 2026-11-06 01:25:27「十八篇先更新到gh版」、01:26:59「001-018，基本上算是正式上線，取消品質控管狀態」，iMessage 原文已核對）：授權範圍為 gh 版的 001–018，按一般文章上線，含重新開放 017、取消 017 品質控管；僅限 gh 版，正式站（main）維持不變、仍須另行核准。保留 MM 最新修訂，未確認的事實更正不套用。（規則變動：017 的品質控管限制對 gh 版取消。）</li>
+<li>事實更正後自動更新 gh（MM 2026-11-06 01:28:03「如果待確認事實解決之後自動跟新到gh版」，「跟新」依文意為「更新」；執行時之對話原文已核對）：待確認事實釐清、修正文句經 MM 確認後，自動更新到 gh 版，不再另問是否推送；事實與文意的修正文句仍須 MM 確認，不得自動採納所有提議；正式站仍須核准。</li>
 </ul>
 <h2 id="s8">8. 每日任務</h2>
 <ul>
@@ -135,7 +137,8 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>全部文章「先查核、發佈前潤飾」進度（2026-11-06 00:41，進行中，未全部完成、尚非可發佈狀態）：共 33 項，已處理 13 項（001–013）做來源查核與無爭議潤飾的審閱稿，20 項未完成；Instinct 繼續 014–016，再處理 017／封存稿與草稿。需事實判斷的 003、005、006、008–013 已隔離、保留原稿，待 MM 決定；彙整的事實清單目前僅內部保存，尚未交付 MM。交付狀況：001 PDF 00:21、002–004 審閱 PDF 00:28 已交付 MM；005–007、008–010、011–013 的 PDF 已收到但尚未檢視交付，待合併交付，不代表每批皆已交付。work-in-progress da2127a6b6eba83892263421055f740074913f71（先前 a30818d、ec0f03f、f8d2064aab485696837010272ef8272afeec3771），入口 https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-refresh/2026-11-06/WORKFLOW.md 。保留 005 遠端最新修改，不歸屬作者。main 7e635c9、gh-pages 8b8f8c5、017 品質控管不變；潤飾成果尚未進入任何站點。流程規則見 §7。</li>
+<li>001–018 gh 版上線進行中（2026-11-06 01:28，尚未核實上線）：依 MM 01:26:59，017 重新開放、018 以一般文章整合、取消 017 品質控管僅限 gh 版，由 Instinct 執行；未核實前不宣稱已上線。正式站 main 7e635c9 不變、仍須核准。此前 gh-pages 為 8b8f8c5。</li>
+<li>全部文章「先查核、發佈前潤飾」進度（2026-11-06 01:03，33 項已全數完成來源查核與無爭議潤飾的審閱副本；非 33 篇皆可發佈）：其中 15 項無新增待處理的事實更正、18 項保留事實判斷（hold）待 MM；原稿皆保留。003 依 MM 00:56:42（iMessage 原文已核對）「那改為「皇位由具有父系皇室血統的男性繼承」」，已按此字句套用於審閱稿，決定完成。018 依 MM 00:55:45「018手動修訂完成」（iMessage 原文已核對），以 MM 最新手動文字為唯一基準，僅對 draft.json 做九處取代，舊 PDF 不作依據；並未增加任何正式刊出許可。彙整索引已於 01:03 交付 MM：https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-refresh/2026-11-06/README.md ；僅 001 與 002–004 的 PDF 曾單獨交付，其後 PDF 皆由索引取代。work-in-progress 76cfbf8525bf11fc6d4b4b91a4da7fd09e841c1a。全部文章審閱仍待 MM。保留 005 遠端最新修改，不歸屬作者。main 7e635c9、gh-pages 8b8f8c5、017 品質控管不變；潤飾成果尚未進入任何站點。流程規則見 §7。</li>
 <li>遠方誌 017 改寫對照（MM 2026-11-06 00:07:15「先對照改寫」，iMessage 原文已核對）：僅作比較，已於 00:11 交付 MM。比較對象為 MM 分享的改寫稿與最新完整 017（確認無更新版後，取封存的 5d744c8）。結論：改寫稿主題結構較集中，但不宜整篇取代——原稿保留的事實限定語較完整，改寫稿則修正了引用對應。本次未改動 GitHub、未採用改寫、未新增寫作規則、017 品質控管不變；是否採用待 MM 另行決定。</li>
 <li>遠方誌 gh-pages 00:06 新提交 8b8f8c5（00:12 唯讀核實）：變動為3處正文用語，並非 005 替代文字或圖說；預覽與正式站（HTTP 200、UTF-8）的 005 替代文字仍為舊的「經緯線等距」。預覽已顯示新正文，正式站仍為舊正文、main 7e635c9 不變。作者未歸屬、不視為核准，不覆寫、不推向 main；005 替代文字更正維持待 MM 核准。</li>
 <li>遠方誌 005 每日檢查發現（2026-11-05，已向 MM 請示 22:00，尚未修改）：問題在地圖圖片的替代文字（alt text，供螢幕閱讀器使用），原寫經緯線皆等距，與墨卡托投影不符；頁面可見圖說經稽核核對無誤、並非有誤。擬將替代文字更正為「墨卡托投影的世界地圖，經線等距平行，緯線間距向兩極逐漸增大」，依據 USGS https://pubs.usgs.gov/pp/1453/report.pdf （此為每日稽核提出並核對之發現，Instinct 未另行查核該來源）。待 MM 核准後才改文章，現行內容不動；屬 gh-pages 預覽層修訂，正式 main 須另經核准。</li>
@@ -272,6 +275,13 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.191（2026-11-06）</h2>
+<ul>
+<li>彙整全部文章進度（01:03）：33項已全數完成來源查核與無爭議潤飾審閱副本，15項無新增事實更正、18項保留事實判斷待 MM，非33篇皆可發佈；彙整索引01:03已交付MM，先前單篇PDF由索引取代。WIP 76cfbf8；兩站、main 7e635c9／gh-pages 8b8f8c5 與017品質控管不變。</li>
+<li>003 依 MM 00:56:42 指定字句套用於審閱稿；018 依 MM 00:55:45「018手動修訂完成」以最新手動文字為基準，僅九處取代，未增加正式刊出許可（兩則 iMessage 原文已核對）。</li>
+<li>發佈說明：v2.2.189／190 部署曾失敗（Actions 事件期間），本版合併其內容。規則查核（01:28）：控制中心 origin/main 02d9e03，無 MM 更動；規則無修改。</li>
+<li>新規則（§7，規則變動：有）：MM 01:26:59「001-018，基本上算是正式上線，取消品質控管狀態」（回應 01:25:27「十八篇先更新到gh版」）——gh 版 001–018 按一般文章上線，含重開 017、取消其品質控管，僅限 gh 版、正式站不變；01:28:03 追加：待確認事實解決並經 MM 確認文句後自動更新 gh，不再另問推送。執行中，尚未核實上線。</li>
+</ul>
 <h2>v2.2.190（2026-11-06）</h2>
 <ul>
 <li>彙整全部文章進度（00:41，進行中）：已處理13/33（001–013）為審閱稿，20項未完成，尚非可發佈狀態；事實判斷項（003、005、006、008–013）已隔離待 MM 決定，原稿保留。已交付 MM 僅001（00:21）與002–004（00:28）；005–013 的 PDF 尚未交付，待合併交付。WIP da2127a；兩站、main 7e635c9／gh-pages 8b8f8c5 與017品質控管不變。</li>
