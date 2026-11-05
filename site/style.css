@@ -17,6 +17,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .doc p{margin:8px 0}
 .doc ul{margin:8px 0;padding-left:22px}
 .doc li{margin:5px 0}
+.doc li,.doc p{overflow-wrap:anywhere}
 .doc code{font-family:ui-monospace,Menlo,monospace;font-size:12px;background:var(--badge);border:1px solid var(--line);border-radius:5px;padding:1px 5px}
 .doc a{color:var(--accent)}
 .doc hr{border:none;border-top:1px solid var(--line);margin:20px 0}
