@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.188 2026-11-06 00:26</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.189 2026-11-06 00:28</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -135,7 +135,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
-<li>全部文章「先查核、發佈前潤飾」進度（2026-11-06 00:26，進行中，未全部完成）：已盤點 33 項。001、002、004 已完成事實查核與潤飾待 MM 審閱；003 僅做無爭議的用語潤飾，男系（male-line）相關事實更正仍待 MM 決定；其餘 29 項未完成。work-in-progress ec0f03f 保存成果（先前 f8d2064aab485696837010272ef8272afeec3771 為 001 階段），入口 https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-refresh/2026-11-06/WORKFLOW.md 。10 頁審閱 PDF 由 Instinct 檢視後交付 MM。main 7e635c9、gh-pages 8b8f8c5、017 品質控管不變；潤飾成果尚未進入任何站點。流程規則見 §7。</li>
+<li>全部文章「先查核、發佈前潤飾」進度（2026-11-06 00:28，進行中，未全部完成）：已盤點 33 項。001、002、004 已完成事實查核與潤飾；005–007 已查核並儲存無爭議用語潤飾；003、005、006 的事實查核關卡待處理，003 的男系（male-line）相關事實更正已請 MM 決定。其餘 26 項未完成。work-in-progress a30818d 保存成果（先前 ec0f03f、f8d2064aab485696837010272ef8272afeec3771），入口 https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-refresh/2026-11-06/WORKFLOW.md 。交付：001 PDF 00:21、002–004 審閱 PDF 00:28 已交付 MM；005–007 PDF 已收到但尚未交付，待下次合併交付。保留 005 遠端最新修改，不歸屬作者。main 7e635c9、gh-pages 8b8f8c5、017 品質控管不變；潤飾成果尚未進入任何站點。流程規則見 §7。</li>
 <li>遠方誌 017 改寫對照（MM 2026-11-06 00:07:15「先對照改寫」，iMessage 原文已核對）：僅作比較，已於 00:11 交付 MM。比較對象為 MM 分享的改寫稿與最新完整 017（確認無更新版後，取封存的 5d744c8）。結論：改寫稿主題結構較集中，但不宜整篇取代——原稿保留的事實限定語較完整，改寫稿則修正了引用對應。本次未改動 GitHub、未採用改寫、未新增寫作規則、017 品質控管不變；是否採用待 MM 另行決定。</li>
 <li>遠方誌 gh-pages 00:06 新提交 8b8f8c5（00:12 唯讀核實）：變動為3處正文用語，並非 005 替代文字或圖說；預覽與正式站（HTTP 200、UTF-8）的 005 替代文字仍為舊的「經緯線等距」。預覽已顯示新正文，正式站仍為舊正文、main 7e635c9 不變。作者未歸屬、不視為核准，不覆寫、不推向 main；005 替代文字更正維持待 MM 核准。</li>
 <li>遠方誌 005 每日檢查發現（2026-11-05，已向 MM 請示 22:00，尚未修改）：問題在地圖圖片的替代文字（alt text，供螢幕閱讀器使用），原寫經緯線皆等距，與墨卡托投影不符；頁面可見圖說經稽核核對無誤、並非有誤。擬將替代文字更正為「墨卡托投影的世界地圖，經線等距平行，緯線間距向兩極逐漸增大」，依據 USGS https://pubs.usgs.gov/pp/1453/report.pdf （此為每日稽核提出並核對之發現，Instinct 未另行查核該來源）。待 MM 核准後才改文章，現行內容不動；屬 gh-pages 預覽層修訂，正式 main 須另經核准。</li>
@@ -272,6 +272,12 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.189（2026-11-06）</h2>
+<ul>
+<li>更正 v2.2.188 提前的交付記載：002–004 審閱 PDF 實際於 00:28 交付 MM（v2.2.188 寫於 00:26，當時尚未交付）；003 決定已詢問 MM。</li>
+<li>更新全部文章進度（00:28，進行中）：005–007 已查核並儲存無爭議潤飾，PDF 尚未交付、待合併交付；003、005、006 事實關卡待處理；26項未完成。work-in-progress a30818d；保留005遠端修改、不歸屬作者；兩站與017品質控管不變。</li>
+<li>規則查核（00:28）：控制中心 origin/main ea209a3，無 MM 更動；規則無修改。</li>
+</ul>
 <h2>v2.2.188（2026-11-06）</h2>
 <ul>
 <li>更新全部文章流程進度（00:26，進行中）：001、002、004 已查核並潤飾待 MM 審閱；003 僅無爭議用語潤飾，事實更正待 MM 決定；其餘29項未完成。work-in-progress ec0f03f；兩站與 017 品質控管不變，成果未進入任何站點。</li>
