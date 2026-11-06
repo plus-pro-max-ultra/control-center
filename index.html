@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.204 2026-11-06 23:09</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.205 2026-11-06 23:14</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -139,6 +139,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>001–018 已推 main 並驗證上線（2026-11-06 23:11）：main 為 6bef62cf8975ea7513aa8f2cc7814339f1e4cfdb，Workers Builds 成功；18 篇正式站內文與站台資源與核准的 gh 一致，017／018 的 canonical 與轉址已核對。正式站：https://journal-for-far.learnman.workers.dev/ 。gh 的連結同步部署（dd50b46）仍在後續處理。此條僅記錄 001–018 的更新，不含今日新一期。以下為 23:08 預檢時的記載，保留作歷程：</li>
 <li>001–018 推 main 執行中（2026-11-06 23:08 預檢，尚未驗證上線）：依 MM 01:28:47 的條件式授權，001–018 經核對符合條件；18 份事實查核記錄與已執行決定已重新讀過，沒有待 MM 決定的項目；004 儲存區與 017 比較已交付，不是閘門；15 篇未刊草稿另計。正在把目前 gh 站台複製到 main，保留 main 專有的編輯內容、歷史與腳本，並更新過時的 017 品質控管說明，不另外發布。main 仍為 7e635c9，在驗證前不視為正式上線；先前記錄的「條件未達成」「004、017 未完成」已更正，此條取代之。</li>
 <li>實質修訂核准已執行完成（2026-11-06 23:05，依 MM 22:52:29 核准）：gh 為 c33d9a788a95a427e03e41e579a24ecd3e7d7735，Pages 部署成功。套用最新 58 組現行提案，已撤回或被取代者排除；已刊 13 篇（005、006、008–018）已更新，另 5 篇未刊草稿僅在 WIP；18 篇線上內文與中繼資料已核對，54 個響應式頁面已檢查；MM 對 008 的手動修改已保留，013 的比喻保留，018 採用核准措辭。先前「13 篇待確認」的事實決定狀態更新為已核准、已套用；其餘編輯工作另計。（2026-11-06 23:08 更正：004 儲存區與 017 比較已交付，不是未完成項目，上述「未完成」寫法不成立；main 資格見上方最新一條。）審閱說明：https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-refresh/2026-11-06/approved-substantive/README.md</li>
 <li>待決實質修訂核准（MM 2026-11-06 22:52:29，iMessage 原文已核對）：「通所有實質裁決，更新到gh」（原文如此）。依此核准，待決的實質修訂可更新到 gh，並須保留 MM 的手動修改。此條只記錄核准與範圍：不代表修訂已執行完成，也不代表已確認 001–018 事實與語意全部完成；001–018 推 main 的條件式授權條件仍未達成，main 7e635c9 不變。執行已於 23:05 完成，見上方最新一條。</li>
@@ -286,6 +287,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.205（2026-11-06）</h2>
+<ul>
+<li>記錄 001–018 已推 main 並驗證上線（23:11）：main 6bef62cf，Workers Builds 成功，18 篇正式站內容與核准 gh 一致。不含今日新一期。規則無修改。</li>
+<li>規則查核（23:14）：控制中心 origin/main 為 6e9bdee，無 MM 更動。</li>
+</ul>
 <h2>v2.2.204（2026-11-06）</h2>
 <ul>
 <li>更正 v2.2.203 的記載：004 儲存區與 017 比較已交付，不是未完成項目；main 條件不再記為未達成。001–018 推 main 預檢通過，執行中，main 仍為 7e635c9，驗證前不視為正式上線。規則無修改。</li>
