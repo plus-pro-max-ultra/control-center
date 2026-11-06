@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.209 2026-11-06 23:50</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.210 2026-11-07 01:22</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -139,8 +139,9 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>逐篇狀態報告（2026-11-07 01:22 交付 MM，35 列已核對，WIP f14530d，審閱：https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-refresh/2026-11-06/STATUS-2026-11-07-0121.md ）：001–018 兩個站台上線的仍是先前核准批次。006 在 gh 有新編輯 3a725ca（01:18，移除英文 ITU 引文與 99% 標註），Pages 部署待完成，未進 main；部署後不宣稱兩站台目前完全相同。019 頁面仍 404（平台逾時）。020 草稿已備、尚未刊出，期限 08:00。其餘 15 篇草稿在做最新全文潤飾，由 Instinct 端處理，不卡在 MM。本條只記錄狀態，不代表新的核准或上線。</li>
 <li>空檔運用授權（MM 2026-11-06 23:43:35，iMessage 原文已核對）：「運算有空閒時就可以進行主題研究或進行目前系統的任何檢查」。範圍：有空閒時可做主題研究與現有系統檢查；進行中的要求與每日 08:00 出刊期限優先；例行檢查無問題時不打擾，有值得看的成果或問題才回報；不新增更動、發布、花費或帳號存取的權限，原有規則不變，並避免與每日檢查及夜間稽核重複。</li>
-<li>今日（11/6）第 019 篇狀態（2026-11-06 23:50 更新）：仍未刊出。先前 99c311f 的 Pages 部署因 updating_pages 階段逾時而失敗；內容相同的重試提交 7482b61 也於 23:48:48 失敗（部署步驟約 10 分鐘，建置與上傳成功），23:49 實查頁面仍 404；重試的完整記錄顯示 401，不斷言與第一次錯誤相同。不再重複空提交或重試。完整稿與 8 個來源可於 WIP 閱讀，MM 已獲告知；結果由 Zine 端保留，11/7 早上第 020 篇的實際新內容發布時會再檢查平台。020 草稿已備於 WIP 77ce272，屬 11/7 期、08:00 期限；main 仍為 6bef62c。</li>
+<li>今日（11/6）第 019 篇狀態（2026-11-06 23:50 更新）：仍未刊出。先前 99c311f 的 Pages 部署因 updating_pages 階段逾時而失敗；內容相同的重試提交 7482b61 也於 23:48:48 失敗（部署步驟約 10 分鐘，建置與上傳成功），23:49 實查頁面仍 404；完整記錄確認重試於 23:48:47 因 updating_pages 逾時中止、23:48:48 取消，與第一次同為平台逾時；先前所見 401 只是讀取記錄時的暫時權限問題，不是部署原因。不再重複空提交或重試。完整稿與 8 個來源可於 WIP 閱讀，MM 已獲告知；結果由 Zine 端保留，11/7 早上第 020 篇的實際新內容發布時會再檢查平台。020 草稿已備於 WIP 77ce272，屬 11/7 期、08:00 期限；main 仍為 6bef62c。</li>
 <li>每日出刊期限更新（MM 2026-11-06 23:23:20，iMessage 原文已核對）：「以後每日出刊改為最晚早上八點」。自此每日新刊最晚於台北時間 08:00 前在 gh 預覽出刊；正式站（main）發布仍依既有核准規則，不變。準備工作改到前一晚：19:00–20:00 備稿，隔日 06:00–06:15 接續發布與驗證，07:30–07:35 為 08:00 前的風險檢查點；若品質查核可能影響期限，會在 08:00 前主動回報延誤。11/7 首期備稿今晚 23:40–23:50 特別安排；11/6 延後的 019 另計，不與 11/7 混算、不回填日期。夜間維護仍為 22:00 前後，其「今日」指當天早上已刊出的文章。以上為實際作業時程，不是保證 06:00 交稿。取代先前未指定時間、晚間才出刊的假設。</li>
 <li>（23:18 記錄，已由上方 23:42 狀態取代）今日（11/6）新一期：部署中，尚未刊出。第 019 篇（主題：Chauvet 岩洞壁畫定年）已完成來源查核與潤飾，gh 提交 09b36752e901d02d772504e24cb5aca1ab1506cf 部署進行中，尚未上線；正式站 main 仍為 6bef62c。待完成回報並驗證上線後才記為已刊出。另 15 篇未刊草稿的全文潤飾排在後面，另計。</li>
 <li>001–018 已推 main 並驗證上線（2026-11-06 23:11）：main 為 6bef62cf8975ea7513aa8f2cc7814339f1e4cfdb，Workers Builds 成功；18 篇正式站內文與站台資源與核准的 gh 一致，017／018 的 canonical 與轉址已核對。正式站：https://journal-for-far.learnman.workers.dev/ 。gh 的連結同步部署（dd50b46）已於 23:18 部署成功。此條僅記錄 001–018 的更新，不含今日新一期。以下為 23:08 預檢時的記載，保留作歷程：</li>
@@ -291,6 +292,12 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.210（2026-11-07）</h2>
+<ul>
+<li>記錄 01:22 逐篇狀態報告（35 列）：006 gh 新編輯 3a725ca 待部署、未進 main；019 仍 404；020 草稿已備、期限 08:00；其餘 15 篇草稿潤飾進行中。</li>
+<li>更正 v2.2.209 對 019 的記載：重試失敗原因同為 updating_pages 逾時（23:48:47 中止、23:48:48 取消），401 僅為讀取記錄時的暫時問題。</li>
+<li>規則查核（01:24）：控制中心 origin/main 為 816438f，無 MM 更動；規則無修改。</li>
+</ul>
 <h2>v2.2.209（2026-11-06）</h2>
 <ul>
 <li>更新 019 狀態：Pages 部署兩次失敗（第一次 updating_pages 逾時；重試 7482b61 於 23:48:48 失敗，記錄為 401），頁面仍 404，未刊出；不再空提交重試。020 草稿已備於 WIP（11/7 期）。main 6bef62c 不變，規則無修改。</li>
