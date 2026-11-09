@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.240 2026-11-09 13:26</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.241 2026-11-09 13:31</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -316,6 +316,15 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.241 — 2026-11-09 13:31</h2>
+<ul>
+<li>v14.72 相容修正——單字網站 v14.73 上線：</li>
+<li>日曆數字來源：改為讀取課程資料的明確 num 欄位（課程編號中繼資料）。明日課程起 ID 採規範格式（如 2026-11-10-jp，週日混合課為 date-sun 型），不再由 id 尾碼取數——避免把日期中的數字誤作課程編號；舊式 de-13 型 id 相容保留；無 num 且非舊式 id 時日曆留白，不誤顯。本地以合成 ID 五組情境測試（2026-11-10-jp 配 num:14→顯示 14；date-sun 配 num:15→15；無 num 的 date-lang→空白；舊式 de-13→13；新舊混合→取最新課 14），全數通過；測試用假課程未發佈，正式庫仍僅 de-13 一課，日曆顯示 13 不變。</li>
+<li>底部操縱欄啟用態一致：每日課程頁開啟時僅日曆入口亮顯，「更多」分頁不再同時亮顯。</li>
+<li>欄位協調：num 欄位需求已回報，明日課程（2026-11-10-jp）起隨課附 num；日後攝入課程時保留該欄位。</li>
+<li>v2.2.240 條 MM 13:19 引文已對訊息紀錄逐字再核對，一致。</li>
+<li>規則查核（13:31）：單字網站與控制中心 origin/main 均無 MM 更動；MM 規則無修改。</li>
+</ul>
 <h2>v2.2.240 — 2026-11-09 13:26</h2>
 <ul>
 <li>每日課程手機版介面修正（MM 2026-11-09 13:19 截圖回報「有點大小不對、把入口改在操縱欄最左側但不是同等級按鍵類似目前safari網址列和迴轉鍵的分佈，圖形為日曆，數字根據課程編號每日更新。對於這個每日課程和現存系統的文法課程都加上折疊之類的功能避免洗版或內容難以觸及」，iMessage 原文已核對）——單字網站 v14.72 上線：</li>
