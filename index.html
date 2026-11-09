@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.230 2026-11-09 09:19</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.231 2026-11-09 11:53</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -139,9 +139,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>課程中心（lesson hub）方案核准（MM 2026-11-09 11:49，iMessage 原文已核對）：「核准這個方案，每天傳一則簡要摘要通知就好（不用附連結），具體網站先做再改」（原文如此）。核准方向：在既有單字網站加 Lessons 區——每日課程成為永久頁面（當日單字連到詞條與例句、文法點、點按顯答案練習；依日期與課程（日文／德文）歸檔，先英後繁；重用網站字庫與 GitHub Pages，不動遠方誌）。通知方式已定：每天一則簡要摘要、不附連結。未明示項目依最小假設處理：只收新課程、不回補第 1–13 課；週日測驗維持在對話中。現在建置中，未上線；每日課程完整內容在交接前仍維持 iMessage 傳送。</li>
+<li>例句翻譯點擊無顯示修復與全站偵錯（MM 2026-11-09 11:40「單字網站中部分例句出現問題」、11:44「檢查單字網站全站偵錯、待執行任務。例句翻譯區點擊無顯示」，iMessage 原文已核對）。主因查明：87 句待補例句沒有中文譯文欄位，點擊翻譯區只展開空白。v14.66（11:51 上線，版本戳 v14.66 1109-1149 已核實，390px 截圖已檢視）：待補例句點擊後改顯示「中文翻譯待補」，德文待補句先顯英文並標待補；正常例句行為不變。同批內容修復：移除 30 組重複例句（29 組完全相同、1 組保留較佳譯文），20 條補上 Tatoeba 來源新例句（記錄句子 ID、中文由 OpenCC 轉繁），10 條無合適來源改標待補，97 條舊詞條補上待補標示（缺句與缺譯分列）；建置程序新增重複例句致命檢查與缺句警告，重複例句無法再充當兩句要求。全站偵錯結果：五個主頁面、單字詳情四頁籤、德文切換與搜尋、文法課程、測驗頁、單字庫、更多頁均可正常渲染，無 JS 錯誤；唯一主控台錯誤為每頁 favicon.ico 404（下次發版一併修）。待辦現況（已核實數字）：缺來源例句 151 句（47 條無例句、57 條僅一句）、缺中文譯文 87 句（另有 6 句待補標記已有譯文待清理），均由每日檢查回補；來源限制：部分詞在 Tatoeba 查無合用例句（如 お巡りさん、昼休み、再来週），中文譯文多為簡體需 OpenCC 轉繁，少數譯文品質不佳需剔除不採用。</li>
 <li>全文章關聯審視指示與結果（MM 2026-11-09 09:16，iMessage 原文已核對）：「注意文章尖的連結不要過於牽強，可審視所有現存文章之間的交互關係」（原文如此，「文章尖」應為「文章間」之類，依意思理解為文章之間）。執行原則：只用到相同詞彙不足以構成連結，連結需有助理解或提供有意義的對照；不為單篇文章勉強找連結。全部 22 篇已審視完成，報告於 09:20 交付（已核實）：https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-review/2026-11-09-relationships/report.md 。建議包含：三處以既有文字為錨的連結（006→002、006→001、004→002）、頁尾出版順序與主題標籤的整理、016 迴圈發現，以及 010↔018 提案（詳見完整報告）。以上皆為建議，未核准、未套用任何文章或導覽更動。先前提議的 022→006 關聯段落經此次評估不夠有用，已撤回，不再等待核准；022 引用清理維持已完成。</li>
 <li>022 引用標記回饋（MM 2026-11-09 08:48，iMessage 原文已核對）：「022的引用符號還是過多。對於和過去文章的關聯，或許可以加上指向連結」（原文如此）。理解保留開放：「引用符號」指引號或引用標記，不硬性解讀為來源引註的數量上限（022 在先前「每篇約兩處引號」檢查後仍被 MM 認為過多）。處理方向：檢視 022 實際引號與引用標記，刪減不必要重複但不削弱來源證據；與舊文確實有關聯處補上可直接開啟的連結，連結目標先核實，不勉強加無關連結。僅 gh 預覽範圍，不代表正式站核准；MM 的手動修改保留。引用清理已於 08:52 完成並核實：gh 為 676f5c7（08:52 核對遠端一致），行內引用標記由 11 處減為 2 處，8 個來源全部保留並按小節對應；手機正文、文末來源區與桌機畫面已檢視；正式站 main 不變（10a88f8）。先前「只指引號」的理解已向 MM 明示更正。與 006 的關聯段落因會增加詮釋，曾送 MM 核准、未套用；09:20 全文章關聯審視後評估不夠有用，已撤回，不再等待核准（見上方最新一條）。</li>
-<li>課程整理方式提案請求（MM 2026-11-09 08:41，iMessage 原文已核對）：「organize daily linguistic lessons in a convenient way (such as a web)in order not to be disturbed by chats. propose first」（原文如此，英文）。MM 要求先提方案：僅提案，尚未核准建置或更動目前的每日課程 iMessage 傳送；08:42 已向 MM 確認會先送方案、確認前不動現行傳送。雙語圖片提案已於 08:48 送達 MM（建議在現有單字頁加「課程」區，並問兩個待決問題：是否同意此方向、通知方式要每日一行連結或不發），現等待 MM 決定；未核准、未建置，結果另記。</li>
+<li>課程整理方式提案請求（MM 2026-11-09 08:41，iMessage 原文已核對）：「organize daily linguistic lessons in a convenient way (such as a web)in order not to be disturbed by chats. propose first」（原文如此，英文）。MM 要求先提方案：僅提案，尚未核准建置或更動目前的每日課程 iMessage 傳送；08:42 已向 MM 確認會先送方案、確認前不動現行傳送。雙語圖片提案已於 08:48 送達 MM（建議在現有單字頁加「課程」區，並問兩個待決問題：是否同意此方向、通知方式要每日一行連結或不發），11:49 MM 核准並選定每天一則簡要摘要通知（不附連結），見上方最新一條。</li>
 <li>德文第十三課（修正 v2）已於 2026-11-09 07:03 送達 MM（iMessage）：內容為強變化分詞與 Perfekt、否定、助動詞選擇，含 6 個複習單字；無新增頁面詞條，單字庫與單字頁未因此更動；交付前已先把過寬的 ge-、nicht、sein 教學規則收窄修正。</li>
 <li>更正：019 正式網址狀態（2026-11-09 06:04 維護端更正）：019 的實際 slug 為 019-chauvet-dating；其正式站路徑的回應不記為已核實 404（維護端 06:04 查詢得到 403；早前以錯誤 slug 得到的 404 不能作為該路徑的證據）。019 未核准、未納入正式站的狀態不變，依據為正式站 main（10a88f8）未收錄 019；前述 021 正式站上線條目已據此修正措辭。</li>
 <li>第 022 篇（11/9 新刊，主題：條碼與 ISBN 的檢查碼）已在 gh 上線（2026-11-09 06:04 核實）：gh 為 9120189（06:04 核對遠端一致），Pages 部署（run 42528097000）成功；48 個線上檔案與提交位元組一致，既有 21 篇正文 DOM 與鏡像值全部保留（含 MM 的 021 修訂）；手機正文、表格、首頁與桌機表格已檢視，無裁切。網址：https://plus-pro-max-ultra.github.io/remote-journal/articles/022-check-digits/ （06:04 核實回應 200）。正式站 main 仍為 10a88f8；022 尚未核准上正式站（正式站維持 404）。對 MM 的通知已於 07:14 送出（雙語導讀加 gh 文章連結，回覆於每日出刊期限的對話串）。</li>
@@ -311,6 +313,13 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.231（2026-11-09）</h2>
+<ul>
+<li>記錄單字網站 v14.66（11:51 上線，版本戳已核實）：修復例句翻譯區點擊無顯示（87 句待補例句缺中文欄位導致展開空白，改顯示待補標記）；移除 30 組重複例句、20 條補 Tatoeba 來源例句、97 條舊詞條補待補標示；建置新增重複例句致命檢查。</li>
+<li>記錄全站偵錯結果：各主頁面與互動正常、無 JS 錯誤，僅 favicon.ico 404 待下次發版修；待辦數字：缺例句 151 句、缺譯文 87 句，每日檢查回補。</li>
+<li>記錄 MM 11:49 核准課程中心方案（iMessage 原文已核對）：在既有單字網站建 Lessons 區；通知定為每天一則簡要摘要、不附連結；建置中、未上線。原 08:41 提案條目結案。</li>
+<li>規則查核（11:54）：控制中心 origin/main 為 6013674，無 MM 更動；規則無修改。</li>
+</ul>
 <h2>v2.2.230（2026-11-09）</h2>
 <ul>
 <li>記錄 MM 09:16 全文章關聯審視指示（iMessage 原文已核對，原文照錄見 §10；「文章尖」依意思理解為「文章間」）：連結不可牽強，需有助理解或提供有意義的對照，不以共用詞彙為由。</li>
