@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.238 2026-11-09 12:47</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.239 2026-11-09 12:54</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -316,6 +316,16 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.239 — 2026-11-09 12:54</h2>
+<ul>
+<li>語義複查續程（承接 v2.2.238 稽核邊界聲明：字面命中但語義相異者逐筆追查）——以「例句僅命中複合詞／詞素、或命中文義與詞條釋義不符」為標的複掃（日文複合詞候選 335 筆、德文 93 筆，逐筆人工判讀），單字網站 v14.71 修復上線：</li>
+<li>例句替換（Tatoeba 來源句）：日文 7 條目 12 句——細い（原句為心細い）、所（原句為台所／近所）、中（原句為電話中）、七（原句為七面鳥）、首（原句為一首）、日（原句僅曜日句）、端（原句為万端／半端）；德文 5 條目 5 句——der Kurs（原句為 Wechselkurs）、das Theater（原句為 Theaterkarten）、der Tag（原句為 Geburtstag）、die Notiz（原句為 Notizbuch）、Danke, gut.（原句為另一組致謝應答句「Danke für die Hilfe. – Keine Ursache.」，非「近況問答」義）。</li>
+<li>移除並標「例句待補」（無可取得來源句，不編造，列入每日檢查回補）：日文 縦（來源僅操縦句）、差す（原句實為刺す／指している，與詞條「照射；撐傘」義不符，查證無來源句）、林（來源僅林檎句）、表（おもて；來源僅時刻表／表面句）各 2 句；一月（ひとつき；來源僅日期句）與 der Betreff（原句為 betreffen 動詞句）各 1 句。</li>
+<li>判讀後確認為正當、保留：複數與變化形、保留原義的複合詞（如 Geschäftspartner、Taxifahrerin、紙飛行機、大学生、掃除機、救急車、共通点）、frühstücken↔das Frühstück、anreden↔die Anrede（句子談稱呼形式選擇，概念相符）、Kilogramm↔das Kilo（詞條已載等值）、alt 之名詞化 Alter（年齡欄）、上げる／挙げる等異體字（同一詞素）。端（つま）讀法經 Jisho 查證為正當讀法，非缺陷。der See 兩句均為湖義、文法消歧正確。</li>
+<li>語義涵蓋有界聲明：本次複掃針對「字面命中詞素但語義不符」類（複合詞含詞素、同形異義），已逐筆判讀候選集；未涵蓋：語義相近但需更細微判斷者、釋義本身的取捨（如 jp-080 年「２年生」、jp-412 人「何人ですか」等邊界個案，經判讀概念保留、接受）。MM 若指出具體條目可立即個別處理。</li>
+<li>回補佇列更新（v14.71 後實測）：零例句 55 條目、單例句 60 條目，共缺 170 句來源例句；譯文待補 91 列。每日檢查持續回補。</li>
+<li>規則查核（12:54）：單字網站與控制中心 origin/main 均無 MM 更動；MM 規則無修改。</li>
+</ul>
 <h2>v2.2.238 — 2026-11-09 12:48</h2>
 <ul>
 <li>內容缺陷修復（MM 2026-11-09 12:33 回報「某些例句與單字不符、單字內容混入括號備注」，iMessage 原文已核對）——全庫複查（日文 1366 條＋德文 696 條，變化形感知比對後逐筆人工判讀候選），單字網站 v14.70 修復上線：</li>
