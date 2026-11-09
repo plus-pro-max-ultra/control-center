@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.239 2026-11-09 12:54</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.240 2026-11-09 13:26</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -316,6 +316,15 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.240 — 2026-11-09 13:26</h2>
+<ul>
+<li>每日課程手機版介面修正（MM 2026-11-09 13:19 截圖回報「有點大小不對、把入口改在操縱欄最左側但不是同等級按鍵類似目前safari網址列和迴轉鍵的分佈，圖形為日曆，數字根據課程編號每日更新。對於這個每日課程和現存系統的文法課程都加上折疊之類的功能避免洗版或內容難以觸及」，iMessage 原文已核對）——單字網站 v14.72 上線：</li>
+<li>尺寸：停用行動瀏覽器的文字自動放大（text-size-adjust:100%，此為頁面文字異常放大的已知來源之一），並加水平溢出防護（頁面容器 overflow-x:clip、課文段落自動斷行換行）。本地 iPhone 尺寸（390px）實機模擬量測：頁面文件寬 390px、無任何超寬元素、無水平捲動。MM 截圖中的放大與左側裁切屬整頁等比放大位移；若本次上線後 MM 端仍見放大，可能為瀏覽器對本站的網站專屬縮放設定（頁面無法覆寫），屆時需於 MM 端檢查該設定。</li>
+<li>日曆入口：每日課程入口改至底部操縱欄最左側，為小型獨立按鍵（不佔分頁等寬，配置類 Safari 返回鍵與網址列之分佈）；圖形為日曆，內嵌數字為最新課程編號（現為 de-13 的 13），每日課程入檔時自動更新；點按直達每日課程歸檔。原「更多」網格中的每日課程入口依「改在操縱欄」指示移除。</li>
+<li>折疊：每日課程各段落（暖身、重點、複習單字、本課單字、文法、練習等）與文法課程頁全部 20 課改為可折疊，預設收合、只顯示標題作索引，點標題展開，避免整頁洗版。段內原有的點按看答案／看翻譯機制不變。</li>
+<li>驗證：390px 實機模擬截圖 5 張（歸檔、課程收合、課程展開、文法收合、文法展開）逐張檢視；日曆數字、入口位置、折疊開合、無溢出均符合；學習進度、導航結構、課程內容未動。</li>
+<li>規則查核（13:26）：單字網站與控制中心 origin/main 均無 MM 更動；MM 規則無修改。</li>
+</ul>
 <h2>v2.2.239 — 2026-11-09 12:54</h2>
 <ul>
 <li>語義複查續程（承接 v2.2.238 稽核邊界聲明：字面命中但語義相異者逐筆追查）——以「例句僅命中複合詞／詞素、或命中文義與詞條釋義不符」為標的複掃（日文複合詞候選 335 筆、德文 93 筆，逐筆人工判讀），單字網站 v14.71 修復上線：</li>
