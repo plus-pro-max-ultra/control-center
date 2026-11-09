@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.237 2026-11-09 12:32</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.238 2026-11-09 12:47</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -316,6 +316,16 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.238 — 2026-11-09 12:48</h2>
+<ul>
+<li>內容缺陷修復（MM 2026-11-09 12:33 回報「某些例句與單字不符、單字內容混入括號備注」，iMessage 原文已核對）——全庫複查（日文 1366 條＋德文 696 條，變化形感知比對後逐筆人工判讀候選），單字網站 v14.70 修復上線：</li>
+<li>例句與單字不符：43 個條目、50 句以 Tatoeba 來源句逐句替換（日文 21 條目、德文 22 條目）。典型為同音異字混句——張る 混入 貼る 句、撮る 混入 取る 句、締める 混入 閉める 句、乾く 混入 渇く 句、建てる 混入 立てる（腹を立てる）句、打つ 混入 ぶつ 句、止める（とめる）混入 やめる 句、間（あいだ）混入 まもなく 句、硝子（ガラス）混入 グラス 句、das Ei／das Eis 例句交叉、suchen 混入 besuchen 句、genießen 混入 Genossen 句、der Junge 混入 jung 句、der/die Verwandte 混入 verwenden 句；及錯義句——notieren 誤用「上市」義句、treffen 誤用 zutreffen 句、möchten 誤用 mögen 直陳句等。</li>
+<li>無可取得來源句的句型條目（Das macht … Euro, bitte.／Es ist kurz vor vier.／Geht es am … um …?／morgens／Stimmt so. 第二句）：依 MM 2026-10-29「以後例句可後補但單字先更新」規則移除不符句並標「例句待補（列入每日檢查回補）」，不編造。de-680 原譯文待補標記隨不符句移除一併清理。</li>
+<li>單字內容混入括號備注：26 個德文名詞詞條的 (Sg.)／(Pl.)／(g)／(kg)／(l) 註記移出 word 欄、併入 grammar 註記（此類註記原會混入打字與字塊作答目標）；9 個可分動詞 word 欄的「|」分隔符號移除（grammar 已載 separable，如 ein|kaufen→einkaufen）；(keine) Lust haben 的可選成分括號屬辭書正當用法，保留。</li>
+<li>條目 ID、學習進度、例句來源標註（Tatoeba CC BY 2.0 FR，中文社群譯文自動轉繁體）不變。</li>
+<li>稽核邊界聲明：比對採字形與變化形規則＋候選逐筆人工判讀；字面仍命中但語義相異者（如複合詞含詞素）未必全數捕捉，後續發現個案按同法修復。MM 若指出具體條目可立即個別處理。</li>
+<li>規則查核（12:47）：單字網站 origin/main 無 MM 更動；規則無修改。</li>
+</ul>
 <h2>v2.2.237 — 2026-11-09 12:33</h2>
 <ul>
 <li>稽核收尾：本次品質稽核定調為「已測項有界涵蓋」，非全面無虞。已驗證：主要資料與金鑰整合性、測驗三模組出題資料流、還原（本機備份資料）路徑、完整測驗模式矩陣（含日文字塊重組、中→日拼寫、漢字⇄假名、名詞測驗、名詞「中性」測驗、德文字塊重組，及測驗範圍「僅精熟」切換、備份頁「還原資料」路徑）。未涵蓋：德文 flashcards/熟悉度按鈕路徑（與已測日文共用元件）、音效播放（自動化環境無法核聽）、還原失敗時的錯誤提示、未觸及的日文語法題型（類型/填充）與其他次要路徑。</li>
