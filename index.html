@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.241 2026-11-09 13:31</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.242 2026-11-09 14:02</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -316,6 +316,16 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.242 — 2026-11-09 14:02</h2>
+<ul>
+<li>介面方向修正（MM 2026-11-09 13:58 附兩張參考圖：「操縱欄類似第一張圖，左側放每日課程、右側放測驗。關於每日課程，在課程層級的排版有待改善、內文部分折疊過於繁瑣，應該留中英選擇之外其他大致如同平時的呈現。規劃全站整體UI語言及互動原則朝圖二及apple液態玻璃靠攏。」，iMessage 原文已核對）——單字網站 v14.74 上線：</li>
+<li>操縱欄：依圖一分佈改為左側圓形按鍵＝每日課程（日曆形、數字為課程編號、隨每日課程更新，num 中繼資料機制不變）、右側圓形按鍵＝測驗，中間圓角群組放四個主要分頁（課程、查詢、單字庫、更多）；啟用態一致（僅當前入口亮顯）。</li>
+<li>每日課程歸檔列排版：日期·語言·單字數移上行、標題下行（最多兩行截斷），卡片式列。</li>
+<li>內文折疊回退：v14.72 的逐段折疊經 MM 指正過於繁瑣，每日課程內文恢復連續呈現，另加中英／EN／中文切換（段內點按看答案機制不變）；文法課程頁的折疊保留（MM 未要求移除）。</li>
+<li>全站液態玻璃方向：MM 指示為「規劃」，依大型改版先審核規則僅整理方案，未動全站樣式。</li>
+<li>驗證：390px 實機模擬截圖（首頁、歸檔、內文中英／中文模式）逐張檢視；操縱欄量測（左 10、群組 62-328、右 380）、中英切換三態、文法 20 課仍收合、五個主要畫面無水平溢出。</li>
+<li>規則查核（14:02）：單字網站與控制中心 origin/main 均無 MM 更動；MM 規則無修改。</li>
+</ul>
 <h2>v2.2.241 — 2026-11-09 13:31</h2>
 <ul>
 <li>v14.72 相容修正——單字網站 v14.73 上線：</li>
