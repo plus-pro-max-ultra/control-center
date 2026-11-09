@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.234 2026-11-09 12:06</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.235 2026-11-09 12:07</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -139,6 +139,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>課程中心第一課上線與備份還原實測（2026-11-09 12:05）：單字網站 v14.68（版本戳 v14.68 1109-1201 已核實）：德文第 13 課（強變化分詞）成為每日課程歸檔第一課，內容依 07:03 交付原文照錄、未改寫；課程頁段落（先英後繁）、本課單字 16 個詞條連結、文法點、6 題點按顯答案練習全部現場實測通過，單字連結可開啟對應詞條。歸檔格式支援日德合併課（週日測驗不必拆語言）。備份還原實測通過（一次性瀏覽環境）：產生備份輸出完整 JSON（進度、分類、書籤、筆記、自訂單字、暫存、每日統計、設定），清除儲存後貼上還原成功。</li>
 <li>遠方誌文章連結與頁尾隨機跳轉核准並完成（MM 2026-11-09 11:58，iMessage 原文已核對，回覆 09:16 全文章關聯審視）：「連結加入（gh)、頁尾的按鍵設定成在所有文章中隨機跳轉（對於所有文章）」（原文如此）。執行結果（12:05 已核實，gh-pages 為 1bac328）：五組連結加入——006→002、006→001、004→002、010↔018；全部 22 篇頁尾按鈕改為在全部文章中隨機跳轉（排除當前篇），22 篇現場點擊全部通過；MM 的修改保留；正式站 main 維持 10a88f8 未動、未獲正式發布核准。已於 12:05 向 MM 回報完成（附 010 連結）。新文章共用頁尾管線由發佈方更新中。</li>
 <li>全站偵錯補完與課程中心管線狀態（2026-11-09 12:00）：先前「單字庫 0 列」查明為測試假象——文法課程頁有自己的返回列、無底部導覽，從該頁點導覽本就不會切換；單字庫正常（現行範圍 183 條目）。實測補完：測驗完整流程（選題型後「開始」才可用，屬設計；出題、作答標記 ✓、結束確認對話均正常）、備份資料頁（產生備份／還原資料）渲染正常；全站無 JS 錯誤、無 404。課程中心管線：每日課程歸檔已上線待內容；第一課預定為今日修正版德文第 13 課，由課程 agent 直接交付寫入字庫庫房 lessons 資料檔（格式已定：日期、語言、標題、先英後繁段落、本課單字連詞條、文法點、點按顯答案練習），上內容並實測互動後才算完成；不重複通知 MM。</li>
 <li>課程中心（lesson hub）方案核准（MM 2026-11-09 11:49，iMessage 原文已核對）：「核准這個方案，每天傳一則簡要摘要通知就好（不用附連結），具體網站先做再改」（原文如此）。核准方向：在既有單字網站加 Lessons 區——每日課程成為永久頁面（當日單字連到詞條與例句、文法點、點按顯答案練習；依日期與課程（日文／德文）歸檔，先英後繁；重用網站字庫與 GitHub Pages，不動遠方誌）。通知方式已定：每天一則簡要摘要、不附連結。未明示項目依最小假設處理：只收新課程、不回補第 1–13 課；每日練習與測驗（含週日測驗）同樣適用摘要原則，不再全文傳送。v14.67（11:57 上線，版本戳 v14.67 1109-1156 已核實，390px 截圖已檢視）：更多頁新增「每日課程」歸檔區（依日期與課程列表；課程頁含先英後繁段落、本課單字連到詞條、文法點、點按顯答案練習）；同批修掉每頁 favicon.ico 404。目前為空歸檔，每日課程交付後由維護流程寫入字庫庫房的 lessons 資料檔歸檔；課程完整內容在交接前仍維持 iMessage 傳送。</li>
@@ -315,6 +316,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.235（2026-11-09）</h2>
+<ul>
+<li>記錄單字網站 v14.68：課程中心第一課（德文 L13，交付原文照錄）上線並全互動實測通過；歸檔支援日德合併課。備份產生與還原於一次性環境實測通過。</li>
+<li>規則查核（12:07）：控制中心 origin/main 為 93351ab，無 MM 更動；規則無修改。</li>
+</ul>
 <h2>v2.2.234（2026-11-09）</h2>
 <ul>
 <li>記錄遠方誌 MM 11:58 核准（iMessage 原文已核對）：連結加入（gh）與全部文章頁尾隨機跳轉；12:05 完成並核實（gh 1bac328）：五組連結（006→002、006→001、004→002、010↔018）、22 篇頁尾隨機跳轉排除當前篇、現場點擊全數通過；正式站 main 未動、未獲正式發布核准。原 09:20 關聯審視「未核准、未套用」狀態結案。</li>
