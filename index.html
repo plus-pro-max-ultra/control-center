@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.258 2026-11-10 15:01</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.259 2026-11-10 15:12</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -143,6 +143,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
+<li>單字網站 v15.09 單字頁排版調整（MM 2026-11-10 15:03「單字排版按第一張照片（名詞詞性用m./f./n.㠒是）單字頁內如第二張照片把功能放在操縱欄」，兩張參考照片同則訊息——原文「㠒是」疑為誤字，未據以推論；MM 15:05 補充「就不用目前上下一個單字的按鍵了，只用滑動」；兩則 iMessage 原文已核對。版本戳 v15.09 1110-1506 線上核實，commit 32f106b）：一、單字與讀音、音標改為靠左排列（按第一張參考照片）。二、德文名詞性別改以 m.／f.／n. 標示（原「陽性 der／陰性 die／中性 das」），複數等詞形資訊保留。三、加入單字簿、書籤、熟悉度三項功能集中至頁底浮動操縱欄（按第二張參考照片，固定不隨內容捲動）。四、「上一個／下一個」按鍵依 15:05 補充移除，切換單字統一左右滑動（沿用 v15.08 手勢修正）。照片中的全球／影片／跟讀等功能未新增（無此授權）；字卡、測驗等其他頁面未動。觸控實測：操縱欄三鍵點按、熟悉度選取、單字簿面板、左右滑動 8→9→8 切換、垂直捲動不誤觸換字，320px 寬度操縱欄無溢出；18 項冒煙檢查通過、零頁面錯誤；正式站截圖已檢視。字型與配色未動。</li>
 <li>單字網站 v15.08 滑動順暢修復（MM 2026-11-10 14:56「有時候單字左右滑動不順」，iMessage 原文已核對；版本戳 v15.08 1110-1458 線上核實，commit 7790fcf）：查明三個成因並修復——一、單字詳情頁左右滑動原先若起點落在按鈕或連結上（例句朗讀鈕、操作列等）會被整個忽略，造成「有時沒反應」；現改為任何起點皆記錄，依位移門檻（60px 且水平主導）判定滑動，點按不受影響。二、詳情頁未設觸控方向宣告，瀏覽器可能攔截水平滑動（邊緣手勢、彈效）；現設 touch-action: pan-y 與 overscroll-behavior-x: none，垂直捲動維持原生。三、字卡模式原 touch-action: none，自卡片起手無法垂直捲動且垂直拖曳會帶動卡片橫移；現改 pan-y 並加方向判定（起手 8px 內判定水平／垂直，垂直拖曳交還原生捲動，pointercancel 時重置）。合成觸控實測：自朗讀按鈕起滑 48→49、垂直主導不換字、水平來回 49→50→49、輕點「下一個」正常；字卡垂直拖曳不計數、水平拖曳 90px 以上計數前進；18 項冒煙檢查通過、零頁面錯誤。保留限制：iOS Safari 自螢幕最邊緣起滑的系统返回手勢無法於頁面內完全抑制；無頭模擬不等同 iPhone 手感，實際順暢度以 MM 實機確認為準。版面、字型與操作配置未動。</li>
 <li>單字網站 v15.07（2026-11-10 14:48 版本戳 v15.07 1110-1447 線上核實，commit 6f44353）兩項 MM 指示：一、德文基礎區新增「單位與量詞」分類（MM 2026-11-10 14:41 手寫筆記照片＋指示「補上這些把單位和量詞加到基礎區」，iMessage 原文已核對）：11 字中 der Liter、das Gramm、das Kilo、das Glas、die Flasche、der Becher、die Packung、die Dose、das Stück、die Tasse 已在 Lektion 1／4／6，採跨分類收錄（ID 不變、原課程與進度完整保留、詞庫不重複；觸控實測自基礎區設定熟悉度寫入同一條目，Lektion 4 仍 103 字且收錄不變）；die Tafel 新收錄 de-797（音標 ˈtaːfl̩、陰性、複數 Tafeln，de.wiktionary 核對；2 句 Tatoeba 量詞義例句 tid 3103531、14018371 附直接英譯，中文待補不編造）。二、移除單字頁淺灰色註記文字（MM 14:42「刪除單字頁面淺灰色的註記詞」，iMessage 原文已核對）：例句下來源註記行、待補句數提示、翻譯待補佔位文字自詳情頁移除（文法課共用元件一併生效，同 v15.04 先例）；Tatoeba（CC BY 2.0 FR）授權標示移至設定頁常設保留，讀音、詞性、釋義、例句與來源資料（tid、sourceUrl、zhPending）均未更動。觸控實測：基礎區 69 條目、新分類 11 字列表、詳情頁無註記、熟悉度選取、課程切換均正常；18 項冒煙檢查通過、零頁面錯誤；正式站截圖已檢視。</li>
 <li>遠方誌 023 出刊完成、024 審閱版上線（2026-11-10 06:06 發布代理核實回報）：023（11/10 刊，閏秒）已依 MM 22:44 新規則於表訂日自動推正式站 main e1f56ed——正式站 31 個線上檔案回應 200 且內容與提交一致，保留 MM 最新正文與反思修改 a879c3d，23 個隨機連結有效；024（11/11 刊）審閱版已在 gh 上線 d06a1c9——32 個檔案核實、24 個連結有效，023 HTML 未更動。本端抽檢（07:14）：正式站 023 頁回應 200；gh 索引已列出 <a href="https://plus-pro-max-ultra.github.io/remote-journal/articles/024-humidity/">024 審閱稿</a> 連結且該頁回應 200。依 MM 22:44 規則，024 於 11/11 表訂日自動推 main；若完全無細調動作，另行提醒。</li>
@@ -330,6 +331,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.259 - 2026-11-10 15:12</h2>
+<ul>
+<li>記錄單字網站 v15.09 單字頁排版調整（MM 15:03 兩張參考照片＋指示「單字排版按第一張照片（名詞詞性用m./f./n.㠒是）單字頁內如第二張照片把功能放在操縱欄」，「㠒是」疑為誤字未據以推論；15:05 補充「就不用目前上下一個單字的按鍵了，只用滑動」）：單字區靠左排列、德文名詞性別 m.／f.／n.、三項功能集中頁底浮動操縱欄、移除切換按鍵改純滑動。版本戳 v15.09 1110-1506 線上核實（commit 32f106b）；合成觸控實測（操縱欄點按、熟悉度、滑動 8→9→8、垂直不誤觸、320px 無溢出）與 18 項冒煙檢查通過、零頁面錯誤。</li>
+<li>規則查核（15:12）：控制中心 origin/main 795847b（v2.2.258 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。MM 兩則指示原文已於 phone_messages 核對（15:03、15:05）。</li>
+</ul>
 <h2>v2.2.258 - 2026-11-10 15:01</h2>
 <ul>
 <li>記錄單字網站 v15.08 滑動順暢修復（MM 14:56 回報「有時候單字左右滑動不順」）：詳情頁滑動起點不再排除控制元件、加 touch-action 宣告；字卡加方向判定與 pointercancel 處理。版本戳 v15.08 1110-1458 線上核實（commit 7790fcf）；合成觸控實測與 18 項冒煙檢查通過；iOS 邊緣手勢與實機手感待 MM 確認。</li>
