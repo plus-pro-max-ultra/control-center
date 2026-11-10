@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.261 2026-11-10 19:50</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.262 2026-11-10 19:55</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -332,6 +332,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.262 - 2026-11-10 19:55</h2>
+<ul>
+<li>記錄單字網站 v15.12 課內單字返回路徑修正（接續 v15.11 層級工作）：從課程內開啟單字後，返回鍵現在回到原來那一課的詳情並恢復原捲動位置（實測：課文捲至 600px 開單字 125/213，返回後仍是 2026-10-12 課詳情、捲動 600px、本課單字 38 列俱在），不再跳回歸檔列表。完整返回鏈實測：單字→原課詳情→歸檔（28 列）→課程首頁；日曆鈕重進回歸檔頂層。瀏覽器原生返回未接管站內視圖（全站既有行為，各頁一致，非本次迴歸；如需接管屬全站歷史模型改造，另行提案）。另完成全站橫幅普查：18 種畫面類型（課程首頁、查詢、單字庫、單字詳情、更多格、新增單字、暫存區、單字本、書籤複習、自訂單元、學習統計、備份資料、設定、每日課程歸檔、課程詳情、測驗首頁、測驗作答、測驗結果）全部 62px 置頂固定，文法頁同；標頭僅三種實作（共用 We 元件、測驗與單字翻頁兩處同類原始標頭、文法頁已改共用標頭），無其他頂部橫幅樣式。版本戳 v15.12 1110-1948 線上核實（commit 1485b41）；18 項冒煙檢查通過、零頁面錯誤。</li>
+<li>規則查核（19:55）：控制中心 origin/main 91180b6（v2.2.261 已線上核實），CONTROL.md 本地與遠端雜湊一致（372ad486），無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.261 - 2026-11-10 19:50</h2>
 <ul>
 <li>記錄單字網站 v15.11 每日課程層級、過往課程回補與全站橫幅統一（MM 19:34「處理每日課程的層級問題，補上至今過往課程、處理每個頁面頂部標題實際橫幅位置及高度不一的問題」、19:38 補充「目前每日的操作邏輯仍錯誤歸在其他之下」，兩則 iMessage 原文已核對）：①每日課程自「更多」底下移出，成為獨立頂層頁面——底部日曆鈕直接進入，返回鍵回課程首頁，不再落在更多功能格（導覽歸屬與返回路徑一併修正，非僅改標籤）；②歸檔改依語言分組（日文課程／德文課程／週日綜合複習），各組按課號排序，列示第 N 課、日期與單字數；③回補 10/12–11/8 全部 26 課過往課程，內容取自當日 iMessage 交付原文照錄、未改寫，答案段落正規化為點按顯答案；de-13 補上課號 13；④全站 11 個畫面頂部標題橫幅統一為 62px 置頂固定（原各頁 45／61／61.5 不等），文法課程頁改用同一橫幅（原為不同樣式頁首）。版本戳 v15.11 1110-1944 線上核實（commit 84911dc）；18 項冒煙檢查與合成觸控回歸（分組渲染 28 列、返回路徑、課內單字往返、左右滑動換字 1/697→2/697、測驗）通過、零頁面錯誤。§10 課程中心核准條目中「只收新課程、不回補第 1–13 課」之最小假設由 MM 19:34 指示取代，已於該條標註。</li>
