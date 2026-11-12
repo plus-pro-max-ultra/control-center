@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.278 2026-11-12 09:19</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.279 2026-11-13 07:10</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -334,6 +334,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.279 - 2026-11-13 07:10</h2>
+<ul>
+<li>字庫 v15.17 發布:德文第 15 課「用 war 和 hatte 說過去」(sein/haben 簡單過去式)已上線,id 2026-11-13-de、num 15;依製作端套件收錄,6 個複習字 ID(de-183 das Wort、de-211 das Foto、de-118 die E-Mail-Adresse、de-170 lesen、de-176 schreiben、de-328 sehen)已逐一對字庫核實存在;文法來源 elon.io Präteritum sein/haben 頁(製作端提供)。無新德文單字收錄,德文新字暫停維持;字庫總數 2123 不變。18 項冒煙檢查通過、無頁面錯誤。</li>
+<li>規則查核(07:10):控制中心 origin/main 3622108(v2.2.278 已線上核實),CONTROL.md 本地與遠端雜湊一致,無 MM 更動;依 §5 自動推送規則發布。字庫倉庫推送前發現 origin/main 有一筆 staging 更新(inbox/staging.json,d02b290),已整合後再推送,未覆寫。</li>
+</ul>
 <h2>v2.2.278 - 2026-11-12 09:19</h2>
 <ul>
 <li>每日檢查對帳更正(§8):例句缺口快照更正為 230 句/145 詞條(德 38=29 數字附註槽位+9 未編號明確缺口,日 192);09:12 版德文 29 句僅計數字附註槽位,漏計六個詞條(de-624、de-735、de-762 各缺 2 句;de-504、de-506、de-793 第二句待補),本端已逐條對字庫原始檔核實後納入。de-735 候選句查證:線上現為 0 句例句,Tatoeba 8088438 仍是「已查證可用之候選」而非已收錄,先前記錄無虛假但易誤讀,快照已加註釐清;實際回補屬每日檢查端流程,本端未代為套用。zhPending 122 不變。Nudeln 與 langsame 維持保留。</li>
