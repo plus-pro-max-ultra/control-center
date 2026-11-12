@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.282 2026-11-13 07:54</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.283 2026-11-13 07:58</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -142,6 +142,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>新詞發布前：檢查必要欄位（讀音、詞性、意思、例句、note 條件、parts 條件）。</li>
 <li>詞條以原形收錄（MM 2026-10-29「以後詞條都以原型輸入」）：新詞一律以字典原形建檔；提交為屈折形式時（如 jeden）以其原形（jeder）收錄，並於 grammar 欄位說明變化。此規則不解決拼字疑問——拼字未確定的提交仍保留暫存、不擅自改字。</li>
 <li>例句可後補（MM 2026-10-29「以後例句可後補但單字先更新」）：來源例句不足時詞條先收錄，缺的例句或中文譯文明確標「待補」並列入每日檢查回補；仍不得編造內容。</li>
+<li>暫存匯入檢核（2026-11-13，v15.18–v15.20 撤回教訓）：提交收錄前逐筆檢核——（1）去重：以原形小寫對現有字庫全部詞條比對（含去除 der/die/das 後比對），重複者依 v14.51「ya→de-287」先例記錄略過、不建新條；（2）核心資料：詞性／複數／音標／釋義須出自該詞本身之詞典條目（de.wiktionary／Duden／DWDS 等），複合詞推定或近義詞條目不算核實，無來源者保留暫存、不收錄；（3）例句僅採已核對來源句，缺句或缺譯標待補，不編造。</li>
 </ul>
 <h2 id="s10">10. 目前狀態</h2>
 <ul>
@@ -334,6 +335,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.283 - 2026-11-13 07:58</h2>
+<ul>
+<li>規則新增（§9 暫存匯入檢核，CONTROL.md 已同步）：暫存提交收錄前逐筆檢核——去重（原形小寫對全字庫比對，重複依 v14.51 先例記錄略過）、核心資料須出自該詞本身詞典條目（複合詞推定不算核實，無來源保留暫存）、例句僅採已核對來源句、缺漏標待補。源於 v15.18–v15.20 四筆重複與一筆核心未核實撤回之教訓；不涉新功能。</li>
+<li>規則查核（07:58）：控制中心 origin/main e8d872f（v2.2.282 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.282 - 2026-11-13 07:54</h2>
 <ul>
 <li>字庫 v15.20 發布（字庫 main c37e891，版本戳 v15.20 已線上核實；Pages 邊緣快取首次回 v15.19、第二次核實新版，線上 HTML 已無 de-798／de-802／de-808／de-811／de-813）：重複撤回——v15.18 收錄之 19 筆中，die Nudel（de-798）、studieren（de-802）、das Gericht（de-808）、das Schnitzel（de-811）經線上查詢頁實際檢出與既有詞條重複（de-581、de-242、de-530、de-765），依 v14.51「ya 為 de-287 ja 之重複，記錄略過」先例撤回新條、參照改記重複略過（skip 維持、附註撤回原委）。本次暫存匯入淨結果：19 筆提交＝14 筆新收（de-799 das Ausland、de-800 später、de-801 zusammen、de-803 gleichfalls、de-804 satt、de-805 die Lust、de-806 zum Wohl、de-807 Prost、de-809 das Eisbein、de-810 das Sauerkraut、de-812 das Rindergulasch、de-814 die Salzkartoffel、de-815 die Roulade、de-816 die Spätzle）＋4 筆重複略過＋1 筆核心未核實撤回（Krustenschweinebraten 續留暫存）；詞庫 2123→2137、德文 697→711。新收 14 筆共 20 句 Tatoeba 來源例句、中文譯文全標待補（zhPending）；gleichfalls、zum Wohl、das Eisbein、die Salzkartoffel 缺第二句，das Rindergulasch、die Roulade 雙語例句全缺，均 note 標明、列入每日檢查回補。18 項冒煙檢查通過、無頁面錯誤。</li>
