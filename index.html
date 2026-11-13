@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.285 2026-11-13 11:14</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.286 2026-11-13 15:44</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -336,6 +336,12 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.286 - 2026-11-13 15:44</h2>
+<ul>
+<li>MM 2026-11-13 15:42 指示（iMessage 原文已核對，逐字「在待我決定的9項中，已完成更新先推到正式版、15篇先更新到gh，剩下七項全部刪除。」）：未完成清單中「待 MM 決定」的其餘項目取消。清單第 4–9 項實為六項，六項全部取消：Krustenschweinebraten、langsame、Deutsch.pdf 準備、NotebookLM 匯出、連結入口頁、vocus。MM 所稱「七項」與實際六項之差距已在對話中向 MM 確認是否另有一項，答覆前不推定其他取消對象；取消待辦不刪除既有檔案或已發布內容（已於對話中向 MM 說明）。</li>
+<li>字庫執行（v15.22，字庫 main 52da071，版本戳 v15.22 1113-1543 已線上核實；inbox/staging.json 線上核實已標 canceled）：Krustenschweinebraten 與 langsame 兩筆保留暫存停止後續匯入處理——staging 項目標 canceled、words-inbox 參照標 skip，均附 MM 2026-11-13 取消依據，紀錄保留為歷史、不刪除，不再列入暫存匯入或每日回補；詞庫內容無更動（2139 條不變，冒煙檢查 14 項全通過、零頁面錯誤）。其餘四項（Deutsch.pdf 準備、NotebookLM 匯出、連結入口頁、vocus）不涉字庫，同依指示取消，相關歷史紀錄保留。德文每日新字新增暫停、每日檢查回補、每日課程維持不變。</li>
+<li>規則查核（15:44）：控制中心 origin/main d93ce9b（v2.2.285 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.285 - 2026-11-13 11:14</h2>
 <ul>
 <li>字庫 v15.21 發布（字庫 main 1e0471c，版本戳 v15.21 1113-1112 已線上核實；Pages 邊緣快取前四次回舊版戳、第五次核實新版）：MM 2026-11-13 11:08 確認兩筆暫存拼字（iMessage 原文已核對；逐字「對。027引用的那一條補上原文」——「對」回覆 07:58 之 Mahlzeit／Maultaschen 拼字確認詢問；後句屬遠方誌 027 期事項，另案處理）。「Mahzeit」確認為 Mahlzeit、「Maultschen」確認為 Maultasche，依 §9 暫存匯入檢核三關收錄為 de-817 die Mahlzeit、de-818 die Maultasche：（1）去重：原形小寫（mahlzeit／maultasche，去除冠詞）對全庫既有詞條比對，無重複；（2）核心資料：詞性（均陰性）、複數（Mahlzeiten／Maultaschen）、音標（ˈmaːlˌt͡saɪ̯t／ˈmaʊ̯lˌtaʃə）、釋義均出自 de.wiktionary 該詞本身條目；（3）例句僅採 Tatoeba 已核對來源句、不編造：die Mahlzeit 2 句（tid 427045「Mahlzeit!」、tid 586474「Japaner essen drei Mahlzeiten am Tag.」，各附直接英譯），die Maultasche 2 句（tid 7666097「Was gibt es Besseres als eine Maultasche? Zwei Maultaschen!」、tid 5996808「Seit unserem Urlaub im Schwarzwald sind Maultaschen mein Leibgericht.」，各附直接英譯；以單數「Maultasche」查無來源句，改以複數「Maultaschen」查得）；4 句皆無已核對直接中文譯文，標待補（zhPending，列入每日檢查回補）。兩筆暫存參照已登錄 words-inbox（標 skip，註對應詞條 id 與 MM 2026-11-13 確認依據）；暫存區僅餘 Krustenschweinebraten 一筆（核心資料無獨立詞典來源，續留暫存），langsame 一筆無 MM 回覆、同樣續留。詞庫 2137→2139 條、德文 711→713 條。冒煙檢查 14 項全通過、零頁面錯誤。</li>
