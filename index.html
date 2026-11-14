@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.295 2026-11-14 10:42</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.296 2026-11-15 01:12</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -120,6 +120,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 <li>事實更正後自動更新 gh（MM 2026-11-06 01:28:02「如果待確認事實解決之後自動跟新到gh版」，「跟新」依文意為「更新」，iMessage 原文已核對）：待確認事實釐清、修正文句經 MM 確認後，自動更新到 gh 版，不再另問是否推送；事實與文意的修正文句仍須 MM 確認，不得自動採納所有提議；正式站仍須核准。</li>
 <li>條件式推送 main（MM 2026-11-06 01:28:47「當001-018都確認完成後就將正式版推到main」，iMessage 原文已核對）：條件式授權，不是現在立即發布；待 001–018 全部確認完成後，以 gh 最新版（含 MM 修改）推到正式站 main 並核實官方部署，該批不再另問發布核准。尚未解決的事實或文意確認仍須先經 MM；條件達成前正式站 main 7e635c9 不變。</li>
 <li>潤飾準則新增（MM 2026-11-06 01:34:33，iMessage 原文已核對；原文開頭似有缺漏、括號未成對，以下逐字）：「限定語放進措辭用許多字詞來確保單一證據不是通則的現象，雖然避免偏頗風險，但也讓論述割裂、影響閱讀體驗在精準選字方面下功夫來得到相同效果卻不會多出澄清語句）、注意引用密度、解釋優先於轉述。以上加入潤飾準則」。理解為：以精準選字承載證據範圍，而非堆疊澄清語句打斷論述；控制引用密度；解釋優先於轉述。屬準則更新，不是未確認事實更正的核准，也不是重寫全部文章的新要求；既有授權與事實／文意確認關卡不變。</li>
+<li>潤飾準則新增（MM 2026-11-15 01:10:30，iMessage 原文已核對；「這一整具」依文意為「這一整句」，以下逐字）：「注意要避免整句的否定寫法「不能因為補丁重疊，就替它編出祖母傳給孫女的完整故事。留下來的衣服是一份材料證據，不是已經寫好的人物傳記。」這一整具幾乎沒有有效訊息又生硬，我會改寫成「補丁重疊之下，不一定都有祖母和孫女的感人故事，但留下的衣服是一份讓我們得以細細抽絲剝繭的材料證據。」」。理解為：避免整句只用於否定一個自設誤解、缺乏有效訊息又生硬的寫法；必要之限定與分寸仍保留，篇幅用於提供可理解的資訊與方向；非全面禁止否定句，不把否定句機械刪除。「我會改寫成」為 MM 示範其本人改法，且 MM 已自行套用於 028（gh f3ac0b5，同次並改開場），非授權代為覆寫其待刊稿；028 後續發布以最新 gh HTML 完整保留為準。屬準則更新，不改變既有授權與事實／文意確認關卡。</li>
 </ul>
 <h2 id="s8">8. 每日任務</h2>
 <ul>
@@ -336,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.296 - 2026-11-15 01:12</h2>
+<ul>
+<li>潤飾準則同步（MM 2026-11-15 01:10:30，iMessage 原文已核對；「這一整具」依文意為「這一整句」）：§7 新增一條——避免整句只用於否定一個自設誤解、缺乏有效訊息又生硬的寫法；必要限定保留、篇幅用於可理解的資訊與方向，非全面禁止否定句（原文逐字記入 §7，附 MM 自示範之改寫句）。MM 已自行將其改寫套用於 028（gh f3ac0b5，同次並改開場），無代為覆寫；028 後續發布以最新 gh HTML 完整保留為準，029 語言複核適用此準則。規則變動：有（§7 新增一條）。</li>
+<li>規則查核（01:12）：控制中心 origin/main b301e66（v2.2.295 已線上核實），編輯前 CONTROL.md 本地與遠端雜湊一致、無 MM 更動；本次 §7 新增為依 MM 指示之準則記錄；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.295 - 2026-11-14 10:42</h2>
 <ul>
 <li>單字網站 v15.31（字庫 main ec00e60，版本戳 v15.31 1114-1040 已線上核實）：修復第二輪回補後 6 個詞條之失效待補附註——居間、袋、案内、差す、楽器 已補齊 2 句來源例句，待補附註移除（案内 保留「案内所 是服務台」释义附註）；縦 附註更正為缺 1 句。另發現 6 個德文詞條（de-501／502／503／505 等）附註仍載「第二句雙語例句待補」而第二句已於 v14.58 補上——屬歷史遺留、非本輪改動，留待每日檢查流程核處，本版未更動。</li>
