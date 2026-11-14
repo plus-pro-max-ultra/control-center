@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.298 2026-11-15 01:36</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.299 2026-11-15 02:12</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.299 - 2026-11-15 02:12</h2>
+<ul>
+<li>遠方誌引用標記密度整理（狀態記錄，非規則變動）：出版方核實上線 gh 75c715a——掃描 28 篇日更加 15 篇回顧，就 010、011、012、016、018、021 與未排程回顧 Queen's Head 減少編號引用標記；七頁由 36 個編號標記減至 2 個，全部 43 篇合計 97 減至 63（屬逐篇語義判斷，非數字配額）。移除的標記改以現有具意義的來源、研究者、法令文字連結呈現，標記以外文字不變，來源連結目的地、來源清單與支持範圍不變。43 篇 HTML 逐行區塊守門通過，行動版像素由主線檢視。預覽狀態：gh 已完成；正式 main：六篇較早發布文章的同步已於 02:12 向 MM 請示，待核准。Queen's Head 維持僅 gh；028、029 晨間流程不變。</li>
+<li>規則查核（02:12）：控制中心 origin/main 77c9d4e（v2.2.298 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.298 - 2026-11-15 01:36</h2>
 <ul>
 <li>單字網站 v15.32（MM 2026-11-15 01:23 要求，iMessage 原文已核對；「典籍後」依文意為「點擊後」、「混著」為「循著」、「案件」為「按鍵」）：一、單字頁操縱欄播放鍵改為依目前順序連播——點一下開始循目前順序（同方向鍵與滑動切換的順序，含隨機排序後的順序）逐字切換並播音，再點一下停止，播到清單最後一字自動停止，切字間隔約 0.55 秒；上方「朗讀發音」仍只播當前單字一次，「打開單字時自動朗讀」開關不變（連播進行中自動朗讀暫停，避免重複播音）。二、暫時介面改為獨立彈窗：單字設定（字體大小、朗讀速度、自動朗讀、藏釋義）、加入單字簿、個人筆記編輯，由內嵌展開改為覆於目前頁面上的彈窗（同熟悉度選擇的樣式），點背景或「完成」關閉，底下頁面、位置與狀態保持不變。全站確認：站內內嵌暫時介面僅此三處（選項面板兩處加筆記編輯），熟悉度與測驗詳解本為彈窗，其餘設定為完整頁面。另修：停止連播或交接時取消語音不再跳「朗讀未能完成」錯誤提示。驗證：雲端瀏覽器行動版版面實測（該環境無語音裝置，以模擬語音引擎驅動播放鏈），連播自 1/1456 逐字前進至 行く（9/1456）後停止、停在當字，無錯誤提示；三個彈窗截圖核實覆於原頁面上、關閉後原頁狀態保留。資料、進度、字庫不變。提交 57d0833、2f30987、66bc9aa；線上版本戳 v15.32 1115-0133 經三次快取繞過取回核實。</li>
