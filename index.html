@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.304 2026-11-15 09:52</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.305 2026-11-15 09:58</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.305 - 2026-11-15 09:58</h2>
+<ul>
+<li>單字網站 v15.36（d80e4f6）＋ v15.37（2a4cea9）更正與補充（更正 v2.2.304 一項陳述）：v15.35（26dc2c3）僅更新 words.json 原始檔，未執行 tools/build.py 重新內嵌——本站為單頁應用，字庫資料內嵌於 index.html，故 v15.35 的三處例句修復當時並未實際送出；v2.2.304 所載「線上核實」僅及 words.json 原始檔，未及實際頁面，特此更正。v15.36 重新建置內嵌（index.html 差分僅 30 行，限三條目例句與版本戳；並還原 words.json 為 indent=1 排版），線上版本戳 v15.36 1115-0955 經三次快取繞過取回核實、誤配句零出現、替補句在頁。v15.37 移除 jp-1176 已過時之缺句提示（該條已補足兩句來源例句），版本戳 v15.37 1115-0956 經三次快取繞過取回核實。行動版實頁核實（390×844）：jp-599 ペット 兩句獨立例句在頁、モペット 句已不見；jp-1176 ステレオ 兩句新例句在頁、ステレオタイプ 句與過時提示均已不見；jp-1178 パート 原句加新補兼職義例句在頁、デパート 句已不見。流程防再發：此後字庫資料更動一律以 tools/build.py 建置並以實頁（非僅原始檔）核實後方算上線。統計維持 155 來源缺口／107 詞條／192 待補。</li>
+<li>規則查核（09:58）：控制中心 origin/main 712dc0c（v2.2.304 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.304 - 2026-11-15 09:52</h2>
 <ul>
 <li>單字網站 v15.35（26dc2c3）：同類例句陷阱修復加回補進度核實。一、對全庫日文例句做同類複核時發現三例片假名子字串誤配（與 2026-11-15 09:15 每日檢查回報之複合詞誤配同類），依既有錯誤即修範圍處理：jp-599 ペット 舊句「スクーターとモペットって何が違うの？」（Tatoeba 13028869）中 ペット 僅為 モペット（輕便摩托）之一部，非本詞；以「ペットのネコが昨日しんじゃったの。」（Tatoeba 196795，直接中文譯文「我養的貓昨天死了。」zhtid 470927）替補。jp-1176 ステレオ 舊例句實為 ステレオタイプ（刻板印象），非音響 stereo（舊資料無來源標記），移除；補兩句獨立用法「ステレオにレコードをかけてください。」（Tatoeba 214601）與「少しステレオの音を小さくしてください。」（Tatoeba 146860），兩句無已核對直接中文譯文，依規則標 待補。jp-1178 パート 舊例句「デパートで買った。」實為 デパート（百貨公司，舊資料無來源標記），非兼職 パート；以「パートの仕事を見つけないと。」（Tatoeba 1230896，兼職義）替補，無已核對直接中文譯文，標 待補。「デパートで買った。」一句仍正確保留於 jp-654 デパート 條（159726）。防再發：回填候選比對加入片假名連串防護——目標詞為片假名且其前或後緊接片假名即視為較長外來語之一部，拒收（モペット／デパート／ステレオタイプ 類誤配不再入候選）。二、回補進度核實（每日待補回補）：189 句待補譯文全部即時向 Tatoeba 逐句重查，無新增已核對直接中文譯文（0/189）；既有候選池逐句語義複核，其餘候選均為複合詞或詞義／讀音不符（操縦、森林、林檎、時刻表、本心を表す、ホームシック 等），依例句適配標準拒收，缺口維持誠實待補。統計：155 來源缺口／107 詞條／192 待補（jp-1176 補足兩句，缺口減一；新補三句無已核對譯文，待補淨增三）。線上核實：線上 words.json 經三次快取繞過取回，三處誤配句已不見、替補句在庫，版本戳 v15.35 1115-0950。</li>
