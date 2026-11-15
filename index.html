@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.307 2026-11-15 10:10</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.308 2026-11-15 20:03</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.308 - 2026-11-15 20:03</h2>
+<ul>
+<li>遠方誌每日狀態（狀態記錄，非規則變動）：出版方 2026-11-15 20:03 備妥 030《墨西哥城的運河菜園，誰還願意繼續種？》，WIP 11770a0ba877c10ada41b5ec53aa3d02e8432405（work-in-progress 分支頭，本記錄前經 GitHub 核實一致；<a href="https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/daily/2026-11-17-chinampas/README.md">工作分支 README</a>），排程 11/16 上 gh 預覽、11/17 上正式 main。主線已檢視 3 張桌機與行動版截圖。公開分支無更動：正式 main 2912e32、gh 9a49d6d；尚未對 MM 遞送。明日流程：029 最新 gh 推正式 main、030 推 gh；029 尚無 MM 改稿，發「無改稿」通知前再核一次。六篇較早文章引用標記推正式 main 之核准、管理者區免費提案，均仍待 MM 指示，本記錄不含新核准。</li>
+<li>規則查核（20:03）：控制中心 origin/main 48ecd60（v2.2.307 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.307 - 2026-11-15 10:10</h2>
 <ul>
 <li>單字網站 v15.39（c7de4a1）：假名探索句之詞義適配裁定（v15.38 句經逐義複核，依例句適配標準——僅字串／讀音相符不足）。裁定與依據：一、jp-981 表（おもて；本條釋義 表面；正面／surface）：所加「天気がよければ、パーティーは、おもてでやります。」（125185）句中 おもて 為「戶外；外面」義（JMdict 表（おもて） 另列 outside; exterior 義，但非本條釋義範圍，其已核對中文譯文亦作「戶外」），與本條教學義項不符，移除，恢復誠實缺 2 句提示。二、jp-1221 其れで（それで；接續詞 因此／so; therefore；JMdict 僅列 Conjunction so; therefore; and; (and) then）：所加「それで十分だよ。」（205726）「それでいいよ。」（3488181）為指示詞 それ 加助詞 で（「那樣就」），非因果接續詞用法，移除，恢復誠實缺 2 句提示。三、jp-667 然うして（そうして；本條釋義 於是；那樣做／and; like that；JMdict Conjunction and; like that）：「そうしていただけると助かります。」（4272099，舊句補出處）與「どうぞ、そうして下さい。」（201374）為「那樣做／do so」用法，與本條既有釋義 那樣做 相符，保留；釋義與詞性未更動（未為遷就候選而擴大）。統計：153 來源缺口／105 詞條（日文 75、德文 30）／193 待補。線上核實：版本戳 v15.39 1115-1008 經三次快取繞過取回核實；行動版實頁核實（390×844）jp-981、jp-1221 恢復缺句提示、例句區清空，jp-667 兩句在頁（沿用 v15.38 截圖）。待補全量重查基準更新為 193 句（每週一次）。</li>
