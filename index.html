@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.309 2026-11-16 00:39</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.310 2026-11-16 01:10</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.310 - 2026-11-16 01:10</h2>
+<ul>
+<li>遠方誌管理者區提案：自助設定指南交付（狀態記錄，非規則變動，無實作授權）：MM 2026-11-16 01:07「告訴我怎麼設定就好。029修改：標題重設、第二段第三小段說得太模糊」（iMessage 原文已核對）——只要自助設定說明，不再由系統進行帳號設定。雙語指南已上 gh（5b6f745，<a href="https://plus-pro-max-ultra.github.io/remote-journal/guides/private-repost-setup/">私人轉貼工作台設定指南</a>，01:10 經主線 390px 行動版檢視後以中英雙語遞送；頁面與提交經 GitHub 核實）。指南為通用說明：不含個人信箱、帳號識別或任何密鑰；並依官方文件明示 Cloudflare 免費 Zero Trust 需填付款資料，系統未代付、未送出任何卡片。Access 設定本身不建立工作台程式；文章清單與複製工具尚未製作。指南交付即完成，不含實作授權。029：最新 MM 改稿 gh ce139a2 五段全部保留（已核實提交）；因有 MM 改稿，不發「無改稿」通知；依 01:07 指示草擬之新標題與第二段第三小段改寫已出示待 MM 核准，尚未寫入。六篇較早文章引用標記推正式 main 之核准仍待 MM。</li>
+<li>規則查核（01:10）：控制中心 origin/main 5f0bb33（v2.2.309 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.309 - 2026-11-16 00:39</h2>
 <ul>
 <li>遠方誌管理者區提案進展（狀態記錄，非規則變動，無新授權）：MM 2026-11-16 00:35 指示改用其先前提供之 Google 帳號嘗試登入（iMessage 原文已核對；帳號細節依指示不列入本檔，以下稱「使用者選定之 Google 帳號」）。出版方據此找回原始資料與該專屬帳號並完成登入。該 Cloudflare 帳號顯示 Workers Free 0 美元方案，但無任何專案、未見遠方誌正式站，Zero Trust 未設定。主線已檢視方案頁截圖，並已向 MM 請示：獨立工作台設於此帳號，或改用管理正式站之 Cloudflare 帳號（兩種做法皆可保留該 Google 身分為允許登入者）。未建立或設定任何 Worker／Access／OAuth，無付費動作；惟登入本身可能自動開通帳號（無明確建立步驟），故不宣稱全無更動。六篇較早文章引用標記推正式 main 之核准仍待 MM；晨間 029 推正式、030 推 gh 之流程不變。</li>
