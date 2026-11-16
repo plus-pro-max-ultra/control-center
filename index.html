@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.318 2026-11-17 00:51</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.319 2026-11-17 01:04</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.319 - 2026-11-17 01:04</h2>
+<ul>
+<li>遠方誌「從手動修改學習」流程補強（狀態與流程記錄，依 11/4 既有常設指示，無授權擴大）：MM 2026-11-17 00:52「對於遠方誌文章的編寫，我下過『從我的手動修改學習叫為恰當的用字遣辭』，目前至今結果如何，有否應用結合於實際流程中？」（iMessage 原文已核對，「叫為」為原文）。回顧發現跨篇學習確實發生但不一致：024→025（dc816db）、028→029（80dde10）有實際應用，惟無完整學習台帳、亦非每篇草稿之必經關卡；主線已於 00:57 如實答覆。出版方隨後於 work-in-progress 10c49f0b（經 GitHub 核實）更新既有 DAILY_WORKFLOW 與 POLISHING_CRITERIA：建立可追溯之六例學習台帳（涵蓋 028／029／030，含 MM 原文與修改前後對照、明確區分偏好與推論），並設每篇草稿逐條標記「已套用／原本即符合／不適用／需檢視」附位置與當時雜湊；雜湊僅記錄時效、不作品質判定，MM 後續改稿會重啟相關檢視。台帳公開於 <a href="https://github.com/plus-pro-max-ultra/remote-journal/blob/work-in-progress/editorial-learning/examples.md">editorial-learning/examples.md</a>（已核實可開啟）。031 審閱同步完成：三處僅措辭修改（範疇定義、搬運收納之具體動作、價值提問），來源與語意界線保留，320／390／1440 三種寬度畫面核實，主線已檢視三張截圖。正式 main 與 gh 文章無寫入、030 無 MM 更動、未新增核准規則；01:02 已向 MM 遞送完成說明，並明言此為流程修正、非文稿已穩定之證明。</li>
+<li>規則查核（01:04）：控制中心 origin/main d14d0b9（v2.2.318 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.318 - 2026-11-17 00:51</h2>
 <ul>
 <li>個人記帳網站提案回饋（僅狀態記錄）：MM 2026-11-17 00:49「三版中以第二版的UIUX邏輯最佳，但還有改進空間」（iMessage 原文已核對）。「第二版」所指版本尚未確認——主線已向 MM 求證是指精簡帳本、明確儲存、報告可回查單筆之提案版，或是最新 ZIP 之藍色表單版。在版本所指確認前，程式基線不定案、亦不視為實作授權；後續方向（保留該版操作邏輯、底層採用已驗證修正、改善其餘操作摩擦）待 MM 答覆後記錄。</li>
