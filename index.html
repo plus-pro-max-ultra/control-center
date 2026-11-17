@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.322 2026-11-17 09:58</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.323 2026-11-17 11:59</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,12 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.323 - 2026-11-17 11:59</h2>
+<ul>
+<li>記錄 MM 11:58 對財務頁設計的回覆（iMessage 原文已核對，原文照錄）：「第二版設計是目前最佳，但仍須研擬改良，問題之一是質感不足、也需要思考資訊如何呈現」——第二版為目前最佳方向，改良重點為質感與資訊呈現方式；後續僅研擬改良提案，未定案、未實作、未部署；第二版是否正式定為基準版本尚未定案。</li>
+<li>記錄 MM 11:56 詢問（iMessage 原文已核對，原文照錄）：「說明最近幾篇遠方誌文章都沒有圖片的狀況」——已據實回覆：029、030 正式版與 031 預覽均為純文字，近期例外為 028（照片）與 026（圖解）；公開圖庫候選評估尚未完成。依 2026-11-03 既有指示，圖片角色、候選來源、權利確認與不附圖的評估理由正補入出刊準備流程，尚未完成；各篇文章內容未更動。</li>
+<li>規則查核（11:59）：控制中心 origin/main 787a575（v2.2.322 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.322 - 2026-11-17 09:58</h2>
 <ul>
 <li>單字網站 v15.42 日文第 17 課例句回補第一輪（字庫 main 3159f11，版本戳 v15.42 1117-0954 線上核實三次，行動版 390px 豆腐 詞條頁截圖已檢視）：對第 17 課 30 字執行有界首輪來源回補——Tatoeba 逐字檢索收成 122 句候選（23 字有候選），逐句語境審核（詞字同一、讀音、詞條所標義項與教學用途均相符才採）後採用 45 句：32 句附已核對直接中文譯文（簡體來源 OpenCC 轉繁並規一用字，tid＋zhtid 均記錄可回溯）、13 句中文待補。剔除不符合者含諺語義句（血は水より濃い）、顏色義句（アイシャドウ 之 濃い）、譯文加主語句等；比對防誤配守則沿用精確字串＋漢字複合＋片假名連串。7 字來源收錄稀薄、無合格候選，維持缺 2 句誠實標記：ネックレス、マフラー、履く、おにぎり、定規、筆箱、名刺；画面 補 1 句、維持缺 1 句。回補工具（收成／套用、可續跑）已隨本次提交存入字庫 repo tools/ 供後續批次沿用。</li>
