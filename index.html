@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.332 2026-11-18 14:04</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.333 2026-11-18 15:00</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.333 - 2026-11-18 15:00</h2>
+<ul>
+<li>記帳專案審查範圍更正（承接 v2.2.332，交付紀錄保留）：MM 2026-11-18 14:59 提問（iMessage 原文已核對，原文照錄）：「這個測試似乎不是針對v3？」——已於 15:00 據實答覆：先前執行的功能測試對象為 v2 程式；v3 僅經靜態 PDF／示意稿層級之設計審查，未做實際應用功能測試，故已交付之報告不足以證明 v3 之實際運作行為。已承認先前將兩種範圍混為一談，並向 MM 提議改做以 v3 為中心之設計審查（v2 僅供對照）。此更正僅釐清範圍：尚未開始後續工作、未獲核准，亦無實作授權。</li>
+<li>規則查核（15:00）：控制中心 origin/main dcc3753（v2.2.332 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.332 - 2026-11-18 14:04</h2>
 <ul>
 <li>記錄個人記帳專案審查報告交付（承接 v2.2.331）：最終 18 頁雙語審查 PDF 與優先順序建議已於 2026-11-18 14:04 送達 MM（依 MM 13:37 指示之獨立客觀審查）。審查結論明確區分離線佇列、後端已確認與遭拒寫入三種狀態並提供可見之恢復路徑，未籠統保證無資料遺失。本次僅審查交付：無實作、無部署、未更動專案程式碼；未一併請求核准，後續任何實作須待 MM 另行明確指示。</li>
