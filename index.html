@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.335 2026-11-18 15:50</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.336 2026-11-18 16:15</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -337,6 +337,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.336 - 2026-11-18 16:15</h2>
+<ul>
+<li>記錄記帳 v3 交付（承接 v2.2.334 之 MM 授權、v2.2.335 之進度）：16:15 已於原討論串交付 MM——程式 ZIP（sha256 cd7a3927…611ea9）、七頁雙語審查 PDF（sha256 0a06767e…cfa8f15）與三張代表性截圖。驗證範圍如實記錄：解開交付 ZIP 後全新安裝複查，20 項單元／靜態檢查、23 項模擬瀏覽器端對端、8 項真實 Firestore 規則模擬器檢查（含 146 份介面實際產出文件在不更動的規則下通過）全數通過；v2.2.335 之三項問題（誤顯示為零、行動長文溢出、測試架構）已修正。明確界線：未部署、未設定；真實 Auth、Hosting、離線快取載入、實體 iPhone、3700 筆認列上限與交易刪除確認均未測試；無線上資料、帳號或設定更動。此交付不表示可直接正式上線，亦不代表尚未定案之設計選擇已獲核准。</li>
+<li>規則查核（16:15）：控制中心 origin/main 7b458bf（v2.2.335 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.335 - 2026-11-18 15:50</h2>
 <ul>
 <li>記帳 v3 製作進度（承接 v2.2.334 之 MM 授權，僅狀態記錄）：15:40 可運作之 v3 候選版完成；15:49 獨立審查對實際 v3 執行單元、靜態、模擬瀏覽器測試與真實 Firestore 規則模擬器驗證，含 145 份由介面實際產出之文件在不更動的規則下全數通過。尚未交付 MM。審查發現三項高優先問題：讀取／同步錯誤狀態誤顯示為零、行動裝置長文溢出、規則測試架構不可攜且部分失效；製作端正修正中，審查端將對修正後之確切 ZIP 複查。15:50 已向 MM 簡要回報進度並具名上述問題。無部署、無帳號更動；授權範圍維持製作加審查（v2.2.334）。</li>
