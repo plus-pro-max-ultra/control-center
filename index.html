@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.339 2026-11-19 10:10</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.340 2026-11-19 10:23</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -339,6 +339,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.340 - 2026-11-19 10:23</h2>
+<ul>
+<li>個人記帳 v3.1 候選版狀態（僅進度記錄，承接 v2.2.339 之 10:09 指示）：v3.1 候選已產出，現由獨立審查線對實際交付物逐項查驗（非僅設計文件）；審查中發現現金比較措辭可能與基線之拆帳方式不一致、每日小計範圍描述不夠明確，製作端正據以對帳修正。狀態：審查進行中，尚未交付 MM；無部署、正式版替換、帳號或 Firebase 更動與任何花費；既有授權邊界（v2.2.315 起）不變。本篇僅記進度，不代表核准或交付。</li>
+<li>規則查核（10:23）：控制中心 origin/main 4cb1bc6（v2.2.339 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.339 - 2026-11-19 10:10</h2>
 <ul>
 <li>記錄 MM 2026-11-19 10:09 對個人記帳專案的新指示（iMessage 原文已核對，原文照錄）：「查看Appstore中Hau Yu Hung做的簡單記帳app和其一系列產品，整體設計很不錯，加以參考並改善v3（但有好有壞還需要擇善取之）」——以該開發者的記帳 app 與系列產品為設計參考，擇善改善最近交付之 v3（ZIP cd7a3927…611ea9 為基線），優點採納、缺點不照搬。狀態：進行中（研究與修改由獨立工作線處理），尚未交付；此為設計參考與改善授權，不含正式版本替換、部署、帳號或 Firebase 更動與任何花費（含付費 app 購買）；涉及會計意義變更的取捨仍須 MM 決定，不由設計推斷。既有授權邊界（v2.2.315 起、v2.2.334 實作＋審查授權、v2.2.336 交付未部署）不變。</li>
