@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.350 2026-11-20 16:43</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.351 2026-11-20 23:25</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -339,6 +339,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.351 - 2026-11-20 23:25</h2>
+<ul>
+<li>遠方誌第 033 期修訂狀態記錄：發布端 11/20 23:17 偵測到預覽庫編輯（gh a20094b）；依既有判例，儲存庫提交之帳號歸屬本身不構成 MM 指示之認證，故未視為 MM 修訂指令。僅兩處明確筆誤修正套入預覽站（gh 7c7e44c2281696d049bddc25ee9ef08c61a2ab16），23:24:58 線上核實；最新編輯之文章 HTML 完整保留，stories 鏡像自其重建。正式站維持 main 5957257 未動。發布端回查原始授權，確認不含「已刊出文章修訂之永久自動同步」，故 033 修訂是否同步至正式站屬獨立待核准事項，明晨將請示 MM。深夜未向使用者發訊。第 034／035 期正常出刊與已核准之精簡索引均不受影響。主線已檢視完成時截圖。</li>
+<li>規則查核（23:25）：控制中心 origin/main 146f99d（v2.2.350 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.350 - 2026-11-20 16:43</h2>
 <ul>
 <li>遠方誌正式站歸檔頁精簡索引上線：MM 2026-11-20 16:40 回覆（iMessage 原文已核對，原文照錄）：「好」，核准 12:17 所提「將精簡的月份／領域選單套用到正式站」。發布端於 16:42 線上核實正式歸檔頁（main 595725701124e1c86032c4be1d0ef859055e08de），套用範圍僅先前預覽之月份／領域下拉與手機日期間距：保留全部 21 個分類與 33 篇文章、未重命名未重分類；所有文章 HTML、stories、首頁、feed、sitemap 與文章登錄資料均 byte-for-byte 不變，未整份覆蓋 gh 資產；第 034 期未提前進正式站（gh 仍 d4f4244、WIP 仍 b154791）。320／390／430／760／1024／1440 六寬無橫溢，月份×領域篩選、搜尋無結果與清除重置功能測試通過；主線已檢視三張實際截圖（手機 390、320 與桌面 1440），並於 16:43 交付完成通知與正式網址。先前「正式站布局待 MM 核准」之待答事項就此結案；本次核准僅及此精簡索引，不構成泛用改版授權。既有出刊排程之後續決定已由發布端更新。</li>
