@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.349 2026-11-20 07:51</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.350 2026-11-20 16:43</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -339,9 +339,14 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.350 - 2026-11-20 16:43</h2>
+<ul>
+<li>遠方誌正式站歸檔頁精簡索引上線：MM 2026-11-20 16:40 回覆（iMessage 原文已核對，原文照錄）：「好」，核准 12:17 所提「將精簡的月份／領域選單套用到正式站」。發布端於 16:42 線上核實正式歸檔頁（main 595725701124e1c86032c4be1d0ef859055e08de），套用範圍僅先前預覽之月份／領域下拉與手機日期間距：保留全部 21 個分類與 33 篇文章、未重命名未重分類；所有文章 HTML、stories、首頁、feed、sitemap 與文章登錄資料均 byte-for-byte 不變，未整份覆蓋 gh 資產；第 034 期未提前進正式站（gh 仍 d4f4244、WIP 仍 b154791）。320／390／430／760／1024／1440 六寬無橫溢，月份×領域篩選、搜尋無結果與清除重置功能測試通過；主線已檢視三張實際截圖（手機 390、320 與桌面 1440），並於 16:43 交付完成通知與正式網址。先前「正式站布局待 MM 核准」之待答事項就此結案；本次核准僅及此精簡索引，不構成泛用改版授權。既有出刊排程之後續決定已由發布端更新。</li>
+<li>規則查核（16:43）：控制中心 origin/main 17b80c5（v2.2.349 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.349 - 2026-11-20 07:51</h2>
 <ul>
-<li>11/20 晨間交付完成記錄：07:51 已交付第 033 期正式刊出連結與第 034 期預覽連結，附中英雙語導言；另獨立送出慣例提醒——033 刊出前檢視未發現 MM 個別微調。晨間交付至此完成，不再保留。歸檔頁布局核准（gh 精簡介面是否套用正式站）仍未獲回覆，屬獨立待答事項，與出刊交付無涉。其餘無更動。</li>
+<li>11/20 晨間交付完成記錄：07:51 已交付第 033 期正式刊出連結與第 034 期預覽連結，附中英雙語導言；另獨立送出慣例提醒——033 刊出前檢視未發現 MM 個別微調。晨間交付至此完成，不再保留。歸檔頁布局核准（gh 精簡介面是否套用正式站）已於 16:40 獲 MM 核准並上線（見 v2.2.350），與出刊交付無涉。其餘無更動。</li>
 <li>規則查核（07:51）：控制中心 origin/main 5336191（v2.2.348 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
 </ul>
 <h2>v2.2.348 - 2026-11-20 07:13</h2>
@@ -356,7 +361,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2>v2.2.346 - 2026-11-20 01:17</h2>
 <ul>
-<li>遠方誌歸檔頁精簡（僅 gh 預覽，待 MM 核准才上正式版）：MM 2026-11-20 01:11 截圖反映（iMessage 原文已核對，原文照錄）：「標籤有點多了、最右方空白？」。診斷：22 顆外露複合分類按鈕於手機佔約 8 列、首篇被推到畫面底部；右側空隙來自按鈕依文字長度參差換行與日期欄 148px 桌機式最小寬度，非缺欄或橫向溢出。另查明一項功能錯誤：月份下拉混入分類選項，係發布程式以過寬 fallback 寫入所致（非 MM 造成），已改為明確重建月份選項。改法（依 11/4 預覽授權先上 gh，d67091a）：22 顆按鈕改為「全部月份／全部領域」兩個並排下拉、保留全部 21 個既有分類與 33 篇文章、不重命名不重分類，手機日期取消固定最小寬度；篩選區縮為一列，首篇提早約 350px。320／390／430／760／1024／1440 六寬無橫溢，線上實測通過；所有文章 HTML 與 stories 鏡像 byte-for-byte 未變，正式站 main 仍 03c4589 未動。已交付 MM 已驗證預覽連結並請其確認是否套用正式站；正式版布局未獲核准、未變更。晨間出刊流程已標明界線：033 正式發布只帶文章與必要資產，不攜入本次 gh 介面更動；034 上 gh 時須保留新控制介面。</li>
+<li>遠方誌歸檔頁精簡（僅 gh 預覽，待 MM 核准才上正式版）：MM 2026-11-20 01:11 截圖反映（iMessage 原文已核對，原文照錄）：「標籤有點多了、最右方空白？」。診斷：22 顆外露複合分類按鈕於手機佔約 8 列、首篇被推到畫面底部；右側空隙來自按鈕依文字長度參差換行與日期欄 148px 桌機式最小寬度，非缺欄或橫向溢出。另查明一項功能錯誤：月份下拉混入分類選項，係發布程式以過寬 fallback 寫入所致（非 MM 造成），已改為明確重建月份選項。改法（依 11/4 預覽授權先上 gh，d67091a）：22 顆按鈕改為「全部月份／全部領域」兩個並排下拉、保留全部 21 個既有分類與 33 篇文章、不重命名不重分類，手機日期取消固定最小寬度；篩選區縮為一列，首篇提早約 350px。320／390／430／760／1024／1440 六寬無橫溢，線上實測通過；所有文章 HTML 與 stories 鏡像 byte-for-byte 未變，正式站 main 仍 03c4589 未動。已交付 MM 已驗證預覽連結並請其確認是否套用正式站；MM 已於 16:40 核准，正式站同日上線（見 v2.2.350）。晨間出刊流程已標明界線：033 正式發布只帶文章與必要資產，不攜入本次 gh 介面更動；034 上 gh 時須保留新控制介面。</li>
 <li>規則查核（01:17）：控制中心 origin/main b525fb3（v2.2.345 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
 </ul>
 <h2>v2.2.345 - 2026-11-19 12:08</h2>
