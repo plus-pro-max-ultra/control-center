@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.362 2026-11-22 07:13</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.363 2026-11-22 07:19</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -341,6 +341,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.363 - 2026-11-22 07:19</h2>
+<ul>
+<li>更正記錄（單字網站）：主線像素檢查發現第 6 次測驗第 6 題中英指示不符——英文指示為「翻譯成英文」，中文行誤作「翻譯成中文」，而預定答案為英文。已於 v15.51（字庫 main eeeb3bf，版本戳 v15.51 1122-0716 線上核實三次）修正：中文指示改為「翻譯成英文」，中文答案行改為英文答案附中譯（與第 12 題格式一致），其餘內容不變。修正後行動版 390px 實看確認該行已正確呈現。計數不變。v2.2.362 之測驗上線記錄以此更正為準。</li>
+<li>規則查核（07:19）：控制中心 origin/main 6adade5（v2.2.362 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.362 - 2026-11-22 07:13</h2>
 <ul>
 <li>記錄單字網站 v15.50（字庫 main fe289b0，版本戳 v15.50 1122-0710 線上核實三次）：第 6 次每週檢查測驗（日文第 17–19 課＋德文第 16–18 課，12 題）上線，無新增單字。出題代理今晨未核對正典 ID，維護端已逐一獨立核實全部 7 個引用條目：jpl17-16 筆箱（pencil case）、jpl19-01 症状（symptom）、jpl17-13 お腹いっぱい（吃飽了）、jpl17-14 教科書、jp-467 貸す（借出）、de-128 lernen、de-171 machen，詞義與題目相符。德文每日新字暫停維持不變。行動版 390px 課程歸檔與測驗頁截圖已檢視（測驗列於歸檔最上方、日德雙語題目正常呈現）。計數不變（無新字，依文法課例不更新 §8 快照）：總條目 2259（日文 1546、德文 713）、例句缺口 212 槽／141 條、待補譯文 250。</li>
