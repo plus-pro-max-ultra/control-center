@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.370 2026-11-23 01:17</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.371 2026-11-23 06:06</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -341,6 +341,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.371 - 2026-11-23 06:06</h2>
+<ul>
+<li>遠方誌 11/23 晨間雙刊核實完成（06:05 結案）：036「信寄不到，也退不回，最後會去哪裡？」正式刊出並核實上線（main 595e51125e03d68059cd75565d7e67dd03b41d4d）；037「用不同語言問 AI，為什麼可能花更多錢？」（11/24 名義刊期）提前一天供審閱並核實上線（27e183c57258b787016492742d960f8b896ac606）。036 九組直接手改、來源、反思、圖說全數保留，stories 鏡像同步最新正文，不需未細調提醒；037 未混入 main，012 已批准之存檔網址保留。驗收：兩站全部編號文章與首頁／封存／stories／feed／sitemap 等逐檔比對新提交、正式原網址 200；四個寬度（320/390/1024/1440）無溢出並實看像素；分類篩選與 73 次隨機頁尾導覽全部抵達有效文章。依 11/22 21:05 長期指示，上架同步修改觀察已於兩份提交之 ops/nov23-release.json 完成（比較至 103cba9，無新增直接手改，不將個別較強用字升格為一般規則）；次日 037 正式上架仍須重查當下修改。結案紀錄 WIP 33e802ea49417038e5e88dcb6e9eec131daf1cb3；主線已實看正式與審閱畫面組圖。使用者交付留待既有晨間時段；無新增排程，今晚準備 038（11/25），明早 037 正式＋038 審閱。</li>
+<li>規則查核（06:06）：控制中心 origin/main 576718a（v2.2.370 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.370 - 2026-11-23 01:17</h2>
 <ul>
 <li>遠方誌 012 正式站來源修復完成：MM 於 11/23 01:08 核准限定範圍之修復，iMessage 原文已核對：「ok」（對 22:05 限定提案：僅 012、同份 2014 年 PDF 存檔、只改來源網址；此核准不構成一般修補授權）。發布端 01:12 至 01:13 確認正式文章與無參數 stories.js 皆回應 200、完整內容雜湊與新 main 3bc3a17a68685494cc1ad2a2639d16e9c9858c24 完全相符；僅 012 HTML 與 stories.js 各一處來源網址改為同份 2014 年 PDF 存檔，文章文字、標題、反思、圖片與其他刊期均未改。主線實看來源區截圖正常，01:17 已交付完成通知。本次上架同步完成修改觀察（依 11/22 21:05 長期指示）：036 先前九組直接修改全部保留、無新增編修，紀錄存於 WIP ef179e450fd8b323489f6bd4604dba0906d12686；四個發布端排程已清除 012 等待批准與還原舊網址之過期指示。晨間 036 正式／037 預覽之發布維持獨立，仍須於上架當下進行修改觀察。</li>
