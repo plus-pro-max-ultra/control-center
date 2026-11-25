@@ -114,8 +114,8 @@
 <div class="wrap">
   <header>
     <h1>字體怎麼選</h1>
-    <p>五種字體，同一段畫面、同樣的文字。載入的是實際字型檔，你在 iPhone 上看到的就是裝進 App 後的樣子（E 粉圓檔案較大，第一次載入要等幾秒）。</p>
-    <p>畫面內容照目前版本：今日花費、月預算、三餐、分析列、記一筆。</p>
+    <p>五種字體，同一段範例文字與版面。載入的是實際字型檔，你在 iPhone 上看到的就是裝進 App 後的樣子（E 粉圓檔案較大，第一次載入要等幾秒）。</p>
+    <p>下面是字體範例，用 App 裡會出現的內容（今日花費、月預算、三餐、分析列、記一筆）排成的示意版面，用來比較字體；不是最終畫面的完整樣式。</p>
   </header>
 
   <div id="mount"></div>
@@ -123,14 +123,14 @@
   <footer>
     <div class="big">回覆編號即可（A / B / C / D / E）</div>
     <p>也可以說想混搭，例如「標題用 D、其他用 A」，或「數字要用最好認的」。</p>
-    <p>A 是現在的版本：直接用 iPhone 內建字體，載入最快、不用額外抓字型檔。B 到 E 都要從網路載入字型（約 0.3 到 5 MB 不等，之後會快取）。</p>
+    <p>A 是現在的版本：直接用你裝置的系統字體，在 iPhone 上就是蘋方體，載入最快、不用額外抓字型檔。B 到 E 都要從網路載入字型（約 0.3 到 5 MB 不等，之後會快取）。</p>
     <p><a href="../">回提案頁</a></p>
   </footer>
 </div>
 
 <template id="sample">
   <div class="phone">
-    <div class="date">11月25日 星期二</div>
+    <div class="date">11月25日 星期三</div>
     <div class="card">
       <div class="row">
         <div>
@@ -166,7 +166,7 @@
 
 <script>
   var fonts = [
-    { cls: 'fA', letter: 'A', name: '系統預設（現行）', note: 'iPhone 內建蘋方體，載入最快' },
+    { cls: 'fA', letter: 'A', name: '裝置系統字體（現行）', note: 'iPhone 上會是內建蘋方體，載入最快、不用抓字型檔' },
     { cls: 'fB', letter: 'B', name: 'Noto Sans TC 思源黑體', note: 'Google 與 Adobe 合製，清晰俐落' },
     { cls: 'fC', letter: 'C', name: 'Noto Serif TC 思源宋體', note: '宋體書卷感，典雅耐看' },
     { cls: 'fD', letter: 'D', name: 'LXGW WenKai 霞鶩文楷', note: '楷書手寫感，溫潤易讀' },
