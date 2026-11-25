@@ -75,7 +75,7 @@
     <h1>配色怎麼選</h1>
     <p>20 種配色，每一種都用同一段範例版面實際渲染，不是色票。黑色按鈕、進度條、收入綠色都會跟著配色變。</p>
     <p>下面是配色範例，用 App 裡會出現的內容排成的示意版面；不是最終畫面的完整樣式。色 1 到 色 16 是淺色，色 17 到 色 20 是深色（目前 App 的深色模式跟系統走，若選深色也可以固定）。</p>
-    <p class="toplink">字體選擇在另一頁：<a href="../font-options/"><strong>30 種字體與混搭實際渲染比較</strong></a></p>
+    <p class="toplink">字體選擇在另一頁：<a href="../font-options/"><strong>31 種字體與混搭實際渲染比較</strong></a></p>
   </header>
 
   <h2>淺色（色 1–8 換底色，色 9–16 白底換強調色）</h2>
@@ -88,7 +88,7 @@
 
   <footer>
     <div class="big">回覆編號即可（色 1 到 色 20）</div>
-    <p>也可以說「底色用 色 3、但按鈕想要 色 11 的顏色」這樣混搭。字體在這裡選：<a href="../font-options/">30 種字體比較</a>，兩邊最後合併。</p>
+    <p>也可以說「底色用 色 3、但按鈕想要 色 11 的顏色」這樣混搭。字體在這裡選：<a href="../font-options/">31 種字體比較</a>，兩邊最後合併。</p>
     <p><a href="../">回提案頁</a></p>
   </footer>
 </div>
@@ -186,9 +186,7 @@
       tag.querySelector('.opt-name').textContent = p.name;
       tag.querySelector('.opt-note').textContent = p.note;
       var sample = tpl.content.firstElementChild.cloneNode(true);
-      var css = '';
-      Object.keys(p.v).forEach(function (k) { css += '--' + k.replace(/[A-Z]/g, function (m) { return '-' + m.toLowerCase(); }) + ':' + p.v[k] + ';'; });
-      sample.style.cssText += css;
+      Object.keys(p.v).forEach(function (k) { sample.style.setProperty('--' + k, p.v[k]); });
       sample.style.color = p.v.ink;
       sec.appendChild(tag);
       sec.appendChild(sample);
