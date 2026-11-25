@@ -6,16 +6,11 @@
 <title>字體選擇 · 記帳 App</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+HK:wght@400;500;700&family=Noto+Serif+HK:wght@400;600;700&family=Zen+Maru+Gothic:wght@400;500;700&family=Klee+One:wght@400;600&family=M+PLUS+Rounded+1c:wght@400;500;700&family=Inter:wght@400;500;700&family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&family=Lato:wght@400;700&family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600;700&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&family=Roboto+Mono:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&family=Outfit:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@latest/style.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/taipei-sans-tc@0.1.1/dist/Regular/TaipeiSansTCBeta-Regular.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/taipei-sans-tc@0.1.1/dist/Bold/TaipeiSansTCBeta-Bold.css" rel="stylesheet">
 <style>
-  @font-face {
-    font-family: 'jf-openhuninn';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url('https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@master/font/jf-openhuninn-2.1.ttf') format('truetype');
-  }
   :root {
     --bg: #f5f5f5;
     --surface: #ffffff;
@@ -37,15 +32,17 @@
   .wrap { max-width: 460px; margin: 0 auto; padding: 16px 12px 48px; }
   header { padding: 8px 6px 14px; }
   h1 { font-size: 20px; margin: 0 0 6px; }
-  header p { margin: 4px 0; color: var(--muted); font-size: 13px; }
+  h2 { font-size: 17px; margin: 30px 0 4px; padding: 0 6px; }
+  h2 + p.sec { margin: 0 6px 12px; }
+  header p, p.sec { margin: 4px 0; color: var(--muted); font-size: 13px; }
 
   .opt { margin: 0 0 28px; }
   .opt-tag {
-    display: flex; align-items: baseline; gap: 8px; padding: 0 6px 8px;
+    display: flex; align-items: baseline; gap: 8px; padding: 0 6px 8px; flex-wrap: wrap;
   }
   .opt-letter {
     display: inline-flex; align-items: center; justify-content: center;
-    width: 26px; height: 26px; border-radius: 8px;
+    min-width: 26px; height: 26px; border-radius: 8px; padding: 0 6px;
     background: #1c1c1c; color: #fff; font-weight: 700; font-size: 14px;
     flex: none;
   }
@@ -80,9 +77,7 @@
   .bar { height: 6px; border-radius: 3px; background: var(--softline); margin-top: 7px; overflow: hidden; }
   .bar i { display: block; height: 100%; width: 22%; background: #1c1c1c; border-radius: 3px; }
   .meals { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
-  .meal {
-    border: 1px solid var(--softline); border-radius: 10px; padding: 8px 10px;
-  }
+  .meal { border: 1px solid var(--softline); border-radius: 10px; padding: 8px 10px; }
   .meal .m-label { font-size: 12px; color: var(--muted); }
   .meal .m-amt { font-size: 16px; font-weight: 700; margin-top: 2px; }
   .meal .m-amt .dash { color: var(--faint); font-weight: 400; }
@@ -92,43 +87,49 @@
     background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
     padding: 10px 12px;
   }
-  .entry .amt { font-size: 16px; font-weight: 700; flex: 1; color: var(--faint); font-weight: 400; }
-  .entry .pill {
-    background: #1c1c1c; color: #fff; font-size: 13px; border-radius: 999px; padding: 4px 14px;
-  }
+  .entry .amt { font-size: 16px; flex: 1; color: var(--faint); }
+  .entry .pill { background: #1c1c1c; color: #fff; font-size: 13px; border-radius: 999px; padding: 4px 14px; }
   .sample-long { font-size: 13px; color: var(--muted); margin-top: 6px; }
-
-  .fA { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; }
-  .fB { font-family: "Noto Sans TC", -apple-system, "PingFang TC", sans-serif; }
-  .fC { font-family: "Noto Serif TC", "Songti TC", serif; }
-  .fD { font-family: "LXGW WenKai TC", "Noto Serif TC", serif; }
-  .fE { font-family: "jf-openhuninn", "Noto Sans TC", sans-serif; }
+  .sample-eng { font-size: 13px; color: var(--muted); margin-top: 6px; }
 
   footer { padding: 18px 6px 0; color: var(--muted); font-size: 13px; }
   footer .big { font-size: 15px; color: var(--ink); font-weight: 700; margin-bottom: 6px; }
   footer p { margin: 4px 0; }
   a { color: #1c1c1c; }
+  .toplink { font-size: 13px; margin-top: 10px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <h1>字體怎麼選</h1>
-    <p>五種字體，同一段範例文字與版面。載入的是實際字型檔，你在 iPhone 上看到的就是裝進 App 後的樣子（E 粉圓檔案較大，第一次載入要等幾秒）。</p>
-    <p>下面是字體範例，用 App 裡會出現的內容（今日花費、月預算、三餐、分析列、記一筆）排成的示意版面，用來比較字體；不是最終畫面的完整樣式。</p>
+    <p>30 種字體與組合，同一段範例文字與版面。載入的是實際字型檔，你在 iPhone 上看到的就是裝進 App 後的樣子。</p>
+    <p>下面是字體範例，用 App 裡會出現的內容（今日花費、月預算、三餐、分析列、記一筆）排成的示意版面，用來比較字體；不是最終畫面的完整樣式。每個範例都含中文、英文與數字。</p>
+    <p>有幾款檔案較大（H、I、J），滑到該區才會開始載入，第一次要等幾秒。</p>
+    <p class="toplink">配色選擇在另一頁：<a href="../color-options/"><strong>20 種配色實際渲染比較</strong></a></p>
   </header>
 
-  <div id="mount"></div>
+  <h2>一、中文字體（連同英文數字一起顯示）</h2>
+  <p class="sec">A 是現行的系統字體；B 到 M 是網路字型，第一次載入約 0.2 到 9 MB 不等，之後會快取。</p>
+  <div id="mount-cjk"></div>
+
+  <h2>二、英文與數字字體</h2>
+  <p class="sec">這一區只決定金額、日期、英文怎麼顯示；中文仍用你在第一區選的字體（範例中的中文先以系統字體顯示）。想要等寬數字讓金額上下對齊，選名字裡有 Mono 的。</p>
+  <div id="mount-latin"></div>
+
+  <h2>三、混搭組合（中文一款＋英數一款）</h2>
+  <p class="sec">實際混搭的效果：英文和數字用第一款、中文用第二款。喜歡哪種搭配就回覆編號，也可以自己指定「中文用 X、英數用 Y」。</p>
+  <div id="mount-mix"></div>
 
   <footer>
-    <div class="big">回覆編號即可（A / B / C / D / E）</div>
-    <p>也可以說想混搭，例如「標題用 D、其他用 A」，或「數字要用最好認的」。</p>
-    <p>A 是現在的版本：直接用你裝置的系統字體，在 iPhone 上就是蘋方體，載入最快、不用額外抓字型檔。B 到 E 都要從網路載入字型（約 0.3 到 5 MB 不等，之後會快取）。</p>
+    <div class="big">回覆編號即可</div>
+    <p>中文字體：A–M；英數字體：N–Z；混搭：M1–M5。也可以說「中文用 G、數字用 W」這樣自由配。</p>
+    <p>配色在這裡選：<a href="../color-options/">20 種配色比較</a>。字體和配色可以分開選，最後合併。</p>
     <p><a href="../">回提案頁</a></p>
   </footer>
 </div>
 
-<template id="sample">
+<template id="sample-cjk">
   <div class="phone">
     <div class="date">11月25日 星期三</div>
     <div class="card">
@@ -155,6 +156,7 @@
     <div class="card">
       <div class="meta-line">11月已記 8 天 · 最多花費：餐飲 2,600 元</div>
       <div class="sample-long">早餐 7-11 飯糰加豆漿 65 元，午餐便當 80 元，交通 55 元，共 200 元。</div>
+      <div class="sample-eng">Daily 200 TWD · Nov 25 Wed · 08:30</div>
     </div>
     <div class="entry">
       <span style="font-size:13px;color:var(--muted)">記一筆</span>
@@ -164,31 +166,121 @@
   </div>
 </template>
 
+<template id="sample-latin">
+  <div class="phone">
+    <div class="date">Nov 25, 2026 Wed</div>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">今日花費 Today</div>
+          <div class="hero">1,234<small>TWD</small></div>
+        </div>
+        <div style="text-align:right">
+          <div class="budget-head"><span>Budget</span><span>管理›</span></div>
+          <div class="budget-nums"><b>200</b> / 9,000 元</div>
+          <div class="bar"><i></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="meta-line">0123456789 · 2,600.50 · −70 · 8.9%</div>
+      <div class="sample-eng" style="margin-top:6px">Breakfast 65, lunch 80, transport 55, total 200 TWD.</div>
+      <div class="sample-long">早餐 65 元、午餐 80 元（中文用系統字體顯示）</div>
+    </div>
+  </div>
+</template>
+
 <script>
-  var fonts = [
-    { cls: 'fA', letter: 'A', name: '裝置系統字體（現行）', note: 'iPhone 上會是內建蘋方體，載入最快、不用抓字型檔' },
-    { cls: 'fB', letter: 'B', name: 'Noto Sans TC 思源黑體', note: 'Google 與 Adobe 合製，清晰俐落' },
-    { cls: 'fC', letter: 'C', name: 'Noto Serif TC 思源宋體', note: '宋體書卷感，典雅耐看' },
-    { cls: 'fD', letter: 'D', name: 'LXGW WenKai 霞鶩文楷', note: '楷書手寫感，溫潤易讀' },
-    { cls: 'fE', letter: 'E', name: 'jf open 粉圓', note: '圓體可愛親切，台灣 justfont 釋出' }
+  var CJK_STACK = "-apple-system, BlinkMacSystemFont, 'PingFang TC', 'Microsoft JhengHei', sans-serif";
+  var cjkFonts = [
+    { id: 'A', name: '裝置系統字體（現行）', note: 'iPhone 上會是內建蘋方體，載入最快、不用抓字型檔', stack: CJK_STACK },
+    { id: 'B', name: 'Noto Sans TC 思源黑體', note: 'Google 與 Adobe 合製，清晰俐落', stack: "'Noto Sans TC', " + CJK_STACK, fam: 'Noto Sans TC' },
+    { id: 'C', name: 'Noto Serif TC 思源宋體', note: '宋體書卷感，典雅耐看', stack: "'Noto Serif TC', 'Songti TC', serif", fam: 'Noto Serif TC' },
+    { id: 'D', name: 'Noto Sans HK 思源黑體香港版', note: '港式寫法，筆形和台灣習慣略不同', stack: "'Noto Sans HK', " + CJK_STACK, fam: 'Noto Sans HK' },
+    { id: 'E', name: 'Noto Serif HK 思源宋體香港版', note: '宋體港式寫法', stack: "'Noto Serif HK', 'Songti TC', serif", fam: 'Noto Serif HK' },
+    { id: 'F', name: '台北黑體 Taipei Sans TC', note: '台灣團隊改作，現代俐落的黑體', stack: "'Taipei Sans TC', " + CJK_STACK, fam: 'Taipei Sans TC' },
+    { id: 'G', name: 'LXGW WenKai 霞鶩文楷', note: '楷書手寫感，溫潤易讀', stack: "'LXGW WenKai TC', 'Noto Serif TC', serif", fam: 'LXGW WenKai TC' },
+    { id: 'H', name: 'jf open 粉圓', note: '圓體可愛親切，台灣 justfont 釋出；檔案約 5 MB，滑到才載入', stack: "'jf-openhuninn', 'Noto Sans TC', sans-serif", fam: 'jf-openhuninn',
+      lazy: "https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@master/font/jf-openhuninn-2.1.ttf" },
+    { id: 'I', name: 'Iansui 芫荽體', note: '台灣字形規範的楷體，教育感；檔案約 9 MB，滑到才載入', stack: "'Iansui', 'LXGW WenKai TC', serif", fam: 'Iansui',
+      lazy: "https://cdn.jsdelivr.net/gh/ButTaiwan/iansui@main/fonts/ttf/Iansui-Regular.ttf" },
+    { id: 'J', name: '辰宇落雁體', note: '纖細手寫體，文青感；檔案約 9 MB，滑到才載入', stack: "'ChenYuluoyan', 'LXGW WenKai TC', serif", fam: 'ChenYuluoyan',
+      lazy: "https://cdn.jsdelivr.net/gh/Chenyu-otf/chenyuluoyan_thin@main/ChenYuluoyan-2.0-Thin.ttf" },
+    { id: 'K', name: 'Zen Maru Gothic 日系圓體', note: '日文字體，圓潤可愛；少數漢字可能是日式寫法或缺字', stack: "'Zen Maru Gothic', " + CJK_STACK, fam: 'Zen Maru Gothic' },
+    { id: 'L', name: 'Klee One 日系鉛筆體', note: '日文字體，鉛筆手寫感；少數漢字可能是日式寫法或缺字', stack: "'Klee One', 'LXGW WenKai TC', serif", fam: 'Klee One' },
+    { id: 'M', name: 'M PLUS Rounded 1c 日系圓黑', note: '日文字體，規整的圓體；少數漢字可能是日式寫法或缺字', stack: "'M PLUS Rounded 1c', " + CJK_STACK, fam: 'M PLUS Rounded 1c' }
   ];
-  var tpl = document.getElementById('sample');
-  var mount = document.getElementById('mount');
-  fonts.forEach(function (f) {
-    var sec = document.createElement('section');
-    sec.className = 'opt';
-    var tag = document.createElement('div');
-    tag.className = 'opt-tag';
-    tag.innerHTML = '<span class="opt-letter"></span><span class="opt-name"></span><span class="opt-note"></span>';
-    tag.querySelector('.opt-letter').textContent = f.letter;
-    tag.querySelector('.opt-name').textContent = f.name;
-    tag.querySelector('.opt-note').textContent = f.note;
-    var sample = tpl.content.firstElementChild.cloneNode(true);
-    sample.classList.add(f.cls);
-    sec.appendChild(tag);
-    sec.appendChild(sample);
-    mount.appendChild(sec);
+  var latinFonts = [
+    { id: 'N', name: 'Inter', note: '現代介面最常用的英文字體，數字清楚', fam: 'Inter' },
+    { id: 'O', name: 'Roboto', note: 'Android 系統字體，中性耐讀', fam: 'Roboto' },
+    { id: 'P', name: 'Open Sans', note: '圓潤開放，可讀性高', fam: 'Open Sans' },
+    { id: 'Q', name: 'Lato', note: '穩重帶一點弧度', fam: 'Lato' },
+    { id: 'R', name: 'Montserrat', note: '幾何感強，標題有個性', fam: 'Montserrat' },
+    { id: 'S', name: 'Source Sans 3', note: 'Adobe 出品，介面常用', fam: 'Source Sans 3' },
+    { id: 'T', name: 'DM Sans', note: '簡潔現代，字距寬鬆', fam: 'DM Sans' },
+    { id: 'U', name: 'IBM Plex Sans', note: '工程感、層次分明', fam: 'IBM Plex Sans' },
+    { id: 'V', name: 'Roboto Mono 等寬', note: '數字等寬，金額上下對齊', fam: 'Roboto Mono', mono: true },
+    { id: 'W', name: 'IBM Plex Mono 等寬', note: '數字等寬，帶一點人文感', fam: 'IBM Plex Mono', mono: true },
+    { id: 'X', name: 'Space Grotesk', note: '科技感，數字造型特別', fam: 'Space Grotesk' },
+    { id: 'Y', name: 'Outfit', note: '極簡幾何，輕盈', fam: 'Outfit' },
+    { id: 'Z', name: 'Nunito', note: '圓潤親切的英文字體', fam: 'Nunito' }
+  ];
+  var mixCombos = [
+    { id: 'M1', name: '思源黑體 × Inter', note: '中文俐落＋英數現代', stack: "'Inter', 'Noto Sans TC', sans-serif", fams: ['Inter', 'Noto Sans TC'] },
+    { id: 'M2', name: '霞鶩文楷 × Roboto Mono', note: '中文手寫感＋等寬數字', stack: "'Roboto Mono', 'LXGW WenKai TC', serif", fams: ['Roboto Mono', 'LXGW WenKai TC'] },
+    { id: 'M3', name: '思源宋體 × IBM Plex Mono', note: '書卷感＋工程數字', stack: "'IBM Plex Mono', 'Noto Serif TC', serif", fams: ['IBM Plex Mono', 'Noto Serif TC'] },
+    { id: 'M4', name: '台北黑體 × Space Grotesk', note: '台味黑體＋科技數字', stack: "'Space Grotesk', 'Taipei Sans TC', sans-serif", fams: ['Space Grotesk', 'Taipei Sans TC'] },
+    { id: 'M5', name: '粉圓 × Nunito', note: '整體圓潤可愛', stack: "'Nunito', 'jf-openhuninn', sans-serif", fams: ['Nunito', 'jf-openhuninn'],
+      lazy: "https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@master/font/jf-openhuninn-2.1.ttf" }
+  ];
+
+  function injectLazyFace(fam, url) {
+    if (injectLazyFace.done[fam]) return;
+    injectLazyFace.done[fam] = true;
+    var s = document.createElement('style');
+    s.textContent = "@font-face{font-family:'" + fam + "';font-style:normal;font-weight:400;font-display:swap;src:url('" + url + "') format('truetype');}";
+    document.head.appendChild(s);
+  }
+  injectLazyFace.done = {};
+
+  function addSection(mountId, tplId, list, applyStyle) {
+    var tpl = document.getElementById(tplId);
+    var mount = document.getElementById(mountId);
+    list.forEach(function (f) {
+      var sec = document.createElement('section');
+      sec.className = 'opt';
+      var tag = document.createElement('div');
+      tag.className = 'opt-tag';
+      tag.innerHTML = '<span class="opt-letter"></span><span class="opt-name"></span><span class="opt-note"></span>';
+      tag.querySelector('.opt-letter').textContent = f.id;
+      tag.querySelector('.opt-name').textContent = f.name;
+      tag.querySelector('.opt-note').textContent = f.note;
+      var sample = tpl.content.firstElementChild.cloneNode(true);
+      applyStyle(sample, f);
+      sec.appendChild(tag);
+      sec.appendChild(sample);
+      mount.appendChild(sec);
+      if (f.lazy) {
+        var fam0 = f.lazyFam || f.fam || f.fams[1];
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) {
+              injectLazyFace(fam0, f.lazy);
+              io.disconnect();
+            }
+          });
+        }, { rootMargin: '400px' });
+        io.observe(sec);
+      }
+    });
+  }
+
+  addSection('mount-cjk', 'sample-cjk', cjkFonts, function (el, f) { el.style.fontFamily = f.stack; });
+  addSection('mount-latin', 'sample-latin', latinFonts, function (el, f) {
+    el.style.fontFamily = "'" + f.fam + "', " + CJK_STACK;
+    if (f.mono) el.style.fontVariantNumeric = 'tabular-nums';
   });
+  addSection('mount-mix', 'sample-cjk', mixCombos, function (el, f) { el.style.fontFamily = f.stack; });
 </script>
 </body>
 </html>
