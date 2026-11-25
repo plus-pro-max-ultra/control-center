@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.399 2026-11-26 01:07</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.400 2026-11-26 01:23</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -343,6 +343,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.400 - 2026-11-26 01:23</h2>
+<ul>
+<li>記帳紀錄頁排查結果：共找出 6 處問題，清單已於 01:13 交付 MM，01:23 再交付實際 App 390 寬預覽（非示意圖），並詢問是否套用修復。驗證範圍：測試資料、Firebase 網路以模擬方式於 Chromium 320／390／1440 寬測試；iPhone Safari 未實測，已向 MM 說明。其中日期呈現修正為共用元件，影響範圍及於分析頁與交易表單，已一併檢視。工作站同時核對完整部署詮釋資料與標頭、並復原字體資產。線上版本維持不變，待 MM 核准後才套用修復。</li>
+<li>規則查核（01:23）：控制中心 origin/main 7cbd811（v2.2.399 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.399 - 2026-11-26 01:07</h2>
 <ul>
 <li>記帳紀錄頁問題排查啟動：MM 2026-11-26 01:06 指示（iMessage 原文已核對）：「找找問題、至少有五處待修復改善」，附紀錄頁截圖。已向 MM 確認收到畫面可見的三處：日期文字溢出、頁面出現橫向捲動、導覽列同時出現兩個作用中標記；成因待查，其餘問題盤點中，目標至少五處修復／改善項。排查工作已展開；本次僅調查與紀錄，未獲新的部署核准（前次替換 v3.4f 已完成上線）。</li>
