@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.387 2026-11-25 13:37</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.388 2026-11-25 13:51</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -343,6 +343,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.388 - 2026-11-25 13:51</h2>
+<ul>
+<li>記帳重新設計進入下一輪：MM 2026-11-25 13:51 指示（iMessage 原文已核對）：「用一個圖卡的空間就可以顯示今日花費、月總預算進度（詳細項目應該屬於分析的部分）、最重要的入口記一筆應該放在容易觸及的底部欄（參考至少兩百種設計集錦網路上各種網站、軟體的UI設計，提出總體改善及心得）、資料過度集中左右，導致垂直過長」。已向 MM 確認收到，並承諾：實際參考至少 200 個不同 UI 案例、保留來源紀錄、把心得對應到具體改善，先交付整體方案與新版畫面供檢視。前一輪 v3.3 截圖未獲核准部署；線上試用版維持 v3.2.1 不變，替換前經 MM 審閱的原則不變。新一輪研究與重新設計已展開。</li>
+<li>規則查核（13:51）：控制中心 origin/main 5ccd753（v2.2.387 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.387 - 2026-11-25 13:37</h2>
 <ul>
 <li>記帳重新設計 v3.3 目前審閱狀態（僅記錄，未變更任何部署狀態）：v3.3 由 v3.2.1 備妥——點按日期切換、統一輸入列並含餐次列編輯、中性 UI、間距修正與多類別預算呈現。內部審查後已修正預算重疊類別的合計。線上試用版維持 v3.2.1；替換前經 MM 審閱（已承諾）。瀏覽器驗證目前僅 Chromium，Safari／WebKit 尚未測試。</li>
