@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>記帳 App 改版研究與提案（v3.4 預覽）</title>
+<style>
+  :root{
+    --bg:#f5f5f4; --card:#ffffff; --ink:#1c1917; --sub:#57534e; --faint:#a8a29e;
+    --line:#e7e5e4; --accent:#1c1917; --tint:#fef3c7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",system-ui,sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:28px 18px 80px}
+  header{margin-bottom:28px}
+  h1{font-size:26px;line-height:1.35;letter-spacing:.01em}
+  .meta{color:var(--faint);font-size:13px;margin-top:8px}
+  .note{background:var(--tint);border-radius:12px;padding:12px 16px;font-size:14px;margin:18px 0 28px}
+  h2{font-size:19px;margin:40px 0 12px;padding-top:8px}
+  h3{font-size:16px;margin:20px 0 6px}
+  p{margin:10px 0;font-size:15px;color:var(--ink)}
+  .sub{color:var(--sub)}
+  .small{font-size:13px;color:var(--sub)}
+  ul,ol{margin:10px 0 10px 1.2em;font-size:15px}
+  li{margin:6px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0}
+  .shot{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:14px 0;text-align:center}
+  .shot img{max-width:300px;width:100%;border-radius:10px;border:1px solid var(--line)}
+  .shot .cap{font-size:13px;color:var(--sub);margin-top:8px;text-align:left}
+  .shot.wide img{max-width:100%}
+  table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0}
+  th,td{border-bottom:1px solid var(--line);padding:8px 6px;text-align:left;vertical-align:top}
+  th{color:var(--sub);font-weight:600}
+  a{color:var(--ink)}
+  .tag{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:1px 10px;font-size:12px;color:var(--sub);margin:2px 4px 2px 0}
+  footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--faint)}
+  strong{font-weight:650}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>記帳 App 改版研究與提案</h1>
+  <div class="meta">v3.4 預覽 ・ 2026-11-25 ・ 依你 11/25 的回饋做的第三輪修改</div>
+</header>
+
+<div class="note">
+  試用站目前仍是 v3.2.1，沒有動。這一頁是研究說明＋新版畫面預覽，你看過、覺得可以，我才會更新試用站。
+</div>
+
+<h2>一、這次改了什麼（對照你的四點回饋）</h2>
+
+<h3>1. 一張卡看完今天和本月</h3>
+<p>日檢視頂部現在只有一張總覽卡：左邊是「今日花費」大數字和筆數，右邊是「11月預算」的已用／總額、百分比、尚餘和進度條，右上角有「管理 ›」直達預算設定。每天可用金額、用量／時間百分比、額度計算說明這些細節全部搬到「分析」頁，不再塞在首屏。</p>
+<div class="shot">
+  <img src="shots/mobile-day-top.png" alt="日檢視：一張總覽卡，左今日花費、右本月預算進度">
+  <div class="cap">日檢視（iPhone 尺寸截圖）：一張卡＝今日花費＋本月預算進度。下面依序是待收款、每日三餐（早／午／晚三格並排）、其他交易。</div>
+</div>
+
+<h3>2. 細節收進「分析」頁</h3>
+<p>各分類預算列、用量／時間百分比、「子分類額度含入主分類」的說明，都集中在分析頁的「本月預算明細」區塊，計算口徑和總覽卡完全一致（重疊額度不相加、每筆支出只算一次）。</p>
+<div class="shot">
+  <img src="shots/mobile-report.png" alt="分析頁：本月預算明細">
+  <div class="cap">分析頁：本月預算明細（各分類列＋用量／時間＋每天可用），往下還有與上期比較、費用去哪裡。</div>
+</div>
+
+<h3>3. 「記一筆」放到底部中間</h3>
+<p>底部列改為：記帳｜分析｜<strong>＋</strong>｜紀錄｜更多。中間黑色圓鈕向上凸出，拇指最自然的位置就是記帳入口。原本頁面中間的大按鈕在手機版拿掉（電腦版保留），頁面更乾淨。「紀錄」也從「更多」裡拉上來，常用功能不用點兩層。</p>
+<div class="shot">
+  <img src="shots/mobile-entry.png" alt="記一筆輸入畫面">
+  <div class="cap">點中央 ＋ 直接進入記一筆。</div>
+</div>
+
+<h3>4. 頁面縮短：用並排取代堆疊</h3>
+<p>三餐從三條高列改成早／午／晚三格並排，總覽卡左右並排。實際量測：iPhone 常見尺寸（390×844）整頁剛好一屏放完、不用捲動；較小的螢幕（320×700）只超出 214px，且最後一張卡片不會被底部列遮住。</p>
+<div class="shot wide">
+  <img src="shots/desktop-day.png" alt="電腦版日檢視">
+  <div class="cap">電腦版同步調整。</div>
+</div>
+
+<h2>二、參考研究怎麼做的</h2>
+<p>依你的要求參考了網路上的 UI 設計案例。實際檢視了 <strong>227</strong> 個設計圖，從中剔除 6 個不是介面設計的（3 個純 logo、1 個品牌識別集、1 個作品回顧動畫、1 個 3D 宣傳圖），剩下 <strong>221 個合格的 UI 設計案例</strong>：</p>
+<table>
+  <tr><th>來源</th><th>合格數</th><th>內容</th></tr>
+  <tr><td>Dribbble（expense-tracker、budget-app 兩個標籤，重複只計一次）</td><td>180</td><td>設計師的記帳／預算／金融 App 與網站概念稿</td></tr>
+  <tr><td>Mobbin</td><td>36</td><td>真實上架 App 的實際畫面（Revolut、Klarna 類）</td></tr>
+  <tr><td>design4users 精選文</td><td>5</td><td>編輯精選的財務 App 設計（另有 1 張圖壞掉不計）</td></tr>
+</table>
+<p class="small">另有 261 筆來源索引清單（含標題與連結）和 221 筆檢視清單備查；Behance 因擋自動瀏覽完全打不開，沒有納入。</p>
+<div class="card">
+  <p class="small" style="margin:0"><strong>範圍說明：</strong>這 221 件是「看設計圖」，不是 221 次實際使用測試——我沒有操作過這些 App 的功能，結論只及於版面安排、資訊層級和視覺風格。其中 10 件另外開了全尺寸大圖確認，其餘以作品集網格的縮圖檢視。</p>
+</div>
+
+<h2>三、觀察到的共通模式</h2>
+<p class="sub">以下是看圖後的歸納。<strong>某個做法常見只代表它流行，不代表它被證明比較好用</strong>——所以這一節只做質性描述，不下百分比。</p>
+<ul>
+  <li><strong>底部中央大 ＋</strong>：概念稿裡反覆出現；但真實上架 App 反而少見（多把新增放右上或列表頁）。概念稿和正式產品在這點上有落差。</li>
+  <li><strong>首屏一個大數字＋一個進度視覺</strong>：真實金融 App 的首屏大多只給一個重點數字加一條進度或趨勢，明細收進次級頁。</li>
+  <li><strong>橫向並排</strong>：分類格、雙並卡很常見，用橫向換密度、把頁面變短。</li>
+  <li><strong>預算進度</strong>：圓環和橫條都常見，少數會在橫條上加時間刻度（我們本來就是這種）。</li>
+  <li><strong>配色</strong>：淺中性底＋單一強調色常見；深色金融風在展示稿裡多，真實 App 以淺色居多。</li>
+</ul>
+
+<h2>四、有正式依據的原則（和觀察分開）</h2>
+<ul>
+  <li><strong>主要操作放底部</strong>：2024 年一篇 147 人的可用性研究（Information 期刊）實測發現，「底部圖示＋文字標籤＋FAB」的導覽在效率、易學性、可用性上優於原始設計（場景是影音／資料庫類 App）。Google 官方 Material 指南也把「底部列＋置中 FAB」列為標準形態之一。</li>
+  <li><strong>但也要誠實說</strong>：2019 年一篇 FAB 實驗（Future Internet 期刊）發現 FAB 跟傳統工具列相比<strong>沒有</strong>更好用，只在美觀、愉悅感上得分較高。所以中央 ＋ 不能說是「研究證明最好的做法」；採用它的真正理由是：你要求記帳入口放底部、官方支持這個形態、且有研究支持底部導覽。</li>
+  <li><strong>只有觀察依據的</strong>：首屏單一重點、橫向並排、淺色中性配色——這三點來自上面的看圖歸納，沒有實驗等級的證據，如實標明。</li>
+</ul>
+<p class="small">文獻與官方指南連結：
+<span class="tag"><a href="https://m3.material.io/components/floating-action-button/guidelines">Material FAB 指南</a></span>
+<span class="tag"><a href="https://m2.material.io/design/components/app-bars-bottom.html">Material 底部列指南</a></span>
+<span class="tag"><a href="https://www.mdpi.com/1999-5903/11/7/148">FAB 實驗（2019）</a></span>
+<span class="tag"><a href="https://www.mdpi.com/2078-2489/15/11/732">導覽研究（2024）</a></span>
+</p>
+
+<h2>五、整體心得</h2>
+<ol>
+  <li><strong>首屏只放一個重點</strong>最符合你的使用方式：打開就知道今天花了多少、本月還剩多少，其餘收進分析頁。</li>
+  <li><strong>最常用的動作放在拇指位置</strong>：記帳是高頻動作，值得佔底部正中間。</li>
+  <li><strong>頁面長度靠排列方式解決</strong>，不是靠刪資訊：三餐並排、總覽卡左右並排後，資訊一樣多但頁面短很多。</li>
+  <li><strong>視覺上只留一個焦點</strong>：整頁維持中性灰，只有底部 ＋ 用最深的黑色，視線自然被帶到記帳入口。</li>
+  <li><strong>概念稿和正式產品要分開看</strong>：展示稿追求好看，真實 App 追求耐用；這次兩類都看了，最終採用的都是兩邊都成立的做法。</li>
+</ol>
+
+<h2>六、限制與尚未驗證的事</h2>
+<ul>
+  <li>實機測試只在 Chrome 做過（390／320／1280 寬，亮／暗模式）；iPhone 的 Safari 尚未實測，中央凸出按鈕在最底部的安全間隔是依標準寫法推定，等你確認後我會在試用站上再驗。</li>
+  <li>研究結論來自設計圖檢視，不是使用測試；真正好不好用，要以你在試用站上的實際手感為準。</li>
+</ul>
+
+<footer>
+  v3.4 改版提案 ・ 資料結構、記帳規則、權限規則都沒有改動 ・ 試用站維持 v3.2.1，待你確認後才更新
+</footer>
+
+</div>
+</body>
+</html>
