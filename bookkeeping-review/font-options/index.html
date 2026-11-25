@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>字體選擇 · 記帳 App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@latest/style.css" rel="stylesheet">
+<style>
+  @font-face {
+    font-family: 'jf-openhuninn';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/justfont/open-huninn-font@master/font/jf-openhuninn-2.1.ttf') format('truetype');
+  }
+  :root {
+    --bg: #f5f5f5;
+    --surface: #ffffff;
+    --line: #e4e4e4;
+    --softline: #ececec;
+    --ink: #1c1c1c;
+    --muted: #6e6e6e;
+    --faint: #a3a3a3;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(0,0,0,.05);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #e9e9e9;
+    color: var(--ink);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  }
+  .wrap { max-width: 460px; margin: 0 auto; padding: 16px 12px 48px; }
+  header { padding: 8px 6px 14px; }
+  h1 { font-size: 20px; margin: 0 0 6px; }
+  header p { margin: 4px 0; color: var(--muted); font-size: 13px; }
+
+  .opt { margin: 0 0 28px; }
+  .opt-tag {
+    display: flex; align-items: baseline; gap: 8px; padding: 0 6px 8px;
+  }
+  .opt-letter {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 8px;
+    background: #1c1c1c; color: #fff; font-weight: 700; font-size: 14px;
+    flex: none;
+  }
+  .opt-name { font-weight: 700; font-size: 15px; }
+  .opt-note { color: var(--muted); font-size: 12.5px; }
+
+  /* phone frame */
+  .phone {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    padding: 12px 10px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 12px 14px;
+    margin-bottom: 10px;
+  }
+  .date { font-size: 16px; font-weight: 700; margin-bottom: 10px; padding: 0 2px; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .label { font-size: 12px; color: var(--muted); }
+  .hero { font-size: 30px; font-weight: 700; letter-spacing: .5px; }
+  .hero small { font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 2px; }
+  .budget-head { font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; }
+  .budget-nums { font-size: 14px; margin-top: 2px; }
+  .budget-nums b { font-weight: 700; }
+  .bar { height: 6px; border-radius: 3px; background: var(--softline); margin-top: 7px; overflow: hidden; }
+  .bar i { display: block; height: 100%; width: 22%; background: #1c1c1c; border-radius: 3px; }
+  .meals { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .meal {
+    border: 1px solid var(--softline); border-radius: 10px; padding: 8px 10px;
+  }
+  .meal .m-label { font-size: 12px; color: var(--muted); }
+  .meal .m-amt { font-size: 16px; font-weight: 700; margin-top: 2px; }
+  .meal .m-amt .dash { color: var(--faint); font-weight: 400; }
+  .meta-line { font-size: 13px; color: var(--muted); }
+  .entry {
+    display: flex; align-items: center; gap: 8px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 10px 12px;
+  }
+  .entry .amt { font-size: 16px; font-weight: 700; flex: 1; color: var(--faint); font-weight: 400; }
+  .entry .pill {
+    background: #1c1c1c; color: #fff; font-size: 13px; border-radius: 999px; padding: 4px 14px;
+  }
+  .sample-long { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+  .fA { font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", sans-serif; }
+  .fB { font-family: "Noto Sans TC", -apple-system, "PingFang TC", sans-serif; }
+  .fC { font-family: "Noto Serif TC", "Songti TC", serif; }
+  .fD { font-family: "LXGW WenKai TC", "Noto Serif TC", serif; }
+  .fE { font-family: "jf-openhuninn", "Noto Sans TC", sans-serif; }
+
+  footer { padding: 18px 6px 0; color: var(--muted); font-size: 13px; }
+  footer .big { font-size: 15px; color: var(--ink); font-weight: 700; margin-bottom: 6px; }
+  footer p { margin: 4px 0; }
+  a { color: #1c1c1c; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>字體怎麼選</h1>
+    <p>五種字體，同一段畫面、同樣的文字。載入的是實際字型檔，你在 iPhone 上看到的就是裝進 App 後的樣子（E 粉圓檔案較大，第一次載入要等幾秒）。</p>
+    <p>畫面內容照目前版本：今日花費、月預算、三餐、分析列、記一筆。</p>
+  </header>
+
+  <div id="mount"></div>
+
+  <footer>
+    <div class="big">回覆編號即可（A / B / C / D / E）</div>
+    <p>也可以說想混搭，例如「標題用 D、其他用 A」，或「數字要用最好認的」。</p>
+    <p>A 是現在的版本：直接用 iPhone 內建字體，載入最快、不用額外抓字型檔。B 到 E 都要從網路載入字型（約 0.3 到 5 MB 不等，之後會快取）。</p>
+    <p><a href="../">回提案頁</a></p>
+  </footer>
+</div>
+
+<template id="sample">
+  <div class="phone">
+    <div class="date">11月25日 星期二</div>
+    <div class="card">
+      <div class="row">
+        <div>
+          <div class="label">今日花費</div>
+          <div class="hero">200<small>元</small></div>
+        </div>
+        <div style="text-align:right">
+          <div class="budget-head"><span>11月預算</span><span>管理›</span></div>
+          <div class="budget-nums"><b>200</b> / 9,000 元</div>
+          <div class="bar"><i></i></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="label" style="margin-bottom:8px">每日三餐</div>
+      <div class="meals">
+        <div class="meal"><div class="m-label">早餐</div><div class="m-amt">120</div></div>
+        <div class="meal"><div class="m-label">午餐</div><div class="m-amt">80</div></div>
+        <div class="meal"><div class="m-label">晚餐</div><div class="m-amt"><span class="dash">—</span></div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="meta-line">11月已記 8 天 · 最多花費：餐飲 2,600 元</div>
+      <div class="sample-long">早餐 7-11 飯糰加豆漿 65 元，午餐便當 80 元，交通 55 元，共 200 元。</div>
+    </div>
+    <div class="entry">
+      <span style="font-size:13px;color:var(--muted)">記一筆</span>
+      <span class="amt">0</span>
+      <span class="pill">支出</span>
+    </div>
+  </div>
+</template>
+
+<script>
+  var fonts = [
+    { cls: 'fA', letter: 'A', name: '系統預設（現行）', note: 'iPhone 內建蘋方體，載入最快' },
+    { cls: 'fB', letter: 'B', name: 'Noto Sans TC 思源黑體', note: 'Google 與 Adobe 合製，清晰俐落' },
+    { cls: 'fC', letter: 'C', name: 'Noto Serif TC 思源宋體', note: '宋體書卷感，典雅耐看' },
+    { cls: 'fD', letter: 'D', name: 'LXGW WenKai 霞鶩文楷', note: '楷書手寫感，溫潤易讀' },
+    { cls: 'fE', letter: 'E', name: 'jf open 粉圓', note: '圓體可愛親切，台灣 justfont 釋出' }
+  ];
+  var tpl = document.getElementById('sample');
+  var mount = document.getElementById('mount');
+  fonts.forEach(function (f) {
+    var sec = document.createElement('section');
+    sec.className = 'opt';
+    var tag = document.createElement('div');
+    tag.className = 'opt-tag';
+    tag.innerHTML = '<span class="opt-letter"></span><span class="opt-name"></span><span class="opt-note"></span>';
+    tag.querySelector('.opt-letter').textContent = f.letter;
+    tag.querySelector('.opt-name').textContent = f.name;
+    tag.querySelector('.opt-note').textContent = f.note;
+    var sample = tpl.content.firstElementChild.cloneNode(true);
+    sample.classList.add(f.cls);
+    sec.appendChild(tag);
+    sec.appendChild(sample);
+    mount.appendChild(sec);
+  });
+</script>
+</body>
+</html>
