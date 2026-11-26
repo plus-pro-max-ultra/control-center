@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.417 2026-11-27 00:59</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.418 2026-11-27 01:06</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,9 +345,17 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.418 - 2026-11-27 01:06</h2>
+<ul>
+<li>記帳 v4.1 部分修正已上線：https://bookkeeping-trial.web.app （僅 Hosting，2026-11-27 01:04 發布；僅 styles.css 變動，JS、HTML、資料、規則未動）。針對 MM 00:57 回報（見 v2.2.417，iMessage 原文已核對）。線上樣式表與建置版本雜湊一致（5757ba31…）。</li>
+<li>已改：記帳頁與分析頁圖塊縮小（標題區 24 至 22px、統計圖塊 64 至 52px、餐別圖塊 76 至 60px、列內距收緊、預算與分類列字級統一 13.5 至 14px、區塊間距縮小）；紀錄頁篩選改為浮出式小面板，不再把紀錄列表往下推，欄位高 40px、三個下拉同列（320 寬度為兩列），輸入字級維持 16px 以免 iOS 對焦放大；加入穩定捲軸空間避免左右跳動；v3.3 區域內左右滑動與起訖留白維持。</li>
+<li>重現與驗證（Chromium、測試資料、390 寬）：修正前開啟篩選使列表下移 321px（版面位移 0.325）；修正後開啟與關閉位移為 0.000、頁高不變。320/390/1440 控制項點擊檢查無 JS 錯誤、無新增問題。</li>
+<li>尚未解決：分析頁「更換期間」展開仍會推動下方內容（位移約 0.08），調整持續中；不以數值門檻視為已解決。iPhone Safari 與真實帳號寫入仍未驗證。篩選浮出面板的視覺分離與窄螢幕互動仍在複查。v2.2.417 所列缺陷因此未全部結案。</li>
+<li>規則查核（01:06）：控制中心 origin/main 0eddc73，CONTROL.md 本地與遠端雜湊一致（bff1d2b0…），無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.417 - 2026-11-27 00:59</h2>
 <ul>
-<li>記帳 v4 上線後使用回報（MM 00:57，iMessage 原文已核對）：「分析頁大小不對、有些互動之後整個頁面會位移、有些大小還是有過大的問題如記帳頁和篩選部分」。狀態：未解決，調查與修正進行中。這代表 v2.2.416 記載的瀏覽器點擊檢查（Chromium、測試資料）未涵蓋 MM 實際遇到的狀況；該檢查結果不應視為完整的品質驗收。</li>
+<li>記帳 v4 上線後使用回報（MM 00:57，iMessage 原文已核對）：「分析頁大小不對、有些互動之後整個頁面會位移、有些大小還是有過大的問題如記帳頁和篩選部分」。狀態：01:04 已部分修正，見 v2.2.418；分析頁更換期間位移尚未解決。這代表 v2.2.416 記載的瀏覽器點擊檢查（Chromium、測試資料）未涵蓋 MM 實際遇到的狀況；該檢查結果不應視為完整的品質驗收。</li>
 <li>目前已知：分析頁比例、互動後整頁位移、記帳頁與篩選區部分元件仍過大；觸發條件與是否僅限特定裝置尚未釐清。線上仍為 v4（00:51 發布，僅 styles.css 變動，邏輯、資料、規則未動），修正完成並驗證前不宣稱已解決。iPhone Safari 與真實帳號寫入仍未驗證。</li>
 <li>規則查核（00:59）：控制中心 origin/main db023fb，CONTROL.md 本地與遠端雜湊一致（bff1d2b0…），無 MM 更動；依 §5 自動推送規則發布。</li>
 </ul>
