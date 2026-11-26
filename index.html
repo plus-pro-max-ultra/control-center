@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.414 2026-11-26 22:38</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.415 2026-11-27 00:44</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,6 +345,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.415 - 2026-11-27 00:44</h2>
+<ul>
+<li>記帳改版 v4 質感與細節審閱頁發布（修正後候選版；第一版 v4 因換行退縮未送出，本版恢復區域內左右滑動）：https://plus-pro-max-ultra.github.io/control-center/bookkeeping-review/redesign-v4/ 。依 MM 00:27 指示（iMessage 原文已核對）：「之前提到的那些蘋果效果能否整合進去（感覺有點缺乏質感，可能是少了一些效果？）？有些字大小有點大、可以善用虛線框、有些地方圖塊需要校正。全部徹底檢查操控上存在的不完美」。內容為七個頁面調整前（v3.3）／調整後並排截圖、320/390 捲動區靜止與捲到底及桌機、對話框與窄螢幕截圖；僅 CSS 變動，線上 v3.3 未受影響；半透明導覽與對話框底層為網頁近似效果，頁面明示非蘋果原生 Liquid Glass。純截圖對照，非 Firebase 部署；部署需 MM 批准。驗證範圍如實記載：七個分頁於 320/390/1440 點擊檢查通過；匯入匯出、寫入、離線、Safari 與壓力測試尚未完成，操控全面檢查仍在進行，不宣稱全部控制項已驗證。發布核實：頁面戳記快取穿透連續 3 次一致、23 張圖全部完整載入；手機 390 實看頁面無溢出、11 個圖列皆可左右滑動。</li>
+<li>規則查核（00:44）：控制中心 origin/main 3dc2f13（v2.2.414 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.414 - 2026-11-26 22:38</h2>
 <ul>
 <li>更正 v2.2.413 排程描述並更新審閱圖：排程表原將項目名稱欄固定於左側，320px 實測發現固定欄遮住金額，已於 22:35 移除固定 CSS 重新部署——現為整表各欄一起左右滑動，滑至末端可完整讀出金額；22:37 已向 MM 更正先前「項目名稱固定在左側」之說法。審閱頁 redesign-v3 之排程「改版後」截圖已同步換成與線上一致的整表滑動版本（僅該圖更動，其餘圖與頁面不變，截圖說明文字保留），線上圖檔快取穿透連續 3 次一致。現行版本記為 v3.3；驗證仍為 Chromium 回歸 62 項、互動 28 項（測試資料），Safari 與真實登入資料未驗證。</li>
