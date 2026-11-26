@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.413 2026-11-26 22:34</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.414 2026-11-26 22:38</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,6 +345,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.414 - 2026-11-26 22:38</h2>
+<ul>
+<li>更正 v2.2.413 排程描述並更新審閱圖：排程表原將項目名稱欄固定於左側，320px 實測發現固定欄遮住金額，已於 22:35 移除固定 CSS 重新部署——現為整表各欄一起左右滑動，滑至末端可完整讀出金額；22:37 已向 MM 更正先前「項目名稱固定在左側」之說法。審閱頁 redesign-v3 之排程「改版後」截圖已同步換成與線上一致的整表滑動版本（僅該圖更動，其餘圖與頁面不變，截圖說明文字保留），線上圖檔快取穿透連續 3 次一致。現行版本記為 v3.3；驗證仍為 Chromium 回歸 62 項、互動 28 項（測試資料），Safari 與真實登入資料未驗證。</li>
+<li>規則查核（22:38）：控制中心 origin/main 713760e（v2.2.413 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.413 - 2026-11-26 22:34</h2>
 <ul>
 <li>記帳試用站第三版改版上線測試（Firebase 既有試用站，22:32 部署、22:34 交付）：依 MM 22:29 指示（iMessage 原文已核對）：「排程的長條沒有改，概念是一個可以左右滑動的表格，目前還是分為兩行，修改完之後上線測試」。本次上線為第三版全量改版（非僅排程頁）：排程改為單行表格、區域內左右滑動、項目名稱固定左側，並一併套用 v3 審閱之其餘修改；僅託管層更新，資料邏輯、設定與規則不變。驗證範圍：Chromium 回歸 62 項通過、七個分頁以測試資料實測；iPhone Safari 與 MM 登入後真實資料未驗證，已於交付時明示。審閱頁 v3 之排程截圖已過時（上線版更新），製作方重製中，完成後另行記錄。MM 其餘手動修改全部保留。</li>
