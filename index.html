@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.419 2026-11-27 01:09</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.420 2026-11-27 01:14</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,6 +345,14 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.420 - 2026-11-27 01:14</h2>
+<ul>
+<li>記帳 v4.3 已上線：https://bookkeeping-trial.web.app （僅 Hosting，2026-11-27 01:14 發布；styles.css 與 js/app.js 變動，index.html、format.js、ledger.js、firebase-config.js 未動；Firestore 規則與資料邏輯未動；線上雜湊 styles.css 81ea6593…、app.js 741e8ecd… 與建置版本一致）。延續 MM 00:57 回報（見 v2.2.417–419）。</li>
+<li>本次含程式（互動）變更，不再是純 CSS：650px 以下浮出的篩選與期間面板，按 Escape 或點面板外即關閉，該次點擊不會觸發下方控制項（面板開著時第一次點底部分頁只關面板，第二次才切換）；選擇預設區間（本月／上月／今年）後套用並自動收起；手動輸入日期、搜尋與多欄位篩選編輯不受影響，Escape 後篩選條件維持；651–899px 面板改回行內；桌機不變。另修正 v3.3 即有的問題：分析頁「本月預算明細」各列看似可點但無反應，現在會進入預算頁。</li>
+<li>驗證（Chromium、測試資料）：320/390 互動案例與 320/390/1440 控制項點擊檢查無 JS 錯誤；長文字、320 列、橫向與版面位移探測各互動皆為 0.000（四捨五入內）。</li>
+<li>尚未驗證：iPhone 觸控與 Safari（真實鍵盤、網址列縮放、回彈捲動）、真實帳號資料；無法確認 MM 實際遇到的位移是否即為已修正者。上線後驗證維持開放，v2.2.417 缺陷不標記為已結案。原始碼未公開上傳。</li>
+<li>規則查核（01:14）：控制中心 origin/main 7f080c2，CONTROL.md 本地與遠端雜湊一致（bff1d2b0…），無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.419 - 2026-11-27 01:09</h2>
 <ul>
 <li>記帳 v4.2 已上線：https://bookkeeping-trial.web.app （僅 Hosting，2026-11-27 01:08 發布；僅 styles.css 變動，JS、HTML、資料、規則未動；線上樣式表雜湊 9e5dce03… 與建置版本一致）。延續 MM 00:57 回報（見 v2.2.417；v2.2.418 為 v4.1 部分修正）。</li>
