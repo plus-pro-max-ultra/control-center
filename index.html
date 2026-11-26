@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.411 2026-11-26 16:16</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.412 2026-11-26 18:52</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,6 +345,11 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.412 - 2026-11-26 18:52</h2>
+<ul>
+<li>記帳改版審閱第三版發布（取代 v2 作為交付版，v1、v2 保留可瀏覽）：https://plus-pro-max-ultra.github.io/control-center/bookkeeping-review/redesign-v3/ 。依 MM 18:30 指示（iMessage 原文已核對）：「記帳修改：對於箭號之類的互動符號行狀都很奇怪甚至影響到文字圖塊排版（專門研究其他人怎麼處理）、文字符號會在該對齊或居中的地方卻不做、刪掉「三餐的尚未紀錄」、左右長條數據採用該區域左右滑動而非換行」（「行狀」依文意為「形狀」之筆誤，照錄原文）。本版：互動符號改用 SVG 圖示並修正對齊、刪除三餐空格「尚未紀錄」文案、窄寬時數據長條於區域內左右滑動不換行；另修復總覽內嵌區、三餐操作列完整可見、預算月份與新增同列。純截圖對照審閱頁，非 Firebase 試用站替換；部署仍需 MM 批准。製作方確切建置 Chromium 回歸 62 項通過、28 項互動檢查通過；Safari 未驗證。發布核實：頁面戳記快取穿透連續 3 次一致、19 張引用圖全部完整載入；手機 390 實看無橫向溢出，改版前／後切換與操作流程圖實測正常。</li>
+<li>規則查核（18:52）：控制中心 origin/main 0487d92（v2.2.411 已線上核實），CONTROL.md 本地與遠端雜湊一致，無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.411 - 2026-11-26 16:16</h2>
 <ul>
 <li>更正 v2.2.410 尾註：製作方最終回歸測試已於 16:16 完成，63 項全數通過、0 失敗（原記「逾時未完成」為過時資訊，已就地更正）；其後 18 項變更互動檢查（含紀錄修改／複製／刪除、預算刪除與鍵盤操作，以隔離測試資料於確切建置執行）亦於 16:16 全數通過、無需修正；已發布之 v2 維持有效。全部為 Chromium 環境，Safari 未驗證。審閱頁 v2 已於 16:16 交付 MM，並明示為第一輪截圖對照、非可操作 App，無玻璃效果、非 Firebase 替換、iPhone Safari 未驗證。</li>
