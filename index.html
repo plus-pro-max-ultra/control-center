@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.415 2026-11-27 00:44</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.416 2026-11-27 00:54</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,6 +345,14 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.416 - 2026-11-27 00:54</h2>
+<ul>
+<li>記帳 v4 外觀改版已上線測試站：https://bookkeeping-trial.web.app （僅 Hosting，2026-11-27 00:51 發布完成）。依據 MM 00:47「好了就上線」（iMessage 原文已核對），其前提為 v4 預覽頁 https://plus-pro-max-ultra.github.io/control-center/bookkeeping-review/redesign-v4/ 。本次僅更動樣式表 styles.css；index.html、js/app.js、js/format.js、js/ledger.js、firebase-config.js 與 v3.3 逐一雜湊相同，未改邏輯；Firestore 規則與資料未動；標頭與 CSP 不變。線上樣式表與測試版本連續 3 次抓取一致。</li>
+<li>預覽後、發布前的修正：超大金額（如 100,000,204.99）不再擠到日概覽的預算欄，欄寬隨內容增長並在卡片內左右滑動；320 寬度的報表日期範圍改為單行橫向（預設區間、起日、迄日）；仍維持各橫向資料區域內滑動、不換行。</li>
+<li>驗證範圍如實記載：Chromium 搭配測試資料，7 個分頁於 320/390/1440 逐一點擊各可見控制項，無 JS 錯誤、無畫面外或被裁切；另含編輯、複製、刪除、匯入匯出與窄螢幕／橫向版面檢查。尚未驗證：iPhone Safari、真實帳號資料寫入；這兩項不算已測。網頁半透明效果為近似材質，非蘋果原生 Liquid Glass。</li>
+<li>更正：v2.2.415 中「部署需 MM 批准」之句已由 MM 00:47 指示取代；該次僅預覽，本條為實際部署紀錄。原始碼未公開上傳。</li>
+<li>規則查核（00:54）：控制中心 origin/main fd85453，CONTROL.md 本地與遠端雜湊一致（bff1d2b0…），無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.415 - 2026-11-27 00:44</h2>
 <ul>
 <li>記帳改版 v4 質感與細節審閱頁發布（修正後候選版；第一版 v4 因換行退縮未送出，本版恢復區域內左右滑動）：https://plus-pro-max-ultra.github.io/control-center/bookkeeping-review/redesign-v4/ 。依 MM 00:27 指示（iMessage 原文已核對）：「之前提到的那些蘋果效果能否整合進去（感覺有點缺乏質感，可能是少了一些效果？）？有些字大小有點大、可以善用虛線框、有些地方圖塊需要校正。全部徹底檢查操控上存在的不完美」。內容為七個頁面調整前（v3.3）／調整後並排截圖、320/390 捲動區靜止與捲到底及桌機、對話框與窄螢幕截圖；僅 CSS 變動，線上 v3.3 未受影響；半透明導覽與對話框底層為網頁近似效果，頁面明示非蘋果原生 Liquid Glass。純截圖對照，非 Firebase 部署；部署需 MM 批准。驗證範圍如實記載：七個分頁於 320/390/1440 點擊檢查通過；匯入匯出、寫入、離線、Safari 與壓力測試尚未完成，操控全面檢查仍在進行，不宣稱全部控制項已驗證。發布核實：頁面戳記快取穿透連續 3 次一致、23 張圖全部完整載入；手機 390 實看頁面無溢出、11 個圖列皆可左右滑動。</li>
