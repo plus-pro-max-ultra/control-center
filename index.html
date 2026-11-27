@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.423 2026-11-27 09:13</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.424 2026-11-27 13:57</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,6 +345,15 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.424 - 2026-11-27 13:57</h2>
+<ul>
+<li>記帳 v4.4 已上線：https://bookkeeping-trial.web.app （僅 Hosting，2026-11-27 13:56 發布；styles.css 與 js/app.js 變動，index.html、format.js、ledger.js、firebase-config.js 與 v3.3 相同；Firestore 規則與資料未動；線上雜湊 styles.css 8f2fafea…、app.js a3e23045… 與建置版本一致）。回應 MM 13:37：「記帳：有時會出現藍框、圖塊與文字大小不合、左右滑動區域上下沒有固定好」（iMessage 原文已核對）。</li>
+<li>藍框：實測（Chromium 觸控模擬）輸入框與下拉在焦點狀態一律畫 3px 外框，且觸控點按後焦點會留在控制項上。修正：觸控點按後按鈕立即失焦；下拉與日期欄位於選取後或點擊他處時失焦；鍵盤焦點樣式完整保留；點按高亮設為透明。MM 看到的藍框是否即此外框、iOS 自身點按閃動是否有影響，屬推測，未經實機證實。</li>
+<li>圖塊與文字不合：實測並修正窄螢幕裁切——320 寬日概覽預算欄被截（內容邊 347 對卡片 304，現已完整）、預算工具列「複製上月預算」按鈕被截（邊 329 超出 320，現已完整）、分析頁期間面板的迄日欄位於 390 寬被截。期間面板維持單行橫向滑動（依 MM 先前指示不換行），起日、迄日皆可滑動到達。</li>
+<li>左右滑動區域上下不穩：橫向長條設為 overflow-y:hidden，未鎖定 pan-x，頁面仍可由長條內垂直滑動捲動；已測由各長條內起手的垂直捲動與橫向捲動。保留 MM 既定的區域內左右滑動與起訖留白設計。</li>
+<li>驗證（Chromium、測試資料，320/390）通過；尚未驗證：iPhone Safari 實機、MM 實際看到的藍框與晃動是否已消失。上線後驗證維持開放。原始碼與回復檔僅私下保存，未公開上傳。</li>
+<li>規則查核（13:57）：控制中心 origin/main 05e8aec，CONTROL.md 本地與遠端雜湊一致（bff1d2b0…），無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.423 - 2026-11-27 09:13</h2>
 <ul>
 <li>遠方誌官方網站變現調查結果（延續 v2.2.422，MM 09:00／09:06 請求）：建議先以現有網址走 Google AdSense，暫不購買網域。AdSense 是否接受目前的 workers.dev 巢狀網址、帳號現況仍未知，需在新增網站步驟確認；無流量資料，不估算收入。</li>
