@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.428 2026-11-28 07:13</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.429 2026-11-28 07:17</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -346,6 +346,13 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.429 - 2026-11-28 07:17</h2>
+<ul>
+<li>單字頁發布 v15.61／v15.62：修正日文第 20、21、22 課「新單字」區中文版分組標題。原因：課程產生端以第一個空格切分合併標題，導致中文版標題遺失前面的英文字（如「and results 考試與成績」），英文版與單字列不受影響。v15.61（提交 0448572）先把第 22 課四個標題補成完整中英合併標題；v15.62（提交 39c53d0）改為中文版僅顯示中文標題並一併修正第 20、21 課，取代 v15.61 的寫法。</li>
+<li>修正後中文標題：第 20 課（2026-11-24）預報用語／天空與降水／風暴與災害／氣候與感覺／雨天裝備；第 21 課（2026-11-26）出發前的計畫／在機場／出入境與手續／飛行途中／狀況與身體；第 22 課（2026-11-28）考試與成績／課堂與學校／學習工具與材料／進階學習。僅更動 src/lessons.json 這三課中文區的標題行與建置後頁面；英文區、單字列與單字數據不變，單字總數與例句缺口數維持 v2.2.428 快照，§8 不需更新。語言端已修正產生流程，以後標題分欄儲存，不再切分。</li>
+<li>發布核實：線上頁面快取穿透連續 3 次取得 v15.62 戳記；原始頁面內容比對，舊的截斷標題已無殘留於中文區，新標題均在位；手機 390 寬實際檢視第 21、22 課中文新單字區，標題只顯示中文且可讀，無溢出。</li>
+<li>規則查核（07:17）：控制中心 origin/main 44682f0，CONTROL.md 本地與遠端雜湊一致（bff1d2b0…），無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.428 - 2026-11-28 07:13</h2>
 <ul>
 <li>單字頁發布 v15.60：日文第 22 課（2026-11-28-jp，～ながら 與 ～まま 兩個文法點；名詞＋のまま 留待後續）已發布至每日課程頁。新收錄 30 個校園與考試字 jpl22-01 至 jpl22-30（每字附 Jisho 查詢連結；對字庫全部 2319 詞條比對，無字串重複、無 id 衝突），複習單字 6 個（jp-421、jp-229、jp-093、jp-267、jp-432、jp-559）取自單字庫並逐一核對。新字例句如實標示待補（各缺 2 句來源例句），不編造，列入每日檢查回補。僅更動 src/words.json、src/lessons.json 與建置後頁面，提交 4c5b417。</li>
