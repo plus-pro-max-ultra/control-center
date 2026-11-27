@@ -25,7 +25,7 @@ nav.anchors a:active{background:var(--accent-soft)}
 .changelog h2{font-size:15px;margin:16px 0 6px;color:var(--ink);border-bottom:none}
 footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;text-align:center}
 </style></head><body>
-<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.424 2026-11-27 13:57</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
+<header class="topbar"><strong>控制中心</strong><span class="ver">v2.2.425 2026-11-27 13:58</span><span class="spacer"></span><a href="https://github.com/plus-pro-max-ultra/control-center/edit/main/CONTROL.md" target="_blank" rel="noreferrer">編輯</a></header>
 <main class="wrap">
 <nav class="anchors"><a href="#s1">1 使用者背景</a><a href="#s2">2 對話邏輯</a><a href="#s3">3 資訊呈現</a><a href="#s4">4 工作方式</a><a href="#s5">5 部署架構</a><a href="#s6">6 單字架構</a><a href="#s7">7 遠方誌</a><a href="#s8">8 每日任務</a><a href="#s9">9 資料規則</a><a href="#s10">10 目前狀態</a><a href="#s11">11 修改方式</a><a href="#log">更新紀錄</a></nav>
 <div class="doc"><h1>控制中心（Control Center）</h1>
@@ -345,6 +345,14 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul></div>
 <p class="section-label">CHANGELOG</p>
 <div class="doc changelog" id="log"><h1>更新紀錄</h1>
+<h2>v2.2.425 - 2026-11-27 13:58</h2>
+<ul>
+<li>遠方誌官方網站變現（延續 v2.2.422／423）：MM 12:00 回報「adsense表示要有頂層網域」（phonemsg-01M8DJJ50G7ZF4G46N5T6A62TQ，iMessage 原文已核對）。更正：v2.2.423 所載「先以現有網址走 AdSense」的建議不足，目前網址在 MM 實際操作中被拒，不能照原樣送出。</li>
+<li>官方說明的區別（https://support.google.com/adsense/answer/2784438 、https://support.google.com/adsense/answer/12170421 ）：帳號註冊頁要求標準網域且不接受一般子網域，但註冊時網址可留空、日後再新增網站；網站管理頁則允許網域、平台夥伴子網域與公共尾碼清單平台下的子網域，對兩層的 workers.dev 巢狀主機名稱沒有範例。MM 看到的是註冊頁還是「網站 → 新增網站」尚未確認，已請他說明或提供只含該欄位與錯誤訊息的裁切截圖。</li>
+<li>目前結論：現有主機名稱能否被接受仍未解決，也不據此得出必須購買網域的結論；上層的 learnman.workers.dev 不是遠方誌的網址，且尚未驗證能否在該處提供 Google 驗證內容，不作為替代方案。</li>
+<li>狀態：未購買任何東西、未新增登入嘗試、網站與帳號未更動；先前提出的「僅預覽」授權與隱私準備尚待 MM 回覆，不視為已批准。等待畫面資訊；預定 16:00 追蹤。</li>
+<li>規則查核（13:58）：控制中心 origin/main 485caab，CONTROL.md 本地與遠端雜湊一致（bff1d2b0…），無 MM 更動；依 §5 自動推送規則發布。</li>
+</ul>
 <h2>v2.2.424 - 2026-11-27 13:57</h2>
 <ul>
 <li>記帳 v4.4 已上線：https://bookkeeping-trial.web.app （僅 Hosting，2026-11-27 13:56 發布；styles.css 與 js/app.js 變動，index.html、format.js、ledger.js、firebase-config.js 與 v3.3 相同；Firestore 規則與資料未動；線上雜湊 styles.css 8f2fafea…、app.js a3e23045… 與建置版本一致）。回應 MM 13:37：「記帳：有時會出現藍框、圖塊與文字大小不合、左右滑動區域上下沒有固定好」（iMessage 原文已核對）。</li>
@@ -356,7 +364,7 @@ footer{margin-top:34px;padding-top:12px;border-top:1px solid var(--line);color:v
 </ul>
 <h2>v2.2.423 - 2026-11-27 09:13</h2>
 <ul>
-<li>遠方誌官方網站變現調查結果（延續 v2.2.422，MM 09:00／09:06 請求）：建議先以現有網址走 Google AdSense，暫不購買網域。AdSense 是否接受目前的 workers.dev 巢狀網址、帳號現況仍未知，需在新增網站步驟確認；無流量資料，不估算收入。</li>
+<li>遠方誌官方網站變現調查結果（延續 v2.2.422，MM 09:00／09:06 請求）：建議先以現有網址走 Google AdSense，暫不購買網域（13:58 更正：現有網址在 MM 實際操作中被拒，不能照原樣送出，見 v2.2.425）。AdSense 是否接受目前的 workers.dev 巢狀網址、帳號現況仍未知，需在新增網站步驟確認；無流量資料，不估算收入。</li>
 <li>發現的前置缺口：部分文章圖片的商業使用授權未確定（兩張圖片待核）、較舊說明的連結需處理；隱私頁須先更新廣告揭露，才可放廣告。讀者支持方面，OEN 列為可能候選，但刊登資格與總費用尚未核實，不採用未驗證的費率；ECPay 不建議。</li>
 <li>已向 MM 詢問是否批准「僅預覽」的授權與隱私準備；等待回覆。未批准前不做任何變更。</li>
 <li>狀態：網站、帳號與廣告均未更動；未提交 AdSense 申請；未安裝廣告程式碼。</li>
